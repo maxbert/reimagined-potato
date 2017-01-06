@@ -5,4 +5,4 @@
 
 ## VS
 
-<img src="http://www.scandinavia-design.fr/wa_files/triangle_20clock_20vitra.jpg"> </img>
+<img src="http://www.scandinavia-design.fr/wa_files/triangle_20clock_20vitra.jpg" style = "width: 200px;"> </img>
