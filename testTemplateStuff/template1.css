@@ -69,3 +69,7 @@ p {
     margin-top: 30%;
 }
 
+.pics {
+    position: relative;
+    margin-bottom: 30px;
+}
