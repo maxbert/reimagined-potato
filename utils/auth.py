@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, url_for, session, redirect
 import hashlib, sqlite3
 
-f = "database.db"
+f = "data/database.db"
 
 def register(username, password):
     if (username=="" or password==""): return "Please fill in the username and password fields"
