@@ -25,12 +25,12 @@ def login():
     if request.method == "GET":
         return render_template("login.html", status = "")
     if request.form["enter"] == "Register":
-        register_message = auth.register(request.form["user"],request.form["pass"])
+        register_message = auth.register(request.form["users"],request.form["pass"])
         return render_template("login.html", status = register_message)
     if request.form["enter"] == "Login":
-        login_message = auth.checkLogin(request.form["user"],request.form["pass"])
+        login_message = auth.checkLogin(request.form["users"],request.form["pass"])
         if (login_message == ""):
-            session["user"] = request.form["user"]
+            session["user"] = request.form["users"]
             return redirect(url_for("home"))
 
     return render_template("login.html", status = login_message)
@@ -41,7 +41,7 @@ def accountsettings():
         return redirect(url_for("login"))
     if request.method =="GET":
         return render_template("accountSettings.html")
-    else: pass_message = auth.changePass(session["user"],request.form["oldpass"],request.form["newpass"])
+    else: pass_message = auth.changePass(session["users"],request.form["oldpass"],request.form["newpass"])
     return render_template("accountSettings.html", status = pass_message)
 
 @app.route("/logout/")
