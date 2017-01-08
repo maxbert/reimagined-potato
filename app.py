@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, url_for, session, redirect
-import hashlib, sqlite3, json, requests, auth
+import hashlib, sqlite3, json, requests
+from utils import auth
 
 
-f = "database.db"
+f = "data/database.db"
 
 
 app = Flask(__name__)
