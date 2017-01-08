@@ -50,6 +50,20 @@ def logout():
     if "coords" in session: session.pop("coords")
     return redirect(url_for("home"))
 
+@app.route("/template_selector")
+def template_selector():
+    return render_template("template_selector.html")
+
+@app.route("/design/<template>")
+def design(template):
+    temp_url = template + '.html'
+    return render_template(temp_url)
+
+@app.route("/<username>/<site_name>")
+def hosted_site(username, site_name):
+    temp_url = username + '/' + site_name + '.html'
+    return render_template(temp_url)
+
 if __name__ == "__main__":
     app.debug = True
     app.run()
