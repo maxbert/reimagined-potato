@@ -1,0 +1,84 @@
+body {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 7%;
+    margin-left: 7%;
+}
+
+.navbar {
+    background-color: transparent;
+    background: transparent;
+    border-color: transparent;
+    position: relative;
+    margin-bottom: 7%;
+}
+
+li {
+    margin-top: 20px;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.75vw;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: border 500ms ease;
+    -moz-transition: border 500ms ease;
+    -ms-transition: border 500ms ease;
+    -o-transition: border 500ms ease;
+    transition: border 500ms ease; 
+}
+
+li:hover {
+    border-bottom: 1px solid #333;
+}
+
+p {
+    font-family: 'Vollkorn', serif;
+    font-size: 3vw;
+    margin-bottom: 7%;
+}
+
+.box {
+    float: left;
+    position: relative;
+    background-color: white;
+    width: 33%;
+    padding-bottom: 45%;
+}
+
+.tile {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    filter: brightness(100%);
+    
+    -webkit-transition: filter 500ms ease;
+    -moz-transition: filter 500ms ease;
+    -ms-transition: filter 500ms ease;
+    -o-transition: filter 500ms ease;
+    transition: filter 500ms ease; 
+    
+    overflow: hidden;
+}
+
+.tile:hover {
+    filter: brightness(50%);
+}
+
+.imgDescription {
+    position: absolute;
+    color: #fff;
+    top:0;
+    left:0;
+    margin: 5%;
+    margin-top: 30%;
+
+    visibility: hidden;
+    opacity: 0;
+    
+}
+
+.imgDescription:hover {
+    visibility: visible;
+    opacity: 1;
+}
