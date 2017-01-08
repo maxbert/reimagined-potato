@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+
+{% block title %}
+
+Login
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<h1 id="heading">{{status}}</h1><br>
+
+  <form action = "/login/" method = "POST">
+    <b>Username:</b> <input type = "text" name = "user" placeholder = "user"><br>
+    <b>Password:</b> <input type = "password" name = "pass" placeholder = "pass"><br><br>
+    <input type = "submit" value = "Login" name = "enter">
+    <input type = "submit" value = "Register" name = "enter">
+  </form><br>
+
+{% endblock %}

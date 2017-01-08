@@ -1,0 +1,28 @@
+{% extends "template.html" %}
+
+{% block title %}
+
+Settings
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<h1 id="heading">Account Settings<br>{{status}}</h1><br>
+
+<div class="transbox">
+  
+  <form method = "POST"><br>
+    <b>Change Password</b><br><br>
+    <b>Old Password:</b> <input type = "password" name = "oldpass"><br>
+    <b>New Password:</b> <input type = "password" name = "newpass"><br><br>
+    <input type = "submit" value = "Change Password" name = "newpassSubmit"><br><br>
+  </form>
+  
+</div>
+
+
+{% endblock %}
