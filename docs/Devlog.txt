@@ -2,3 +2,7 @@
 
 Michael -- 2017-1-7 21:00-22:00
 finished auth
+
+Brian -- 2017-01-08 16:11
+-Added variable links for site hosting/saving
+-Added example file under theOne/test path
