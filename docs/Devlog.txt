@@ -6,3 +6,4 @@ finished auth
 Brian -- 2017-01-08 16:11
 -Added variable links for site hosting/saving
 -Added example file under theOne/test path
+-Added variable link for site design/editing and template selection
