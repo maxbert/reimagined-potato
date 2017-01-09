@@ -7,3 +7,11 @@ Brian -- 2017-01-08 16:11
 -Added variable links for site hosting/saving
 -Added example file under theOne/test path
 -Added variable link for site design/editing and template selection
+
+Sarah -- 2017-01-09 22:45
+-Added testTemplateStuff folder, which includes bootstrap directories and
+ the homepage of a schvalid template for user to modify
+
+Max -- 2017-01-09 22:45
+-Added javascript to template1 so user can click on the company description
+ paragraph at the top and modify it
