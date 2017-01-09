@@ -38,27 +38,35 @@ p {
     background-color: white;
     width: 33%;
     padding-bottom: 45%;
-    color: transparent;
-    -webkit-transition: color 300ms ease;
-}
-
-.box:hover{
-    color:#fff;
 }
 
 .tile {
+    background-color: black;
     position: absolute;
     left: 10px;
     right: 10px;
     top: 10px;
     bottom: 10px;
-    filter: brightness(100%);    
-    -webkit-transition: filter 300ms ease;
     overflow: hidden;
 }
 
-.tile:hover {
-    filter: brightness(50%);
+.tile:hover img{
+    opacity: 0.5;
+}
+
+.tile:hover .imgDescription{
+    opacity: 1;
+}
+
+.tile img {
+    padding: 0;
+    width: 100%;
+    display: block;
+    opacity: 1;
+}
+
+.tile img, .imgDescription {
+    -webkit-transition: opacity 300ms ease;
 }
 
 .imgDescription {
@@ -67,9 +75,8 @@ p {
     left:0;
     margin: 5%;
     margin-top: 30%;
+    color: white;
+    opacity: 0;
+    
 }
 
-.pics {
-    position: relative;
-    margin-bottom: 30px;
-}
