@@ -1,5 +1,4 @@
 --Devlog--
-
 Michael -- 2017-1-7 21:00-22:00
 finished auth
 
@@ -7,3 +6,6 @@ Brian -- 2017-01-08 16:11
 -Added variable links for site hosting/saving
 -Added example file under theOne/test path
 -Added variable link for site design/editing and template selection
+
+Max -- 2017-01-08 11:46 PM
+- added the ability to edit tags called description in edit.js
