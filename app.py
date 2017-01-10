@@ -3,7 +3,7 @@ import hashlib, sqlite3, json, requests
 from utils import auth
 
 
-f = "data/database.db"
+db = "data/database.db"
 
 
 app = Flask(__name__)

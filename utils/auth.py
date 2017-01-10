@@ -1,12 +1,12 @@
 from flask import Flask, render_template, request, url_for, session, redirect
 import hashlib, sqlite3
 
-f = "data/database.db"
+db1 = "data/database.db"
 
 def register(username, password):
     if (username=="" or password==""): return "Please fill in the username and password fields"
 
-    db = sqlite3.connect(f)
+    db = sqlite3.connect(db1)
     c = db.cursor()
     query = "SELECT user FROM users"
     dbUsers = c.execute(query)
@@ -27,7 +27,7 @@ def register(username, password):
 
 def checkLogin(username,password):
     hashedPass = hashlib.sha1(password).hexdigest()
-    db = sqlite3.connect(f)
+    db = sqlite3.connect(db1)
     c = db.cursor()
     query = "SELECT * FROM users"
     dbUserPass = c.execute(query)
@@ -42,7 +42,7 @@ def changePass(username,oldpass,newpass):
     if (oldpass=="" or newpass==""): return "Please fill in both password fields"
     hashedOldPass = hashlib.sha1(oldpass).hexdigest()
     hashedNewPass = hashlib.sha1(newpass).hexdigest()
-    db = sqlite3.connect(f)
+    db = sqlite3.connect(db1)
     c = db.cursor()
     d = db.cursor()
     query = "SELECT * FROM users"
