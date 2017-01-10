@@ -1,5 +1,5 @@
 --Devlog--
-Michael -- 2017-1-7 21:00-22:00
+Michael -- 2017-01-07 11:00 PM
 finished auth
 
 Brian -- 2017-01-08 16:11
@@ -7,10 +7,11 @@ Brian -- 2017-01-08 16:11
 -Added example file under theOne/test path
 -Added variable link for site design/editing and template selection
 
-<<<<<<< HEAD
 Sarah -- 2017-01-09 22:45
 -Added testTemplateStuff folder, which includes bootstrap directories and
  the homepage of a schvalid template for user to modify
 
 Max -- 2017-01-08 11:46 PM
 - added the ability to edit tags called description in edit.jsx
+
+Michael -- 2016-01-09 9:50PM
