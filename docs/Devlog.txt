@@ -15,3 +15,5 @@ Max -- 2017-01-08 11:46 PM
 - added the ability to edit tags called description in edit.jsx
 
 Michael -- 2016-01-09 9:50PM
+change database: site, site_edit for each user
+started save.py
