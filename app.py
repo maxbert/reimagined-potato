@@ -67,9 +67,9 @@ def test():
 def template_selector():
     return render_template("template_selector.html")
 
-@app.route("/<template>")
+@app.route("/<template>/")
 def design(template):
-    temp_url = template + '/' + template + '.html'
+    temp_url =  template + '/' + template + '.html'
     return render_template(temp_url)
 
 @app.route("/<username>/<site_name>")
