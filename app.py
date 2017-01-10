@@ -9,7 +9,7 @@ db = "data/database.db"
 app = Flask(__name__)
 app.secret_key = '<j\x9ch\x80+\x0b\xd2\xb6\n\xf7\x9dj\xb8\x0fmrO\xce\xcd\x19\xd49\xe5S\x1f^\x8d\xb8"\x89Z'
 
-
+test_html_string = ""
 @app.route("/")
 @app.route("/home/", methods = ["GET","POST"])
 def home():
@@ -49,6 +49,18 @@ def logout():
     if "user" in session: session.pop("user")
     if "coords" in session: session.pop("coords")
     return redirect(url_for("home"))
+
+@app.route("/save", methods = ['POST'])
+def save():
+    res = request.json
+    html_extract = str(res['templatehtml'])
+    global test_html_string
+    test_html_string = html_extract
+    #write_to_file
+
+@app.route("/test_")
+def test():
+    return test_html_string
 
 @app.route("/template_selector")
 def template_selector():

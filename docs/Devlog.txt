@@ -19,4 +19,6 @@ change database: site, site_edit for each user
 started save.py
 
 Brian -- 2017-01-10 4:24
--Started jQuery/AJAX implementation in edit.js to extract HTML and transport to Python file.
+- Started jQuery/AJAX implementation in edit.js to extract HTML and transport to Python file.
+- Added /save route in app.py file
+- Added test route to test this function
