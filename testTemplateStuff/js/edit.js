@@ -22,3 +22,25 @@ var change = function(e) {
 
 desc.addEventListener('click', change);
 
+
+		$("input#submit").click(function() {
+			var data = {};
+			data.templatehtml = document.getElementsByTagName("html")[0];
+		$.ajax({
+			type: "POST",
+			url: "save",
+			contentType: "application/json",
+			data: JSON.stringify(data),
+			success: function(data){
+				var res = data['name']
+				$('.container').html(res)},
+			error: function(data){
+				$('#result').html('I failed')
+			}
+		})
+            var firstName = document.getElementById("inputFirstName").value;
+            var lastName = document.getElementById("inputLastName").value;
+            var name = firstName + lastName;
+            window.location.href= 'home/' + name;
+		})
+
