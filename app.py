@@ -56,6 +56,7 @@ def save():
     html_extract = str(res['templatehtml'])
     global test_html_string
     test_html_string = html_extract
+    print test_html_string
     #write_to_file
 
 @app.route("/test_")
@@ -66,9 +67,9 @@ def test():
 def template_selector():
     return render_template("template_selector.html")
 
-@app.route("/design/<template>")
+@app.route("/<template>")
 def design(template):
-    temp_url = template + '.html'
+    temp_url = template + '/' + template + '.html'
     return render_template(temp_url)
 
 @app.route("/<username>/<site_name>")
