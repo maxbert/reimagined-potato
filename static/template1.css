@@ -6,14 +6,6 @@ body {
     margin-left: 7%;
 }
 
-.navbar {
-    background-color: transparent;
-    background: transparent;
-    border-color: transparent;
-    position: relative;
-    margin-bottom: 4%;
-}
-
 li {
     margin-top: 20px;
     color: black;
