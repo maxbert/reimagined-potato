@@ -28,7 +28,7 @@
 
         passing: 20px;
         color: black;
-        background-color: #EEE2DF;
+        background-color: #CBD4C2;
         background-attachment: fixed;
         background-position: center;
         background-repeat: repeat;
@@ -39,7 +39,7 @@
     .bs-float-label {
         position:relative;
         border:1px solid lightsteelblue;
-        margin:10px;
+        margin:20px;
         padding:10px;
         background-color: rgba(100,50,200,0.4);
     }
@@ -58,12 +58,12 @@
         opacity:0;
     }
 
-    .bs-float-label > .float-label.show { color:#2BBBAD; top:1px; opacity:1; }
-    .bs-float-label > .float-label.on { color:blue; }
+    .bs-float-label > .float-label.show { color:#FFFCFF; top:1px; opacity:1; }
+    .bs-float-label > .float-label.on { color:#FFFCFF; }
 
     div.transbox {
         margin: 15px;
-        background-color: #2BBBAD;
+        background-color: #FFFCFF;
         border: 1px solid black;
         opacity: 0.6;
         filter: alpha(opacity=60); /* For IE8 and earlier */
@@ -76,11 +76,33 @@
     }
 
     #heading {
-        color: #D5B0AC;
+        color: #FFFCFF;
         text-align: center;
         font-size: 300%;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         line-height: 2;
+    }
+
+    #navbar-nav {
+        color: white;
+        background-color: #515251;
+    }
+
+    #login {
+        top: 500px;
+        padding-top: 4em;
+        text-align: center;
+    }
+
+    .nav{
+        color: white;
+    }
+
+    #homemsg{
+        margin: 200px;
+        color: #FFFCFF;
+        text-align:center;
+        font-size: 300%;
     }
 
     </style>
@@ -91,7 +113,7 @@
 
 <body>
 
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <nav id="navbar-nav" class="navbar navbar-light navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="/home/">Triangle Time</a>
@@ -100,8 +122,9 @@
                 <li class="active"><a href="/home/">Home</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li> View my Pages</li>
                 <li><a href="/accountsettings/"><span class="glyphicon glyphicon-user"></span> Account Settings</a></li>
-                <li><a href="/logout/"><span class="glyphicon glyphicon-log-in"></span> {{userStatus}}</a></li>
+                <li><a href="/logout/"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
             </ul>
         </div>
 
