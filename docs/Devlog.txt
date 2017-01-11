@@ -34,3 +34,7 @@ Sarah -- 2017-01-11 1:00AM
     - Add a Tile
     - Save, Publish
 - Add placeholder divs for "Work", "About", and "Contact", need content for each + buttons
+
+Max --2017-01-11 4:30 AM
+-Made the buttons for adding, removing and editing a description work
+-started wroking on JS for adding photo blocks
