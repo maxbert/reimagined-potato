@@ -1,3 +1,4 @@
+
 body {
     margin-top: 5%;
     margin-bottom: 5%;
@@ -78,6 +79,18 @@ p {
     color: white;
     opacity: 0;
     
+}
+
+#addtile {
+    background-color: transparent;
+}
+
+#addphto {
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 100%;
+    font-size: 5vw;
 }
 
 h1 {
