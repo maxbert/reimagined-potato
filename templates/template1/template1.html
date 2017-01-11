@@ -29,23 +29,22 @@
 	</div>
       </div>      
       <ul class="nav navbar-nav navbar-right" id="navlist">
-	<li id="navitem1"><a href="#work">WORK</a></li>
-	<li id="navitem2"><a href="#about">ABOUT</a></li>
-	<li id="navitem3"><a href="#contact">CONTACT</a></li>
+	<li id="navitem1"><a href="/#work">WORK</a></li>
+	<li id="navitem2"><a href="/#about">ABOUT</a></li>
+	<li id="navitem3"><a href="/#contact">CONTACT</a></li>
       </ul>
     </nav>
 
-    <button type="button" class="btn btn-info">Add Company Description</button>
-    <button type="button" class="btn btn-danger">Remove Company Description</button>
-    <button type="button" class="btn btn-success">Edit Company Description</button>
-    <button type="button" class="btn btn-default">Done Editing</button>
+    <button type="button" class="btn btn-info" id="adddesc">Add Company Description</button>
+    <button type="button" class="btn btn-danger" id="remdesc">Remove Company Description</button>
+    <button type="button" class="btn btn-success" id="editdesc">Edit Company Description</button>   
 
-    <div style="margin-top: 3%;">
+    <div style="margin-top: 3%;" id="descholder">
       <p id="description">
 	Place a brief description of what your company does here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
     </div>
-
+<div id="boxholder">
     <div class="box">
       <div class="tile">
 	<img id="image1" src="/static/images/image1.jpeg" alt="Place image here." width="100%">
@@ -135,7 +134,8 @@
       </div>      
     </div>    
 
-    <button id="addbox" type="button" class="btn btn-info">Add a Tile</button>
+    <button id="addbox" type="button" class="btn btn-info" id="addphto">Add a Tile</button>
+    </div>
     
     <div class="spacer" style="clear: both;"></div>
 

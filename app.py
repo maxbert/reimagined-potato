@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, url_for, session, redirect
-import hashlib, sqlite3, json, requests
+import hashlib, sqlite3, json
 from utils import auth
 
 

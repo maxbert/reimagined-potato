@@ -1,16 +1,17 @@
-
+//description editing
 var desc = document.getElementById("description");
 var addchangedesc = function(e){
     desc.addEventListener('click', change);
 }
+
 var revdesc = function(e) {
     console.log('?');
     var newdesc = document.getElementById("descentry").value;
     desc.innerHTML = newdesc;
-    setTimeout(addchangedesc,1);
+    setTimeout(addchangedesc,1);//important so that there isnt a double click
     
 };
-
+//change it
 var change = function(e) {
     
     desc.innerHTML = '<textarea rows="4" cols="50" id="descentry">' + desc.innerHTML + '</textarea><br><button id = "subdesc" > Submit </button><br>';
@@ -21,4 +22,4 @@ var change = function(e) {
 };
 
 desc.addEventListener('click', change);
-
+//done with description
