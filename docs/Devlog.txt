@@ -22,3 +22,6 @@ Brian -- 2017-01-10 4:24
 - Started jQuery/AJAX implementation in edit.js to extract HTML and transport to Python file.
 - Added /save route in app.py file
 - Added test route to test this function
+
+Michael -- 2017-01-10 1!:04PM
+-worked on front end
