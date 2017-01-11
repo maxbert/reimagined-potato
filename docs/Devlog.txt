@@ -25,3 +25,12 @@ Brian -- 2017-01-10 4:24
 
 Michael -- 2017-01-10 1!:04PM
 -worked on front end
+
+Sarah -- 2017-01-11 1:00AM
+- Added buttons to template1:
+    - Upload/Remove Logo
+    - Add/Remove/Edit/Done Editing Comapny Description
+    - Upload/Remove Image
+    - Add a Tile
+    - Save, Publish
+- Add placeholder divs for "Work", "About", and "Contact", need content for each + buttons
