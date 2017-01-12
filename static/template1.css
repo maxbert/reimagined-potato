@@ -1,9 +1,17 @@
-
 body {
     margin-top: 5%;
     margin-bottom: 5%;
     margin-right: 7%;
     margin-left: 7%;
+}
+
+.nav {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#logo {
+    padding-right: 3%;
 }
 
 li {
