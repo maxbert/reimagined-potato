@@ -55,7 +55,7 @@ def logout():
 def save():
     res = request.json
     html_extract = str(res['templatehtml'])
-    savefile.publish("template1", "template2", html_extract)
+    savefile.publish("template1", "saved_site1", html_extract)
     return "success"
 
 @app.route("/test_")

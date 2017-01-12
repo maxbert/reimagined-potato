@@ -101,7 +101,7 @@ $("button#save").click(function() {
 		contentType: "application/json",
 		data: JSON.stringify(data),
 		success: function(data){
-			console.log("success")
+			alert("Your site was successfully saved")
 		},
 		error: function(data){
 			console.log("failure")

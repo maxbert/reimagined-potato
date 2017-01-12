@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e576593f-3cf1-4887-8bb7-6ac775d6722d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/save.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/filepathname" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/template1/template2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/theOne/test.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/edit.js" afterPath="$PROJECT_DIR$/static/js/edit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/savefile.py" afterPath="$PROJECT_DIR$/utils/savefile.py" />
     </list>
     <ignored path="reimagined-potato.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -18,7 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/reimagined-potato$app.coverage" NAME="app Coverage Results" MODIFIED="1484248531505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/reimagined-potato$app.coverage" NAME="app Coverage Results" MODIFIED="1484262351415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/reimagined-potato$save.coverage" NAME="save Coverage Results" MODIFIED="1484246967781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -40,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+            <state relative-caret-position="236">
+              <caret line="57" column="46" selection-start-line="57" selection-start-column="46" selection-end-line="57" selection-end-column="46" />
               <folding>
                 <element signature="e#0#77#0" expanded="true" />
               </folding>
@@ -52,40 +55,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="savefile.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="savefile.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/savefile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
               <folding>
                 <element signature="e#0#77#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/template1/template2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auth.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/auth.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#77#0" expanded="true" />
-                <marker date="1484037727800" expanded="true" signature="323:345" ph="SELECT user users" />
-                <marker date="1484037727800" expanded="true" signature="590:634" ph="INSERT INTO users... " />
-                <marker date="1484037727800" expanded="true" signature="939:958" ph="SELECT * FRO... users" />
-                <marker date="1484037727800" expanded="true" signature="1504:1523" ph="SELECT * FRO... users" />
-                <marker date="1484037727800" expanded="true" signature="1699:1749" ph="UPDATE users... " />
               </folding>
             </state>
           </provider>
@@ -94,8 +70,8 @@
       <file leaf-file-name="edit.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/edit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="64" column="2" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="2" />
+            <state relative-caret-position="401">
+              <caret line="103" column="53" selection-start-line="103" selection-start-column="53" selection-end-line="103" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -104,8 +80,8 @@
       <file leaf-file-name="template1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/template1/template1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2754">
-              <caret line="162" column="20" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="20" />
+            <state relative-caret-position="2720">
+              <caret line="160" column="20" selection-start-line="160" selection-start-column="16" selection-end-line="160" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -143,10 +119,11 @@
         <option value="$PROJECT_DIR$/testTemplateStuff/js/edit.js" />
         <option value="$PROJECT_DIR$/templates/template1/template1.html" />
         <option value="$PROJECT_DIR$/docs/Devlog.txt" />
-        <option value="$PROJECT_DIR$/static/js/edit.js" />
         <option value="$PROJECT_DIR$/utils/save.py" />
         <option value="$PROJECT_DIR$/templates/template1/template2.html" />
+        <option value="$PROJECT_DIR$/templates/theTwo/template2.html" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/static/js/edit.js" />
         <option value="$PROJECT_DIR$/utils/savefile.py" />
       </list>
     </option>
@@ -188,6 +165,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -248,31 +226,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="theOne" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reimagined-potato" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reimagined-potato" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="template1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -887,14 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/template1/template1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2754">
-          <caret line="162" column="20" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/Devlog.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
@@ -903,26 +854,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/edit.js">
+    <entry file="file://$PROJECT_DIR$/utils/save.py" />
+    <entry file="file://$PROJECT_DIR$/filepathname">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="64" column="2" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="2" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/save.py">
+    <entry file="file://$PROJECT_DIR$/template2">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/template1/template2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/theTwo/template2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/auth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="17" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
             <marker date="1484037727800" expanded="true" signature="323:345" ph="SELECT user users" />
@@ -934,28 +902,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/templates/template1/template1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#77#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2720">
+          <caret line="160" column="20" selection-start-line="160" selection-start-column="16" selection-end-line="160" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/template1/template2.html">
+    <entry file="file://$PROJECT_DIR$/static/js/edit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="401">
+          <caret line="103" column="53" selection-start-line="103" selection-start-column="53" selection-end-line="103" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/savefile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="57" column="46" selection-start-line="57" selection-start-column="46" selection-end-line="57" selection-end-column="46" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
           </folding>

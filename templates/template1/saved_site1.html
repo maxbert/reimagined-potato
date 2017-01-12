@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Company Name</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/template1.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Vollkorn" rel="stylesheet">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    
+  </head>
+
+  <body>
+    
+    <nav class="nav navbar-default navbar-fixed-top" role="banner">
+      <div class="navbar-header">	
+        <div class="pull-left">
+	  <a href="#"><img id="logo" src="/static/images/generic_logo.png" style="max-height: 100%;"></a>
+	  <button type="button" class="btn btn-success">Upload Logo</button>
+	  <button type="button" class="btn btn-danger">Remove</button>
+	</div>
+      </div>  
+      <ul class="nav navbar-nav navbar-right" id="navlist">
+	<li id="navitem1"><a href="#work">WORK</a></li>
+	<li id="navitem2"><a href="#about">ABOUT</a></li>
+	<li id="navitem3"><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="spacer" style="margin-top: 15rem;"></div>
+    <button type="button" class="btn btn-info" id="adddesc">Add Company Description</button>
+    <button type="button" class="btn btn-danger" id="remdesc">Remove Company Description</button>
+    <button type="button" class="btn btn-success" id="editdesc">Edit Company Description</button>   
+
+    <div style="margin-top: 3%;" id="descholder">
+      <p id="description">
+	Place a brief description of what your company does here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    </div>
+<div id="boxholder">
+    <div class="box">
+      <div class="tile">
+	<img id="image1" src="/static/images/image1.jpeg" alt="Place image here." width="100%">
+	<div class="imgDescription">
+	  <p id="imgDescription1">Describe this image.</p>
+	  <button type="button" class="btn btn-success">Upload Picture</button>
+	  <button type="button" class="btn btn-danger">Remove</button>
+	</div>
+      </div>      
+    </div>
+
+    <div class="box">
+      <div class="tile">
+	<img id="image2" src="/static/images/image2.jpeg" alt="Place image here." width="100%">
+	<div class="imgDescription">
+	  <p id="imgDescription2">Describe this image.</p>
+	  <button type="button" class="btn btn-success">Upload Picture</button>
+	  <button type="button" class="btn btn-danger">Remove</button>
+	</div>
+      </div>      
+    </div>
+
+    <div class="box">
+      <div class="tile">
+	<img id="image3" src="/static/images/image3.jpeg" alt="Place image here." width="100%">
+	<div class="imgDescription">
+	  <p id="imgDescription3">Describe this image.</p>
+	  <button type="button" class="btn btn-success">Upload Picture</button>
+	  <button type="button" class="btn btn-danger">Remove</button>	  
+	</div>
+      </div>      
+    </div>
+    
+    <div class="box">
+      <div class="tile">
+	<img id="image4" src="/static/images/image4.jpeg" alt="Place image here." width="100%">
+	<div class="imgDescription">
+	  <p id="imgDescription4">Describe this image.</p>
+	  <button type="button" class="btn btn-success">Upload Picture</button>
+	  <button type="button" class="btn btn-danger">Remove</button>
+	</div>
+      </div>      
+    </div>
+    
+
+    <div class="box">
+      <div class="tile">
+	<img id="image5" src="/static/images/image5.jpeg" alt="Place image here." width="100%">
+	<div class="imgDescription">
+	  <p id="imgDescription5">Describe this image.</p>
+	  <button type="button" class="btn btn-success">Upload Picture</button>
+	  <button type="button" class="btn btn-danger">Remove</button>
+	</div>
+      </div>      
+    </div>
+    
+    <div class="box">
+      <div class="tile">
+	<img id="image6" src="/static/images/image6.jpeg" alt="Place image here." width="100%">
+	<div class="imgDescription">
+	  <p id="imgDescription6">Describe this image.</p>
+	  <button type="button" class="btn btn-success">Upload Picture</button>
+	  <button type="button" class="btn btn-danger">Remove</button>
+	</div>
+      </div>      
+    </div>
+
+    <div class="box">
+      <div class="tile">
+	<img id="image7" src="/static/images/image7.jpeg" alt="Place image here." width="100%">
+	<div class="imgDescription">
+	  <p id="imgDescription7">Describe this image.</p>
+	  <button type="button" class="btn btn-success">Upload Picture</button>
+	  <button type="button" class="btn btn-danger">Remove</button>
+	</div>
+      </div>      
+    </div>
+    
+    <div class="box">
+      <div class="tile">
+	<img id="image8" src="/static/images/image8.jpeg" alt="Place image here." width="100%">
+	<div class="imgDescription">
+	  <p id="imgDescription8">Describe this image.</p>
+	  <button type="button" class="btn btn-success">Upload Picture</button>
+	  <button type="button" class="btn btn-danger">Remove</button>
+	</div>
+      </div>      
+    </div>    
+
+    <div class="box">
+      <div class="tile" id="addtile">
+	<button id="addphto" type="button" class="btn btn-info">+</button>
+      </div>
+    </div>
+    
+    <div class="spacer" style="clear: both;"></div>
+    <div class="spacer" style="margin-top: 5rem;"></div>
+
+    <div id="work">
+      <h1>WORK</h1> 
+      
+    </div>
+
+    <div id="about">
+      <h1>ABOUT</h1>      
+    </div>
+
+    <div id="contact">
+      <h1>CONTACT</h1>      
+    </div>
+
+    <div class="spacer" style="margin-top: 15rem;"></div>
+    <hr style="border-top: 1px solid black;">
+    <button id="save" type="button" class="btn btn-primary btn-lg">Save</button>
+    <button id="publish" type="button" class="btn btn-success btn-lg">Publish</button>
+    
+</div>
+  
+  <script src="/static/js/edit.js"> </script>
+
+
+
+
+
+
+
+</body>
+</html>
