@@ -3,14 +3,22 @@ import hashlib, sqlite3, json, requests
 import os
 db = "../data/database.db"
 
-#saves edditing page as editting html
+def create(user,site_name,template):
+    filepathname = "%s/edit/%s.html"%(user,site_name)
+    print filepathname
+    if os.path.exists(filepathname):
+        f = open('filepathname', 'r+')
+        
+    
+#saves
 #use javascript(?) to remove the editting stuff and save as design page
-#def save():
-# 
+#def save(html):
+    if os.path.exists(filepathname):
+        f = open('filepathname' 'r+')
+    #write <html> as html of f
 
-#??
 def publish(user,site_name,html):
-	filepathname = "templates/%s/%s.html"%(user,site_name)
+	filepathname = "%s/%s.html"%(user,site_name)
 	print filepathname
 	if os.path.exists(filepathname):
 		f = open('filepathname', 'r+')
