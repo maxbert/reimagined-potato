@@ -35,6 +35,10 @@ Sarah -- 2017-01-11 1:00AM
     - Save, Publish
 - Add placeholder divs for "Work", "About", and "Contact", need content for each + buttons
 
-Max --2017-01-11 4:30 AM
+Max -- 2017-01-11 4:30 AM
 -Made the buttons for adding, removing and editing a description work
--started wroking on JS for adding photo blocks
+-started working on JS for adding photo blocks
+
+Brian -- 2017-01-11 23:15
+- Finished jQuery/AJAX implementation for saving a user's templates
+- Started work on writing to a file using AJAX data

@@ -50,15 +50,11 @@ def logout():
     if "coords" in session: session.pop("coords")
     return redirect(url_for("home"))
 
-@app.route("/save", methods = ['POST'])
+@app.route("/save/", methods = ['POST'])
 def save():
     res = request.json
     html_extract = str(res['templatehtml'])
-    global test_html_string
-    test_html_string = html_extract
-    print test_html_string
-    #write_to_file
-
+    return "this works"
 @app.route("/test_")
 def test():
     return test_html_string

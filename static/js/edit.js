@@ -62,43 +62,22 @@ imgDescription.setAttribute('id','imgDescription');
 im.appendChild(tile);
 var imDescription = document.createElement('p');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//AJAX
-		$("button#save").click(function() {
-			var data = {};
-			data.templatehtml = document.getElementsByTagName("html")[0];
-		$.ajax({
-			type: "POST",
-			url: "/save",
-			contentType: "application/json",
-			data: JSON.stringify(data)/*,
-			success: function(data){
-				var res = data['name']
-				$('.container').html(res)},
-			error: function(data){
-				$('#result').html('I failed')
+$("button#save").click(function() {
+	var data = {};
+	var html_info = document.getElementsByTagName("html")[0].innerHTML;
+	data.templatehtml = html_info;
+	$.ajax({
+		type: "POST",
+		url: "/save/",
+		contentType: "application/json",
+		data: JSON.stringify(data),
+		success: function(data){
+			console.log("success")
+		},
+		error: function(data){
+			console.log("failure")
 			}
-			*/
-		})/*
-            var firstName = document.getElementById("inputFirstName").value;
-            var lastName = document.getElementById("inputLastName").value;
-            var name = firstName + lastName;
+		});/*
             window.location.href= 'home/' + name;
             */
-		})
-
+		});
