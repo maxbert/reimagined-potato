@@ -46,6 +46,7 @@ var add = function(e){
 adddesc.addEventListener('click', add);
 
 //adding photo bloks
+/*
 var box = document.createElement('div');
 photoblock.setAttribute('class', 'box');
 var tile = document.createElement('div');
@@ -61,7 +62,7 @@ var imgDescription = document.createElement('div');
 imgDescription.setAttribute('id','imgDescription');
 im.appendChild(tile);
 var imDescription = document.createElement('p');
-
+*/
 $("button#save").click(function() {
 	var data = {};
 	var html_info = document.getElementsByTagName("html")[0].innerHTML;

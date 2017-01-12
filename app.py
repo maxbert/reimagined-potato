@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, url_for, session, redirect
 import hashlib, sqlite3, json
 from utils import auth
+from utils import savefile
 
 
 db = "data/database.db"
@@ -54,7 +55,9 @@ def logout():
 def save():
     res = request.json
     html_extract = str(res['templatehtml'])
-    return "this works"
+    savefile.publish("template1", "template2", html_extract)
+    return "success"
+
 @app.route("/test_")
 def test():
     return test_html_string
