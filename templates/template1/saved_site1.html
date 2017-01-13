@@ -16,7 +16,7 @@
     
   </head>
 
-  <body>
+  <body data-gr-c-s-loaded="true">
     
     <nav class="nav navbar-default navbar-fixed-top" role="banner">
       <div class="navbar-header">	
@@ -38,32 +38,17 @@
     <button type="button" class="btn btn-success" id="editdesc">Edit Company Description</button>   
 
     <div style="margin-top: 3%;" id="descholder">
-      <p id="description">
-	Place a brief description of what your company does here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
-    </div>
-<div id="boxholder">
-    <div class="box">
-      <div class="tile">
-	<img id="image1" src="/static/images/image1.jpeg" alt="Place image here." width="100%">
-	<div class="imgDescription">
-	  <p id="imgDescription1">Describe this image.</p>
-	  <button type="button" class="btn btn-success">Upload Picture</button>
-	  <button type="button" class="btn btn-danger">Remove</button>
+      
+    <p id="description">Place a brief description of what your company does here. Lorem ipsu dolor sit amet, consectetur adipiscing elit.</p></div>
+    <div id="boxholder">
+      <div class="box">
+	<div class="tile" id="addtile">
+	  <button id="addphto" type="button" class="btn btn-info">+</button>
 	</div>
-      </div>      
-    </div>
+      </div>
+    
 
-    <div class="box">
-      <div class="tile">
-	<img id="image2" src="/static/images/image2.jpeg" alt="Place image here." width="100%">
-	<div class="imgDescription">
-	  <p id="imgDescription2">Describe this image.</p>
-	  <button type="button" class="btn btn-success">Upload Picture</button>
-	  <button type="button" class="btn btn-danger">Remove</button>
-	</div>
-      </div>      
-    </div>
+    
 
     <div class="box">
       <div class="tile">
@@ -71,21 +56,12 @@
 	<div class="imgDescription">
 	  <p id="imgDescription3">Describe this image.</p>
 	  <button type="button" class="btn btn-success">Upload Picture</button>
-	  <button type="button" class="btn btn-danger">Remove</button>	  
+	  <button type="button" class="btn btn-danger remphto">Remove</button>	  
 	</div>
       </div>      
     </div>
     
-    <div class="box">
-      <div class="tile">
-	<img id="image4" src="/static/images/image4.jpeg" alt="Place image here." width="100%">
-	<div class="imgDescription">
-	  <p id="imgDescription4">Describe this image.</p>
-	  <button type="button" class="btn btn-success">Upload Picture</button>
-	  <button type="button" class="btn btn-danger">Remove</button>
-	</div>
-      </div>      
-    </div>
+    
     
 
     <div class="box">
@@ -94,50 +70,19 @@
 	<div class="imgDescription">
 	  <p id="imgDescription5">Describe this image.</p>
 	  <button type="button" class="btn btn-success">Upload Picture</button>
-	  <button type="button" class="btn btn-danger">Remove</button>
+	  <button type="button" class="btn btn-danger remphto">Remove</button>
 	</div>
       </div>      
     </div>
     
-    <div class="box">
-      <div class="tile">
-	<img id="image6" src="/static/images/image6.jpeg" alt="Place image here." width="100%">
-	<div class="imgDescription">
-	  <p id="imgDescription6">Describe this image.</p>
-	  <button type="button" class="btn btn-success">Upload Picture</button>
-	  <button type="button" class="btn btn-danger">Remove</button>
-	</div>
-      </div>      
-    </div>
+    
 
-    <div class="box">
-      <div class="tile">
-	<img id="image7" src="/static/images/image7.jpeg" alt="Place image here." width="100%">
-	<div class="imgDescription">
-	  <p id="imgDescription7">Describe this image.</p>
-	  <button type="button" class="btn btn-success">Upload Picture</button>
-	  <button type="button" class="btn btn-danger">Remove</button>
-	</div>
-      </div>      
-    </div>
     
-    <div class="box">
-      <div class="tile">
-	<img id="image8" src="/static/images/image8.jpeg" alt="Place image here." width="100%">
-	<div class="imgDescription">
-	  <p id="imgDescription8">Describe this image.</p>
-	  <button type="button" class="btn btn-success">Upload Picture</button>
-	  <button type="button" class="btn btn-danger">Remove</button>
-	</div>
-      </div>      
-    </div>    
+    
+        
 
-    <div class="box">
-      <div class="tile" id="addtile">
-	<button id="addphto" type="button" class="btn btn-info">+</button>
-      </div>
-    </div>
-    
+
+    <div class="box"><div class="tile"><img id="image8" src="/static/images/image8.jpeg" alt="Place image here" width="100%"><div class="imgDescription"><p id="imgDescription8">Describe this image</p><button type="button" class="btn btn-danger remphto">Remove</button><button type="button" class="btn btn-success">Upload Picture</button></div></div></div><div class="box"><div class="tile"><img id="image8" src="/static/images/image8.jpeg" alt="Place image here" width="100%"><div class="imgDescription"><p id="imgDescription8">Describe this image</p><button type="button" class="btn btn-danger remphto">Remove</button><button type="button" class="btn btn-success">Upload Picture</button></div></div></div></div>
     <div class="spacer" style="clear: both;"></div>
     <div class="spacer" style="margin-top: 5rem;"></div>
 
@@ -159,7 +104,7 @@
     <button id="save" type="button" class="btn btn-primary btn-lg">Save</button>
     <button id="publish" type="button" class="btn btn-success btn-lg">Publish</button>
     
-</div>
+
   
   <script src="/static/js/edit.js"> </script>
 

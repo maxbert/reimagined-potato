@@ -4,7 +4,7 @@
 
   <head>
 
-    <title>Company Name</title>
+    <title>{{sitetitle}}</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +25,7 @@
         <div class="pull-left">
 	  <a href="#"><img id="logo" src="/static/images/generic_logo.png" style="max-height: 100%;"></a>
 	  <button type="button" class="btn btn-success">Upload Logo</button>
-	  <button type="button" class="btn btn-danger">Remove</button>
+	  <button type="button" class="btn btn-danger remlogo">Remove</button>
 	</div>
       </div>  
       <ul class="nav navbar-nav navbar-right" id="navlist">
@@ -44,14 +44,19 @@
 	Place a brief description of what your company does here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
     </div>
-<div id="boxholder">
+    <div id="boxholder">
+      <div class="box">
+	<div class="tile" id="addtile">
+	  <button id="addphto" type="button" class="btn btn-info">+</button>
+	</div>
+      </div>
     <div class="box">
       <div class="tile">
 	<img id="image1" src="/static/images/image1.jpeg" alt="Place image here." width="100%">
 	<div class="imgDescription">
-	  <p id="imgDescription1">Describe this image.</p>
+	  <p id="imgDescription" class="imdesc">Describe this image.</p>
 	  <button type="button" class="btn btn-success">Upload Picture</button>
-	  <button type="button" class="btn btn-danger">Remove</button>
+	  <button type="button" class="btn btn-danger remphto">Remove</button>
 	</div>
       </div>      
     </div>
@@ -60,9 +65,9 @@
       <div class="tile">
 	<img id="image2" src="/static/images/image2.jpeg" alt="Place image here." width="100%">
 	<div class="imgDescription">
-	  <p id="imgDescription2">Describe this image.</p>
+	  <p id="imgDescription" class="imdesc">Describe this image.</p>
 	  <button type="button" class="btn btn-success">Upload Picture</button>
-	  <button type="button" class="btn btn-danger">Remove</button>
+	  <button type="button" class="btn btn-danger remphto">Remove</button>
 	</div>
       </div>      
     </div>
@@ -71,9 +76,9 @@
       <div class="tile">
 	<img id="image3" src="/static/images/image3.jpeg" alt="Place image here." width="100%">
 	<div class="imgDescription">
-	  <p id="imgDescription3">Describe this image.</p>
+	  <p id="imgDescription" class="imdesc">Describe this image.</p>
 	  <button type="button" class="btn btn-success">Upload Picture</button>
-	  <button type="button" class="btn btn-danger">Remove</button>	  
+	  <button type="button" class="btn btn-danger remphto">Remove</button>	  
 	</div>
       </div>      
     </div>
@@ -82,9 +87,9 @@
       <div class="tile">
 	<img id="image4" src="/static/images/image4.jpeg" alt="Place image here." width="100%">
 	<div class="imgDescription">
-	  <p id="imgDescription4">Describe this image.</p>
-	  <button type="button" class="btn btn-success">Upload Picture</button>
-	  <button type="button" class="btn btn-danger">Remove</button>
+	  <p id="imgDescription" class="imdesc">Describe this image.</p>
+	  <button type="button" class="btn btn-sccess">Upload Picture</button>
+	  <button type="button" class="btn btn-danger remphto">Remove</button>
 	</div>
       </div>      
     </div>
@@ -94,9 +99,9 @@
       <div class="tile">
 	<img id="image5" src="/static/images/image5.jpeg" alt="Place image here." width="100%">
 	<div class="imgDescription">
-	  <p id="imgDescription5">Describe this image.</p>
+	  <p id="imgDescription" class="imdesc">Describe this image.</p>
 	  <button type="button" class="btn btn-success">Upload Picture</button>
-	  <button type="button" class="btn btn-danger">Remove</button>
+	  <button type="button" class="btn btn-danger remphto">Remove</button>
 	</div>
       </div>      
     </div>
@@ -105,9 +110,9 @@
       <div class="tile">
 	<img id="image6" src="/static/images/image6.jpeg" alt="Place image here." width="100%">
 	<div class="imgDescription">
-	  <p id="imgDescription6">Describe this image.</p>
+	  <p id="imgDescription" class="imdesc">Describe this image.</p>
 	  <button type="button" class="btn btn-success">Upload Picture</button>
-	  <button type="button" class="btn btn-danger">Remove</button>
+	  <button type="button" class="btn btn-danger remphto">Remove</button>
 	</div>
       </div>      
     </div>
@@ -116,9 +121,9 @@
       <div class="tile">
 	<img id="image7" src="/static/images/image7.jpeg" alt="Place image here." width="100%">
 	<div class="imgDescription">
-	  <p id="imgDescription7">Describe this image.</p>
+	  <p id="imgDescription" class="imdesc">Describe this image.</p>
 	  <button type="button" class="btn btn-success">Upload Picture</button>
-	  <button type="button" class="btn btn-danger">Remove</button>
+	  <button type="button" class="btn btn-danger remphto">Remove</button>
 	</div>
       </div>      
     </div>
@@ -127,19 +132,15 @@
       <div class="tile">
 	<img id="image8" src="/static/images/image8.jpeg" alt="Place image here." width="100%">
 	<div class="imgDescription">
-	  <p id="imgDescription8">Describe this image.</p>
+	  <p id="imgDescription" class="imdesc">Describe this image.</p>
 	  <button type="button" class="btn btn-success">Upload Picture</button>
-	  <button type="button" class="btn btn-danger">Remove</button>
+	  <button type="button" class="btn btn-danger remphto">Remove</button>
 	</div>
       </div>      
     </div>    
 
-    <div class="box">
-      <div class="tile" id="addtile">
-	<button id="addphto" type="button" class="btn btn-info">+</button>
-      </div>
+
     </div>
-    
     <div class="spacer" style="clear: both;"></div>
     <div class="spacer" style="margin-top: 5rem;"></div>
 
