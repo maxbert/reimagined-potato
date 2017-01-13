@@ -89,7 +89,14 @@ p {
     font-size: 5vw;
 }
 
-h1 {
+.subpage {
+    display: inline;
+}
+
+.sptitle {  
     font-family: 'Montserrat', sans-serif;
     font-size: 5vw;
+    display: inline;
 }
+
+    
