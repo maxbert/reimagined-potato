@@ -86,6 +86,7 @@
     #navbar-nav {
         color: white;
         background-color: #515251;
+
     }
 
     #login {
@@ -105,6 +106,10 @@
         font-size: 300%;
     }
 
+    .content{
+        margin-top: 100px;
+    }
+
     </style>
 
 
@@ -121,7 +126,8 @@
                 <li class="active"><a href="/home/">Home</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li> View my Pages</li>
+                <li><a href="/viewmypages/">View my Pages</a></li>
+                <li><a href="/editmypages/">Edit my Pages</a></li>
                 <li><a href="/accountsettings/"><span class="glyphicon glyphicon-user"></span> Account Settings</a></li>
                 <li><a href="/logout/"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
             </ul>
@@ -129,10 +135,11 @@
 
     </nav>
 
+    <div class="content">
     {% block content %}
 
     {% endblock %}
-
+</div>
 
 </body>
 
