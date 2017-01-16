@@ -48,8 +48,14 @@ def accountsettings():
 @app.route("/logout/")
 def logout():
     if "user" in session: session.pop("user")
-    if "coords" in session: session.pop("coords")
     return redirect(url_for("home"))
+
+
+#@app.route("/mypages/")
+#def mypages():
+#    if "user" not in session:
+#        return redirect(url_for("login"))
+#    return render_template("")
 
 @app.route("/save/", methods = ['POST'])
 def save():
@@ -65,6 +71,15 @@ def test():
 @app.route("/<template>/")
 def design(template):
     temp_url = template + '/' + template + '.html'
+    return render_template(temp_url)
+
+@app.route("/<username>/edit/<site_name>")
+def edit_site(username, site_name):
+    if "user" not in session:
+        return redirect(url_for("login"))
+    if session["user"] != username:
+        return redirect(url_for("homepage"))
+    temp_url = "%s/edit/%s.html"%(username,site_name)
     return render_template(temp_url)
 
 @app.route("/<username>/<site_name>")

@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title>Company Name</title>
+    <title></title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,14 +16,14 @@
     
   </head>
 
-  <body data-gr-c-s-loaded="true">
+  <body>
     
     <nav class="nav navbar-default navbar-fixed-top" role="banner">
       <div class="navbar-header">	
         <div class="pull-left">
 	  <a href="#"><img id="logo" src="/static/images/generic_logo.png" style="max-height: 100%;"></a>
 	  <button type="button" class="btn btn-success">Upload Logo</button>
-	  <button type="button" class="btn btn-danger">Remove</button>
+	  <button type="button" class="btn btn-danger remlogo">Remove</button>
 	</div>
       </div>  
       <ul class="nav navbar-nav navbar-right" id="navlist">
@@ -38,66 +38,134 @@
     <button type="button" class="btn btn-success" id="editdesc">Edit Company Description</button>   
 
     <div style="margin-top: 3%;" id="descholder">
-      
-    <p id="description">Place a brief description of what your company does here. Lorem ipsu dolor sit amet, consectetur adipiscing elit.</p></div>
+      <p id="description">
+	Place a brief description of what your company does here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    </div>
     <div id="boxholder">
       <div class="box">
 	<div class="tile" id="addtile">
 	  <button id="addphto" type="button" class="btn btn-info">+</button>
 	</div>
       </div>
-    
+    <div class="box">
+      <div class="tile">
+	<img id="image1" src="/static/images/image1.jpeg" alt="Place image here." width="100%">
+	<div class="imgDescription">
+	  <p id="imgDescription" class="imdesc">Describe this image.</p>
+	  <button type="button" class="btn btn-success">Upload Picture</button>
+	  <button type="button" class="btn btn-danger remphto">Remove</button>
+	</div>
+      </div>      
+    </div>
 
-    
+    <div class="box">
+      <div class="tile">
+	<img id="image2" src="/static/images/image2.jpeg" alt="Place image here." width="100%">
+	<div class="imgDescription">
+	  <p id="imgDescription" class="imdesc">Describe this image.</p>
+	  <button type="button" class="btn btn-success">Upload Picture</button>
+	  <button type="button" class="btn btn-danger remphto">Remove</button>
+	</div>
+      </div>      
+    </div>
 
     <div class="box">
       <div class="tile">
 	<img id="image3" src="/static/images/image3.jpeg" alt="Place image here." width="100%">
 	<div class="imgDescription">
-	  <p id="imgDescription3">Describe this image.</p>
+	  <p id="imgDescription" class="imdesc">Describe this image.</p>
 	  <button type="button" class="btn btn-success">Upload Picture</button>
 	  <button type="button" class="btn btn-danger remphto">Remove</button>	  
 	</div>
       </div>      
     </div>
     
-    
-    
-
     <div class="box">
       <div class="tile">
-	<img id="image5" src="/static/images/image5.jpeg" alt="Place image here." width="100%">
+	<img id="image4" src="/static/images/image4.jpeg" alt="Place image here." width="100%">
 	<div class="imgDescription">
-	  <p id="imgDescription5">Describe this image.</p>
+	  <p id="imgDescription" class="imdesc">Describe this image.</p>
 	  <button type="button" class="btn btn-success">Upload Picture</button>
 	  <button type="button" class="btn btn-danger remphto">Remove</button>
 	</div>
       </div>      
     </div>
     
-    
 
+    <div class="box">
+      <div class="tile">
+	<img id="image5" src="/static/images/image5.jpeg" alt="Place image here." width="100%">
+	<div class="imgDescription">
+	  <p id="imgDescription" class="imdesc">Describe this image.</p>
+	  <button type="button" class="btn btn-success">Upload Picture</button>
+	  <button type="button" class="btn btn-danger remphto">Remove</button>
+	</div>
+      </div>      
+    </div>
     
+    <div class="box">
+      <div class="tile">
+	<img id="image6" src="/static/images/image6.jpeg" alt="Place image here." width="100%">
+	<div class="imgDescription">
+	  <p id="imgDescription" class="imdesc">Describe this image.</p>
+	  <button type="button" class="btn btn-success">Upload Picture</button>
+	  <button type="button" class="btn btn-danger remphto">Remove</button>
+	</div>
+      </div>      
+    </div>
+
+    <div class="box">
+      <div class="tile">
+	<img id="image7" src="/static/images/image7.jpeg" alt="Place image here." width="100%">
+	<div class="imgDescription">
+	  <p id="imgDescription" class="imdesc">Describe this image.</p>
+	  <button type="button" class="btn btn-success">Upload Picture</button>
+	  <button type="button" class="btn btn-danger remphto">Remove</button>
+	</div>
+      </div>      
+    </div>
     
-        
+    <div class="box">
+      <div class="tile">
+	<img id="image8" src="/static/images/image8.jpeg" alt="Place image here." width="100%">
+	<div class="imgDescription">
+	  <p id="imgDescription" class="imdesc">Describe this image.</p>
+	  <button type="button" class="btn btn-success">Upload Picture</button>
+	  <button type="button" class="btn btn-danger remphto">Remove</button>
+	</div>
+      </div>      
+    </div>    
 
 
-    <div class="box"><div class="tile"><img id="image8" src="/static/images/image8.jpeg" alt="Place image here" width="100%"><div class="imgDescription"><p id="imgDescription8">Describe this image</p><button type="button" class="btn btn-danger remphto">Remove</button><button type="button" class="btn btn-success">Upload Picture</button></div></div></div><div class="box"><div class="tile"><img id="image8" src="/static/images/image8.jpeg" alt="Place image here" width="100%"><div class="imgDescription"><p id="imgDescription8">Describe this image</p><button type="button" class="btn btn-danger remphto">Remove</button><button type="button" class="btn btn-success">Upload Picture</button></div></div></div></div>
+    </div>
     <div class="spacer" style="clear: both;"></div>
     <div class="spacer" style="margin-top: 5rem;"></div>
+    <hr>
 
-    <div id="work">
-      <h1>WORK</h1> 
-      
+    <div class="subpage" id="work"> 
+      <div class="sptitle">WORK </div>
+	  <button style="margin-top: -2.5rem;" type="button" class="btn btn-success">Edit Subpage Name</button>
+	  <button style="margin-top: -2.5rem;" type="button" class="btn btn-danger">Remove</button>
     </div>
+    <hr>
 
-    <div id="about">
-      <h1>ABOUT</h1>      
+    <div class="subpage" id="about"> 
+      <div class="sptitle">ABOUT </div>
+	  <button style="margin-top: -2.5rem;" type="button" class="btn btn-success">Edit Subpage Name</button>
+	  <button style="margin-top: -2.5rem;" type="button" class="btn btn-danger">Remove</button>
     </div>
+    <hr>
 
-    <div id="contact">
-      <h1>CONTACT</h1>      
+    <div class="subpage" id="contact"> 
+      <div class="sptitle">CONTACT </div>
+	  <button style="margin-top: -2.5rem;" type="button" class="btn btn-success">Edit Subpage Name</button>
+	  <button style="margin-top: -2.5rem;" type="button" class="btn btn-danger">Remove</button>
     </div>
+    <hr>
+    
+    <div class="spacer" style="margin-top:5rem;"></div>
+    <button type="button" class="btn btn-info btn-lg">Add Subpage</button>    	 
 
     <div class="spacer" style="margin-top: 15rem;"></div>
     <hr style="border-top: 1px solid black;">
