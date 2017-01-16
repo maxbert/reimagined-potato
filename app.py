@@ -68,12 +68,15 @@ def viewmypages():
 def save():
     res = request.json
     html_extract = str(res['templatehtml'])
-    savefile.publish("template1", "saved_site1", html_extract)
+    savefile.save(session.user, "saved_site1", html_extract)
     return "success"
 
-@app.route("/test_")
-def test():
-    return test_html_string
+@app.route("/publish/")
+def publish():
+    res = request.json
+    html_extract = str(res['templatehtml'])
+    savefile.publish(session.user, "saved_site1", html_extract)
+    return "success"
 
 @app.route("/<template>/")
 def design(template):

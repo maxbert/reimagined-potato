@@ -6,10 +6,24 @@ db1 = "data/database.db"
 #saves
 #use javascript(?) to remove the editting stuff and save as design page
 
+def save(user,site_name,html):
+    actual_html = "<!DOCTYPE html>\n<html>\n" + html + "\n</html>"
+    dirname = "templates/" + user + "/edit"
+    filepathname = "templates/" + "%s/edit/%s.html"%(user,site_name)
+    if os.path.exists(dirname):
+        f = open(filepathname, 'w+')
+        f.write(actual_html)
+    else:
+        os.mkdir(dirname)
+        f = open(filepathname, 'w+')
+        f.write(actual_html)
+    return "xd"
+
+
 def publish(user,site_name,html):
     actual_html = "<!DOCTYPE html>\n<html>\n" + html + "\n</html>"
-    dirname = "templates/" + user
-    filepathname = "templates/" + "%s/%s.html"%(user,site_name)
+    dirname = "templates/" + user + "/final"
+    filepathname = "templates/" + "%s/final/%s.html"%(user,site_name)
     if os.path.exists(dirname):
         f = open(filepathname, 'w+')
         f.write(actual_html)
