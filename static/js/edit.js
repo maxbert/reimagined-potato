@@ -135,7 +135,9 @@ for( i = 0; i<imdescs; i++){
 $("button#save").click(function() {
 	var data = {};
 	var html_info = document.getElementsByTagName("html")[0].innerHTML;
+    var title = document.title;
 	data.templatehtml = html_info;
+    data.title = title;
 	$.ajax({
 		type: "POST",
 		url: "/save/",
@@ -150,4 +152,25 @@ $("button#save").click(function() {
 		});/*
             window.location.href= 'home/' + name;
             */
-		});
+});
+$("button#publish").click(function() {
+	var data = {};
+	var html_info = document.getElementsByTagName("html")[0].innerHTML;
+    var title = document.title;
+	data.templatehtml = html_info;
+    data.title = title;
+	$.ajax({
+		type: "POST",
+		url: "/publish/",
+		contentType: "application/json",
+		data: JSON.stringify(data),
+		success: function(data){
+			alert("Your site was successfully published")
+		},
+		error: function(data){
+			console.log("failure")
+			}
+		});/*
+            window.location.href= 'home/' + name;
+            */
+});

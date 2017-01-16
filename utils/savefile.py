@@ -8,13 +8,17 @@ db1 = "data/database.db"
 
 def save(user,site_name,html):
     actual_html = "<!DOCTYPE html>\n<html>\n" + html + "\n</html>"
-    dirname = "templates/" + user + "/edit"
+    dirname = "templates/" + user
     filepathname = "templates/" + "%s/edit/%s.html"%(user,site_name)
     if os.path.exists(dirname):
         f = open(filepathname, 'w+')
         f.write(actual_html)
     else:
         os.mkdir(dirname)
+        editdirname = dirname + "/edit"
+        os.mkdir(editdirname)
+        finaldirname = dirname + "/final"
+        os.mkdir(finaldirname)
         f = open(filepathname, 'w+')
         f.write(actual_html)
     return "xd"
@@ -22,13 +26,17 @@ def save(user,site_name,html):
 
 def publish(user,site_name,html):
     actual_html = "<!DOCTYPE html>\n<html>\n" + html + "\n</html>"
-    dirname = "templates/" + user + "/final"
+    dirname = "templates/" + user
     filepathname = "templates/" + "%s/final/%s.html"%(user,site_name)
     if os.path.exists(dirname):
         f = open(filepathname, 'w+')
         f.write(actual_html)
     else:
         os.mkdir(dirname)
+        editdirname = dirname + "/edit"
+        os.mkdir(editdirname)
+        finaldirname = dirname + "/final"
+        os.mkdir(finaldirname)
         f = open(filepathname, 'w+')
         f.write(actual_html)
     return "xd"
