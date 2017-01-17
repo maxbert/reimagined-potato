@@ -3,8 +3,26 @@ import hashlib, sqlite3, json, requests
 import os
 db1 = "data/database.db"
 
-#saves
-#use javascript(?) to remove the editting stuff and save as design page
+def db_addpath(user,filepath):
+    db = sqlite3.connect(db1)
+    c = db.cursor()
+    query = "SELECT * FROM users"
+    dbPages = c.execute(query)
+    for entry in dbPages:
+        if (entry[0] == user):
+            pages = entry[2]
+            break
+    pagesArr = pages.split(",")
+    for entry in pagesArr:
+        if (entry == filepath):
+            return "AlreadyIN"
+    updatedsites = pages + filepath + ","
+    updateQuery = "UPDATE users SET sites = \'%s\' WHERE user = \'%s\'"%(updatedsites,user)
+    c.execute(updateQuery)
+    print updatedsites
+    db.commit()
+    db.close()
+
 
 def save(user,site_name,html):
     actual_html = "<!DOCTYPE html>\n<html>\n" + html + "\n</html>"
@@ -17,17 +35,19 @@ def save(user,site_name,html):
         os.mkdir(dirname)
         editdirname = dirname + "/edit"
         os.mkdir(editdirname)
-        finaldirname = dirname + "/final"
-        os.mkdir(finaldirname)
+        publishdirname = dirname + "/publish"
+        os.mkdir(publishdirname)
         f = open(filepathname, 'w+')
         f.write(actual_html)
+    filepath = "/edit/%s.html"%(site_name)
+    db_addpath(user,filepath)
     return "xd"
 
 
 def publish(user,site_name,html):
     actual_html = "<!DOCTYPE html>\n<html>\n" + html + "\n</html>"
     dirname = "templates/" + user
-    filepathname = "templates/" + "%s/final/%s.html"%(user,site_name)
+    filepathname = "templates/" + "%s/publish/%s.html"%(user,site_name)
     if os.path.exists(dirname):
         f = open(filepathname, 'w+')
         f.write(actual_html)
@@ -35,10 +55,12 @@ def publish(user,site_name,html):
         os.mkdir(dirname)
         editdirname = dirname + "/edit"
         os.mkdir(editdirname)
-        finaldirname = dirname + "/final"
-        os.mkdir(finaldirname)
+        publishdirname = dirname + "/publish"
+        os.mkdir(publishdirname)
         f = open(filepathname, 'w+')
         f.write(actual_html)
+    filepath = "/publish/%s.html"%(site_name)
+    db_addpath(user,filepath)
     return "xd"
 
 
@@ -60,9 +82,10 @@ def getpages(username,editpublish):
     pagesArr = pages.split(",")
     print pagesArr
     for entry in pagesArr:
+        print entry
         dir = entry.split("/")
         print dir
-        if (dir[1] == editpublish):
+        if (len(dir)>2 and dir[1] == editpublish):
             pagesArr2.append(entry)
 
     mypages_count=0
