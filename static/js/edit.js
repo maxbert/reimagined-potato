@@ -112,24 +112,19 @@ var rmlogo = function(e){
 var remlogo = document.getElementsByClassName('remlogo')[0];
 remlogo.addEventListener("click", rmlogo);
 
-var revphdesc = function(e){
-    var newphdesc = this.parentElement.getElementsByTagName("textarea")[0].value;
-    this.parentElement.innerHTML = newphdesc;
-}
-
 var edphdesc = function(e){
-    console.log(this.innerHTML);
-    this.innerHTML = '<textarea rows="0" cols="0" id="phdescentry">' + this.innerHTML + '</textarea><br><button id = "phsubdesc'+ imgcount + '" > done editing </button><br>';
-    var phsub = document.getElementById("phsubdesc" + imgcount);
-    phsub.addEventListener('click', revphdesc);
-    imgcount += 1;
+    console.log("test");
+    var phdesc = prompt("Enter an image description", this.innerHTML);
+    this.innerHTML = phdesc;
 };
 
 
     
 var imdescs = document.getElementsByClassName("imdesc");
 i = 0;
-for( i = 0; i<imdescs; i++){
+console.log(imdescs);
+for(i; i<imdescs.length; i++){
+    console.log("added event listener");
     imdescs[i].addEventListener('click', edphdesc);
 };
 $("button#save").click(function() {
