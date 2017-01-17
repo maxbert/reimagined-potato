@@ -64,6 +64,15 @@ def viewmypages():
     mypages_str=savefile.getpages(session["user"],"publish")
     return render_template("viewmypages.html", mypages_html=mypages_str)
 
+@app.route("/templateselector/", methods = ['POST'])
+def templateselector():
+    if "user" not in session:
+        return redirect(url_for("login"))
+    f=open("templates/template1/%s.html"%(request.form["template"]),'r')
+    templatehtml = f.read()
+    savefile.save(session["user"],request.form["site_name"], templatehtml)
+    return redirect(url_for("edit_site(%s,%s)"%(session["user"],request.form["site_name"]))
+
 @app.route("/save/", methods = ['POST'])
 def save():
     res = request.json
