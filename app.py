@@ -71,7 +71,8 @@ def templateselector():
     f=open("templates/template1/%s.html"%(request.form["template"]),'r')
     templatehtml = f.read()
     savefile.save(session["user"],request.form["site_name"], templatehtml)
-    return redirect(url_for("edit_site(%s,%s)"%(session["user"],request.form["site_name"])))
+    site_name1=request.form["site_name"]
+    return redirect(url_for("edit_site",username=session["user"],site_name=site_name1))
 
 @app.route("/save/", methods = ['POST'])
 def save():
@@ -101,7 +102,7 @@ def edit_site(username, site_name):
     if session["user"] != username:
         return redirect(url_for("homepage"))
     temp_url = "%s/edit/%s.html"%(username,site_name)
-    return render_template(temp_url)
+    return render_template(temp_url,sitetitle=site_name)
 
 @app.route("/<username>/<site_name>")
 def hosted_site(username, site_name):
