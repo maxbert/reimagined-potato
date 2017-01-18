@@ -42,3 +42,8 @@ Max -- 2017-01-11 4:30 AM
 Brian -- 2017-01-11 23:15
 - Finished jQuery/AJAX implementation for saving a user's templates
 - Started work on writing to a file using AJAX data
+
+Max -- 2017-01-17 12:30 AM
+-added form inputs for uplaoding a file
+-descriptions of photos can now be changed
+-this is really hard

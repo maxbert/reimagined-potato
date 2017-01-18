@@ -115,7 +115,9 @@ remlogo.addEventListener("click", rmlogo);
 var edphdesc = function(e){
     console.log("test");
     var phdesc = prompt("Enter an image description", this.innerHTML);
-    this.innerHTML = phdesc;
+    if(phdesc != null){
+	this.innerHTML = phdesc;
+    }
 };
 
 
@@ -124,48 +126,59 @@ var imdescs = document.getElementsByClassName("imdesc");
 i = 0;
 console.log(imdescs);
 for(i; i<imdescs.length; i++){
-    console.log("added event listener");
     imdescs[i].addEventListener('click', edphdesc);
 };
+
+//upload!
+
+var uploads = document.getElementsByClassName("uphto");
+i = 0;
+for(i; i<uploads.length; i++){
+    uploads[i].addEventListener('click', uplphto);
+}
+
+var uplphto = function(e){
+}; 
+
 $("button#save").click(function() {
-	var data = {};
-	var html_info = document.getElementsByTagName("html")[0].innerHTML;
+    var data = {};
+    var html_info = document.getElementsByTagName("html")[0].innerHTML;
     var title = document.title;
-	data.templatehtml = html_info;
+    data.templatehtml = html_info;
     data.title = title;
-	$.ajax({
-		type: "POST",
-		url: "/save/",
-		contentType: "application/json",
-		data: JSON.stringify(data),
-		success: function(data){
-			alert("Your site was successfully saved")
-		},
-		error: function(data){
-			console.log("failure")
-			}
-		});/*
-            window.location.href= 'home/' + name;
-            */
+    $.ajax({
+	type: "POST",
+	url: "/save/",
+	contentType: "application/json",
+	data: JSON.stringify(data),
+	success: function(data){
+	    alert("Your site was successfully saved")
+	},
+	error: function(data){
+	    console.log("failure")
+	}
+    });/*
+         window.location.href= 'home/' + name;
+       */
 });
-$("button#publish").click(function() {
-	var data = {};
-	var html_info = document.getElementsByTagName("html")[0].innerHTML;
+$("button#publish").click(function(e) {
+    var data = {};
+    var html_info = document.getElementsByTagName("html")[0].innerHTML;
     var title = document.title;
-	data.templatehtml = html_info;
+    data.templatehtml = html_info;
     data.title = title;
-	$.ajax({
-		type: "POST",
-		url: "/publish/",
-		contentType: "application/json",
-		data: JSON.stringify(data),
-		success: function(data){
-			alert("Your site was successfully published")
-		},
-		error: function(data){
-			console.log("failure")
-			}
-		});/*
-            window.location.href= 'home/' + name;
-            */
+    $.ajax({
+ 	type: "POST",
+	url: "/publish/",
+	contentType: "application/json",
+	data: JSON.stringify(data),
+	success: function(data){
+	    alert("Your site was successfully published")
+	},
+	error: function(data){
+	    console.log("failure")
+	}
+    });/*
+         window.location.href= 'home/' + name;
+       */
 });

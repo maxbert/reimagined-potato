@@ -71,7 +71,7 @@ def templateselector():
     f=open("templates/template1/%s.html"%(request.form["template"]),'r')
     templatehtml = f.read()
     savefile.save(session["user"],request.form["site_name"], templatehtml)
-    return redirect(url_for("edit_site(%s,%s)"%(session["user"],request.form["site_name"]))
+    return redirect(url_for("edit_site(%s,%s)"%(session["user"],request.form["site_name"])))
 
 @app.route("/save/", methods = ['POST'])
 def save():
