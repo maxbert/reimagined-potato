@@ -39,7 +39,7 @@ def save(user,site_name,html):
         os.mkdir(publishdirname)
         f = open(filepathname, 'w+')
         f.write(actual_html)
-    filepath = "/edit/%s.html"%(site_name)
+    filepath = "/edit/%s"%(site_name)
     db_addpath(user,filepath)
     return "xd"
 
@@ -59,7 +59,7 @@ def publish(user,site_name,html):
         os.mkdir(publishdirname)
         f = open(filepathname, 'w+')
         f.write(actual_html)
-    filepath = "/publish/%s.html"%(site_name)
+    filepath = "/publish/%s"%(site_name)
     db_addpath(user,filepath)
     return "xd"
 
@@ -90,7 +90,8 @@ def getpages(username,editpublish):
 
     mypages_count=0
     for entry in pagesArr2:
-        mypages_str+= "<a href=%s> %s </a><br>"%(entry, entry.split("/")[2])
+        print entry
+        mypages_str+= "<a href=%s/%s> %s </a><br>"%(username,entry, entry.split("/")[2])
         mypages_count+=1
     if (mypages_count == 0): mypages_str+= "You currently have no sites."
     return mypages_str
