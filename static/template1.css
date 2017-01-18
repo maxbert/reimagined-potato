@@ -23,7 +23,7 @@ li:hover {
     border-bottom: 1px solid #333;
 }
 
-p {
+#description {
     font-family: 'Vollkorn', serif;
     font-size: 3vw;
     margin-bottom: 7%;
@@ -53,6 +53,11 @@ p {
 
 .tile:hover .imgDescription{
     opacity: 1;
+}
+
+#imgDescription {
+    font-family: 'Vollkorn';
+    font-size: 2vw;
 }
 
 .tile img {
@@ -99,4 +104,12 @@ p {
     display: inline;
 }
 
-    
+.pName {
+    font-family: 'Dosis';
+    font-size: 2vw;
+}
+
+.pDescription {
+    font-family: 'Roboto';
+    font-size: 1.5vw;
+}
