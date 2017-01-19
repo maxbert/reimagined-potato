@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/static/template1.css">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Vollkorn|Roboto|Dosis" rel="stylesheet">
-        
+    
   </head>
 
   <body>
@@ -53,7 +53,8 @@
 	  <div class="imgDescription">
 	    <p id="imgDescription" class="imdesc">Describe this image.</p>
 	    <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-	    <button type="button" class="btn btn-danger btn-xs">Remove</button>	  
+	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	    <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
 	    <br><br>
 	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 	      <input type="file" class="form-control" name="upload1"> 	    
@@ -71,7 +72,8 @@
 	  <div class="imgDescription">
 	    <p id="imgDescription" class="imdesc">Describe this image.</p>
 	    <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-	    <button type="button" class="btn btn-danger btn-xs">Remove</button>	  
+	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	    <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
 	    <br><br>
 	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 	      <input type="file" class="form-control" name="upload2">
@@ -89,7 +91,8 @@
 	  <div class="imgDescription">
 	    <p id="imgDescription" class="imdesc">Describe this image.</p>
 	    <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-	    <button type="button" class="btn btn-danger btn-xs">Remove</button>	  
+	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	    <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
 	    <br><br>
 	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 	      <input type="file" class="form-control" name="upload3">
@@ -107,7 +110,8 @@
 	  <div class="imgDescription">
 	    <p id="imgDescription" class="imdesc">Describe this image.</p>
 	    <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-	    <button type="button" class="btn btn-danger btn-xs">Remove</button>	  
+	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	    <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
 	    <br><br>
 	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 	      <input type="file" class="form-control" name="upload4">
@@ -127,7 +131,8 @@
 
 	    <p id="imgDescription" class="imdesc">Describe this image.</p>
 	    <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-	    <button type="button" class="btn btn-danger btn-xs">Remove</button>	  
+	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	    <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
 	    <br><br>
 	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 	      <input type="file" class="form-control" name="upload5">
@@ -145,7 +150,8 @@
 	  <div class="imgDescription">
 	    <p id="imgDescription" class="imdesc">Describe this image.</p>
 	    <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-	    <button type="button" class="btn btn-danger btn-xs">Remove</button>	  
+	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	    <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
 	    <br><br>
 	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 	      <input type="file" class="form-control" name="upload6">
@@ -163,7 +169,8 @@
 	  <div class="imgDescription">
 	    <p id="imgDescription" class="imdesc">Describe this image.</p>
 	    <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-	    <button type="button" class="btn btn-danger btn-xs">Remove</button>	  
+	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	    <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
 	    <br><br>
 	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 	      <input type="file" class="form-control" name="upload7">
@@ -181,7 +188,8 @@
 	  <div class="imgDescription">
 	    <p id="imgDescription" class="imdesc">Describe this image.</p>
 	    <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-	    <button type="button" class="btn btn-danger btn-xs">Remove</button>	  
+	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	    <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
 	    <br><br>
 	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 	      <input type="file" class="form-control" name="upload8">	  
@@ -196,10 +204,32 @@
     </div>
     <div class="spacer" style="clear: both;"></div>
     <div class="spacer" style="margin-top: 5rem;"></div>
+    <button type="button" class="btn btn-info btn-lg">Add Subpage</button>
+    <div class="spacer" style="margin-top:5rem;"></div>   
+    <hr>
+    
+    <div class="spacer" style="margin-top:5rem;"></div>        
+    <div class="subpage" id="newSubpage">
+      <div class="sptitle">NEW SUBPAGE </div>
+      <button style="margin-top: -2.5rem;" type="button" class="btn btn-success">Edit Subpage Name</button>
+      <button style="margin-top: -2.5rem;" type="button" class="btn btn-danger">Remove</button>
+      <br><br>
+      <div class="dropdown">
+	<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+	  Add Element
+	</button>
+	<ul class="dropdown-menu">
+	  <li><button type="button" class="dropdown-item">About Us</button></li>
+	  <li><button type="button" class="dropdown-item">Contact Info</button></li>
+	  <li><button type="button" class="dropdown-item">Image Carousel</button></li>
+	  <li><button type="button" class="dropdown-item">Paragraph</button></li>
+	</ul>
+      </div>
+    </div>
+    <div class="spacer" style="margin-top:5rem;"></div>
     <hr>
 
-    <div class="subpage" id="about">
-      
+    <div class="subpage" id="about">      
       <div class="sptitle">ABOUT </div>
       <button style="margin-top: -2.5rem;" type="button" class="btn btn-success">Edit Subpage Name</button>
       <button style="margin-top: -2.5rem;" type="button" class="btn btn-danger">Remove</button>
@@ -207,9 +237,9 @@
       
       <div class="row">
 	<div class="col-md-4">
-	   <center>
-	     <button type="button" class="btn btn-info btn-lg" style="width:250px; height:250px; font-size: 5vw;">+</button>
-	   </center>
+	  <center>
+	    <button type="button" class="btn btn-info btn-lg" style="width:250px; height:250px; font-size: 5vw;">+</button>
+	  </center>
 	</div>
 	
 	<div class="col-md-4">
@@ -295,7 +325,7 @@
 	  </center>
 	</div>	
 	
-	 <div class="col-md-4">
+	<div class="col-md-4">
 	  <center>
 	    <img id="pImg4" class="img-circle" src="/static/images/image8.jpeg" alt="Place image here." height="250" width="250">
 	    <br><br>
@@ -319,7 +349,7 @@
 	    </div>
 	    <br><button type="button" class="btn btn-danger">Remove Section</button>
 	  </center>
-	 </div>
+	</div>
       </div>
       <div class="spacer" style="margin-top: 5rem;"></div>
     </div>
@@ -344,43 +374,17 @@
       <button type="button" class="btn btn-info">Add Contact Info</button>
       <button type="button" class="btn btn-success">Edit Contact Info</button>
       <button type="button" class="btn btn-danger">Remove</button>
-    </div>
-    <hr>
-    
-    <div class="spacer" style="margin-top:5rem;"></div>
-    
-    <button type="button" class="btn btn-info btn-lg">Add Subpage</button>
-    <div class="spacer" style="margin-top:5rem;"></div>
-    
-    <div class="subpage" id="newSubpage">
-      <div class="sptitle">NEW SUBPAGE </div>
-      <button style="margin-top: -2.5rem;" type="button" class="btn btn-success">Edit Subpage Name</button>
-      <button style="margin-top: -2.5rem;" type="button" class="btn btn-danger">Remove</button>
-      <br><br>
-      <div class="dropdown">
-	<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
-	  Add Element
-	</button>
-	<ul class="dropdown-menu">
-	  <li><button type="button" class="dropdown-item">About Us</a></li>
-	  <li><button type="button" class="dropdown-item">Contact Info</a></li>
-	  <li><button type="button" class="dropdown-item">Image Carousel</a></li>
-	  <li><button type="button" class="dropdown-item">Paragraph</a></li>
-	</ul>
-      </div>
-    </div>
-    
-
+    </div>    
     <div class="spacer" style="margin-top: 15rem;"></div>
     <hr style="border-top: 1px solid black;">
     <button id="save" type="button" class="btn btn-primary btn-lg">Save</button>
     <button id="publish" type="button" class="btn btn-success btn-lg">Publish</button>
-    
+
 
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="static/bootstrap/js/bootstrap.min.js"></script>
     <script src="/static/js/edit.js"> </script>
-</body>
+  </body>
 
 </html>
 
