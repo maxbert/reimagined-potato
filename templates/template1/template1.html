@@ -13,9 +13,7 @@
     <link rel="stylesheet" href="/static/template1.css">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Vollkorn|Roboto|Dosis" rel="stylesheet">
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    
+        
   </head>
 
   <body>
@@ -350,16 +348,39 @@
     <hr>
     
     <div class="spacer" style="margin-top:5rem;"></div>
-    <button type="button" class="btn btn-info btn-lg">Add Subpage</button>    	 
+    
+    <button type="button" class="btn btn-info btn-lg">Add Subpage</button>
+    <div class="spacer" style="margin-top:5rem;"></div>
+    
+    <div class="subpage" id="newSubpage">
+      <div class="sptitle">NEW SUBPAGE </div>
+      <button style="margin-top: -2.5rem;" type="button" class="btn btn-success">Edit Subpage Name</button>
+      <button style="margin-top: -2.5rem;" type="button" class="btn btn-danger">Remove</button>
+      <br><br>
+      <div class="dropdown">
+	<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+	  Add Element
+	</button>
+	<ul class="dropdown-menu">
+	  <li><button type="button" class="dropdown-item">About Us</a></li>
+	  <li><button type="button" class="dropdown-item">Contact Info</a></li>
+	  <li><button type="button" class="dropdown-item">Image Carousel</a></li>
+	  <li><button type="button" class="dropdown-item">Paragraph</a></li>
+	</ul>
+      </div>
+    </div>
+    
 
     <div class="spacer" style="margin-top: 15rem;"></div>
     <hr style="border-top: 1px solid black;">
     <button id="save" type="button" class="btn btn-primary btn-lg">Save</button>
     <button id="publish" type="button" class="btn btn-success btn-lg">Publish</button>
     
-</div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/js/edit.js"> </script>
 </body>
-<script src="/static/js/edit.js"> </script>
 
 </html>
 
