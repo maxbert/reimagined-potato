@@ -91,7 +91,7 @@ def getpages(username,editpublish):
     mypages_count=0
     for entry in pagesArr2:
         print entry
-        mypages_str+= "<a href=%s%s> %s </a><br>"%(username,entry, entry.split("/")[2])
+        mypages_str+= "<a href=../%s%s> %s </a><br>"%(username,entry, entry.split("/")[2])
         mypages_count+=1
     if (mypages_count == 0): mypages_str+= "You currently have no sites."
     return mypages_str
