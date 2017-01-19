@@ -136,8 +136,15 @@ i = 0;
 for(i; i<uploads.length; i++){
     uploads[i].addEventListener('click', uplphto);
 }
-
+var stop = function(e){
+    event.preventDefault();
+}
 var uplphto = function(e){
+    var form = this.getParentElement();
+    var file_selector = this.getParentElement.getElementsByClassName("form-control")[0];
+    var form_submit = this;
+    form.onsubmit = stop 
+    
 }; 
 
 $("button#save").click(function() {
