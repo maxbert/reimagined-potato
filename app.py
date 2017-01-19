@@ -112,3 +112,14 @@ def hosted_site(username, site_name):
 if __name__ == "__main__":
     app.debug = True
     app.run()
+
+@app.route("/editmypages/<username>/edit/<site_name>")
+def edit_site(username, site_name):
+    print "test"
+    if "user" not in session:
+        return redirect(url_for("login"))
+    if session["user"] != username:
+        return redirect(url_for("homepage"))
+    temp_url = "%s/edit/%s.html"%(username,site_name)
+    print temp_url
+    return render_template(temp_url,sitetitle=site_name)
