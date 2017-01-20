@@ -47,43 +47,32 @@ adddesc.addEventListener('click', add);
 
 //adding photo bloks
 
-var addPhotoBlock = function(e){
-    var box = document.createElement('div');
-    box.setAttribute('class', 'box');
-    var tile = document.createElement('div');
-    tile.setAttribute('class', 'tile');
-    box.appendChild(tile);
-    var im = document.createElement('img');
-    im.setAttribute('id', 'image8');
-    im.setAttribute('src', '/static/images/image8.jpeg');
-    im.setAttribute('alt', 'Place image here');
-    im.setAttribute('width', '100%');
-    tile.appendChild(im);
-    var imgDescription = document.createElement('div');
-    imgDescription.setAttribute('class','imgDescription');
-    tile.appendChild(imgDescription);
-    var imDescription = document.createElement('p');
-    imDescription.setAttribute('id','imgDescription8');
-    var imdesc = document.createTextNode('Describe this image');
-    imDescription.appendChild(imdesc);
-    imgDescription.appendChild(imDescription);
-    var but1 = document.createElement('button');
-    but1.setAttribute('type', 'button');
-    but1.setAttribute('class', 'btn btn-success');
-    var but2 = document.createElement('button');
-    but2.setAttribute('type', 'button');
-    but2.setAttribute('class', 'btn btn-danger remphto');
-    but2.addEventListener('click', rmphto);
-    imgDescription.appendChild(but2);
-    var but1desc = document.createTextNode('Upload Picture');
-    but1.appendChild(but1desc);
-    var but2desc = document.createTextNode('Remove');
-    but2.appendChild(but2desc);
-    var holder = document.getElementById('boxholder');
-    imgDescription.appendChild(but1);
-    holder.appendChild(box);
-    console.log('done?');
+var addPhotoBlock = function(e){    
+    var newhtml = document.createTextNode('''
+      <div class="box">
+	<div class="tile">
+	  <img id="image2" src="/static/images/image2.jpeg" alt="Place image here." width="100%">
+	  <div class="imgDescription">
+	    <p id="imgDescription" class="imdesc">Describe this image.</p>
+	    <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
+	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	    <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+	    <br><br>
+	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+	      <input type="file" class="form-control" name="upload2">
+	      <button type="button" class="btn btn-success uphto">Upload File</button>
+	    </form>
+	    <br>
+	    <button type="button" class="btn btn-danger remphto">Remove Block</button>
+	  </div>
+	</div>      
+      </div>
+''');
     
+    
+    var but2 = newhtml.getElementsByClassName("remphto")[0];
+    but2.addEventListener('click', rmphto);
+    this.getParentElement.appendChild(newhtml);
 };
 
 
