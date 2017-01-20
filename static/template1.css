@@ -10,7 +10,7 @@ body {
     padding-right: 5%;
 }
 
-li {
+nav-element {
     margin-top: 20px;
     color: black;
     font-family: 'Montserrat', sans-serif;
@@ -19,7 +19,7 @@ li {
     -webkit-transition: border 300ms ease;
 }
 
-li:hover {
+nav-element:hover {
     border-bottom: 1px solid #333;
 }
 
