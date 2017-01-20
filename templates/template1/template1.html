@@ -215,16 +215,16 @@
       <button style="margin-top: -2.5rem;" type="button" class="btn btn-danger">Remove</button>
       <br><br>
 
-      <!--<div class="dropdown">
-	<button id="dLabel" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div class="dropdown">
+	<button onclick = "actionDropDown()" id="dLabel" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	  Add Element <span class="caret"></span>
 	</button>
-	<ul class="dropdown-menu" aria-labelledby="dLabel">
+	<ul id = "action-dropdown" class="dropdown-menu" aria-labelledby="dLabel">
 	  <li><a href="#">Action</a></li>
 	  <li><a href="#">Another action</a></li>
 	  <li><a href="#">Something else here</a></li>
 	</ul>
-      </div> I don't know why this shit won't work!!! -->
+      </div>
       
     </div>
     <div class="spacer" style="margin-top:5rem;"></div>
@@ -385,12 +385,18 @@
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="static/bootstrap/js/bootstrap.min.js"></script>
     <script src="/static/js/edit.js"> </script>
-    <!--<script type = "text/javascript">
-      window.onclick = function(event) {
-      if(!event.target.matches('.dropdown-toggle')) {
-
-      }
-    </script>-->
+    <script type = "text/javascript">
+		function actionDropDown() {
+			document.getElementById("action-dropdown").classList.toggle("show");
+		}
+      	window.onclick = function(event) {
+		  if (!event.target.matches('.dropdown-toggle')) {
+			if(document.getElementById("action-dropdown").classList.contains('show')) {
+				document.getElementById("action-dropdown").classList.remove('show');
+			}
+		  }
+	  }
+    </script>
   </body>
 
 </html>
