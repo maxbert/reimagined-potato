@@ -64,7 +64,7 @@ def publish(user,site_name,html):
     return "xd"
 
 
-def getpages(username,editpublish):
+def getpages(username,editpublish,withLinks):
     db = sqlite3.connect(db1)
     c = db.cursor()
     query = "SELECT * FROM users"
@@ -88,13 +88,17 @@ def getpages(username,editpublish):
         if (len(dir)>2 and dir[1] == editpublish):
             pagesArr2.append(entry)
 
-    mypages_count=0
-    for entry in pagesArr2:
-        print entry
-        mypages_str+= "<a href=../%s%s> %s </a><br>"%(username,entry, entry.split("/")[2])
+    if (withLinks):
+        mypages_count=0
+        for entry in pagesArr2:
+            print entry
+            mypages_str+= "<a href=../%s%s> %s </a><br>"%(username,entry, entry.split("/")[2])
         mypages_count+=1
-    if (mypages_count == 0): mypages_str+= "You currently have no sites."
+        
+    if (mypages_count == 0):
+        mypages_str+= "You currently have no sites."
     return mypages_str
+        
 
 
 

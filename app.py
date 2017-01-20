@@ -54,14 +54,14 @@ def logout():
 def editmypages():
     if "user" not in session:
         return redirect(url_for("login"))
-    mypages_str=savefile.getpages(session["user"],"edit")
+    mypages_str=savefile.getpages(session["user"],"edit",True)
     return render_template("editmypages.html", mypages_html=mypages_str)
 
 @app.route("/viewmypages/")
 def viewmypages():
     if "user" not in session:
         return redirect(url_for("login"))
-    mypages_str=savefile.getpages(session["user"],"publish")
+    mypages_str=savefile.getpages(session["user"],"publish",True)
     return render_template("viewmypages.html", mypages_html=mypages_str)
 
 @app.route("/templateselector/", methods = ['POST'])
