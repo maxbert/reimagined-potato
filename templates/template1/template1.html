@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/static/template1.css">
 
@@ -224,16 +225,24 @@
 	<ul id = "action-dropdown" class="dropdown-menu" aria-labelledby="dLabel">
 	  <li><a class="dropdown-item" id="addParagraphSerif" href="#addition">Paragraph - Serif, Large</a></li> <!--Same as company description-->
 	  <li><a class="dropdown-item" id="addParagraph">Paragraph - Sans-serif, Small</a></li> <!--Same as contact info-->
-	  <li><a class="dropdown-item" id="addImageWide">Single Image - Full Width</a></li>
+	  <li><a class="dropdown-item" id="addImageLeft">Square Image Left</a></li>
+	  <li><a class="dropdown-item" id="addImageRight">Square Image Right</a></li>
 	  <li><a class="dropdown-item" id="addImageCarousel">Image Carousel</a></li>
 	  <li><a class="dropdown-item" id="addContributorBlock">Contributor Bio</a></li> <!--Same as about page-->
 	</ul>
       </div>
 
-      <div class="singleImage">
-	
+      <div class="spacer" style="margin-top:5rem;"></div>      
+      <div class="sqImageL">
+	<img src="/static/images/single_image.jpg" alt="Image" style="width:500px; height:500px;"></img>
       </div>
 
+      <div class="spacer" style="margin-top:5rem;"></div>      
+      <div class="sqImageL">
+	<img src="/static/images/single_image.jpg" alt="Image" style="width:100%"></img>
+      </div>
+
+      <div class="spacer" style="margin-top:5rem;"></div>        
       <div class="carousel">
 
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">	 
@@ -437,6 +446,7 @@
     <button id="save" type="button" class="btn btn-primary btn-lg">Save</button>
     <button id="publish" type="button" class="btn btn-success btn-lg">Publish</button>
 
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script type="text/javascript" src="/static/js/edit.js"> </script>
     <script type="text/javascript">
       function actionDropDown() {
