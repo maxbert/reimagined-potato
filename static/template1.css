@@ -10,7 +10,7 @@ body {
     padding-right: 5%;
 }
 
-nav-element {
+.nav-element {
     margin-top: 20px;
     color: black;
     font-family: 'Montserrat', sans-serif;
@@ -102,6 +102,10 @@ nav-element:hover {
     font-family: 'Montserrat', sans-serif;
     font-size: 5vw;
     display: inline;
+}
+
+.carousel-caption {
+    font-family: 'Roboto';
 }
 
 .col-md-4 {
