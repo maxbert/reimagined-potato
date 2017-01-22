@@ -26,7 +26,6 @@ nav-element:hover {
 #description {
     font-family: 'Vollkorn', serif;
     font-size: 3vw;
-    margin-bottom: 7%;
 }
 
 .box {
@@ -114,7 +113,10 @@ h2 {
     font-family: 'Roboto';
 }
 
-.col-md-4 {
+.box2 {
+    float: left;
+    width: 33%;
+    padding-bottom: 3%;
     padding-left: 3%;
     padding-right: 3%;
 }
