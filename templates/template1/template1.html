@@ -9,10 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/static/js/edit.js"> </script>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css">    
     <link rel="stylesheet" href="/static/template1.css">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Vollkorn|Roboto|Dosis" rel="stylesheet">
@@ -232,18 +229,12 @@
 	</ul>
       </div>
 
-      <div class="sqImageR">
-	<div class="col-md-7">
-	  <h2>Heading</h2>
-	  <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-	</div>
-	<div class="col-md-5">
-	  <img src="/static/images/square1.jpg" alt="Square Image">
-	</div>
+      <div class="sqImageR">	
+	<img src="/static/images/square1.jpg" alt="Square Image">
       </div>
 
       <div class="spacer" style="margin-top:5rem;"></div>   
-            
+      
       <div id="myCarousel" class="carousel slide" data-ride="carousel">	 
 	<ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -289,12 +280,11 @@
 	</a>
       </div>
       
-    </div>
-      
-    </div>
+    </div>    
+    
     <div class="spacer" style="margin-top:5rem;"></div>
     <hr>
-
+    
     <div class="subpage" id="about">      
       <div class="sptitle">ABOUT </div>
       <button style="margin-top: -2.5rem;" type="button" class="btn btn-success">Edit Subpage Name</button>
@@ -445,6 +435,10 @@
     <hr style="border-top: 1px solid black;">
     <button id="save" type="button" class="btn btn-primary btn-lg">Save</button>
     <button id="publish" type="button" class="btn btn-success btn-lg">Publish</button>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/edit.js"> </script>
     
     <script type="text/javascript">
       function actionDropDown() {
@@ -462,17 +456,17 @@
       $(document).ready(function(){
       // Activate Carousel
       $("#myCarousel").carousel();
-            
+      
       // Enable Carousel Controls
       $(".left").click(function(){
       $("#myCarousel").carousel("prev");
       });
       $(".right").click(function(){
-        $("#myCarousel").carousel("next");
+      $("#myCarousel").carousel("next");
       });
       });
     </script>
-    
+
   </body>
 
 </html>
