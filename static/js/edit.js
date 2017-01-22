@@ -80,7 +80,7 @@ var rmlogo = function(e){
 
 //remove event listenre
 var remlogo = document.getElementsByClassName('remlogo')[0];
-remlogo.addEventListener("click", rmlogo);
+//remlogo.addEventListener("click", rmlogo);
 
 var edphdesc = function(e){
     console.log("test");
@@ -117,11 +117,6 @@ var uplphto = function(e){
     
 }; 
 
-console.log("hello");
-function myFunction() {
-    alert ("Hello World!");
-}
-document.getElementById("save").addEventListener("click", myFunction);
 $("button#save").click(function() {
     var data = {};
     var html_info = document.getElementsByTagName("html")[0].innerHTML;
