@@ -1,3 +1,5 @@
+
+/*
 var imgcount = 9;
 //description editing
 var desc = document.getElementById("editdesc");
@@ -135,7 +137,12 @@ var uplphto = function(e){
     form.onsubmit = stop 
     
 }; 
-
+*/
+console.log("hello");
+function myFunction() {
+    alert ("Hello World!");
+}
+document.getElementById("save").addEventListener("click", myFunction);
 $("button#save").click(function() {
     var data = {};
     var html_info = document.getElementsByTagName("html")[0].innerHTML;
