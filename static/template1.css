@@ -104,6 +104,12 @@ nav-element:hover {
     display: inline;
 }
 
+h2 {    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4vw;
+    margin-top: 20%;
+}
+
 .carousel-caption {
     font-family: 'Roboto';
 }

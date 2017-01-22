@@ -229,12 +229,55 @@
 	</ul>
       </div>
 
-      <div class="sqImageR">	
-	<img src="/static/images/square1.jpg" alt="Square Image">
+      <div class="spacer" style="margin-top:5rem;"></div>        
+      <div class="sqImageR">
+	<div class="row">
+	  <div class="col-md-5">	    
+	    <img src="/static/images/square1.jpg" alt="Square Image"> <br><br>
+	     <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+	       <input type="file" class="form-control" name="upload1"> 	    
+	       <button type="button" class="btn btn-success btn-xs uphto">Upload File</button>
+	     </form>
+	  </div>
+	  <div class="col-md-7">	    
+	    <h2>In lobortis felis non gravida lobortis.</h2>
+	    <button type="button" class="btn btn-info btn-xs">Add Heading</button>
+	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	    <button type="button" class="btn btn-success btn-xs">Edit Heading</button> <br><br>
+	    <p class="pDescription">Quisque fringilla metus ac diam luctus vestibulum. Nulla viverra facilisis leo, quis fringilla elit gravida imperdiet. In tincidunt sollicitudin turpis, et ornare mi fermentum ut.
+	    </p>
+	    <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
+	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	    <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+	  </div>
+	</div>
       </div>
 
-      <div class="spacer" style="margin-top:5rem;"></div>   
-      
+      <div class="spacer" style="margin-top:5rem;"></div>        
+      <div class="sqImageL">
+	<div class="row">
+	  <div class="col-md-7">
+	    <h2>In lobortis felis non gravida lobortis.</h2>
+	    <button type="button" class="btn btn-info btn-xs">Add Heading</button>
+	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	    <button type="button" class="btn btn-success btn-xs">Edit Heading</button> <br><br>
+	    <p class="pDescription">Quisque fringilla metus ac diam luctus vestibulum. Nulla viverra facilisis leo, quis fringilla elit gravida imperdiet. In tincidunt sollicitudin turpis, et ornare mi fermentum ut.
+	    </p>
+	    <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
+	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	    <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+	  </div>
+	  <div class="col-md-5">
+	    <img src="/static/images/square2.jpg" alt="Square Image"> <br><br>
+	     <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+	       <input type="file" class="form-control" name="upload1"> 	    
+	       <button type="button" class="btn btn-success btn-xs uphto">Upload File</button>
+	     </form>	    
+	  </div>
+	</div>
+      </div>
+
+      <div class="spacer" style="margin-top:5rem;"></div>         
       <div id="myCarousel" class="carousel slide" data-ride="carousel">	 
 	<ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -247,7 +290,19 @@
             <div class="container">
 	      <div class="carousel-caption">
 		<h1>Example headline.</h1>
+		<button type="button" class="btn btn-info btn-xs">Add Heading</button>
+		<button type="button" class="btn btn-danger btn-xs">Remove</button>
+		<button type="button" class="btn btn-success btn-xs">Edit Heading</button><br><br>
 		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		<button type="button" class="btn btn-info btn-xs">Add Image Description</button>
+		<button type="button" class="btn btn-danger btn-xs">Remove</button>
+		<button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+		<br><br>
+		<form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+		  <input type="file" class="form-control" name="upload7">
+		  <button type="button" class="btn btn-success btn-xs uphto">Upload File</button>
+		</form><br>
+		<button type="button" class="btn btn-danger btn-xs remphto">Remove Slide</button><br><br>
 	      </div>
             </div>
           </div>
@@ -256,7 +311,19 @@
             <div class="container">
 	      <div class="carousel-caption">
 		<h1>Another example headline.</h1>
+		<button type="button" class="btn btn-info btn-xs">Add Heading</button>
+		<button type="button" class="btn btn-danger btn-xs">Remove</button>
+		<button type="button" class="btn btn-success btn-xs">Edit Heading</button> <br><br>
 		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		<button type="button" class="btn btn-info btn-xs">Add Image Description</button>
+		<button type="button" class="btn btn-danger btn-xs">Remove</button>
+		<button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+		<br><br>
+		<form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+		  <input type="file" class="form-control" name="upload7">
+		  <button type="button" class="btn btn-success btn-xs uphto">Upload File</button>
+		</form><br>
+		<button type="button" class="btn btn-danger btn-xs remphto">Remove Slide</button><br><br>
 	      </div>
             </div>
           </div>
@@ -265,7 +332,19 @@
             <div class="container">
 	      <div class="carousel-caption">
 		<h1>One more for good measure.</h1>
+		<button type="button" class="btn btn-info btn-xs">Add Heading</button>
+		<button type="button" class="btn btn-danger btn-xs">Remove</button>
+		<button type="button" class="btn btn-success btn-xs">Edit Heading</button> <br><br>
 		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		<button type="button" class="btn btn-info btn-xs">Add Image Description</button>
+		<button type="button" class="btn btn-danger btn-xs">Remove</button>
+		<button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+		<br><br>
+		<form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+		  <input type="file" class="form-control" name="upload7">
+		  <button type="button" class="btn btn-success btn-xs uphto">Upload File</button>
+		</form><br>
+		<button type="button" class="btn btn-danger btn-xs remphto">Remove Slide</button><br><br>
 	      </div>	      
             </div>
           </div>
