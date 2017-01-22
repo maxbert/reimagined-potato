@@ -1,5 +1,3 @@
-
-/*
 var imgcount = 9;
 //description editing
 var desc = document.getElementById("editdesc");
@@ -50,31 +48,12 @@ adddesc.addEventListener('click', add);
 //adding photo bloks
 
 var addPhotoBlock = function(e){    
-    var newhtml = document.createTextNode('''
-      <div class="box">
-	<div class="tile">
-	  <img id="image2" src="/static/images/image2.jpeg" alt="Place image here." width="100%">
-	  <div class="imgDescription">
-	    <p id="imgDescription" class="imdesc">Describe this image.</p>
-	    <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
-	    <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
-	    <br><br>
-	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
-	      <input type="file" class="form-control" name="upload2">
-	      <button type="button" class="btn btn-success uphto">Upload File</button>
-	    </form>
-	    <br>
-	    <button type="button" class="btn btn-danger remphto">Remove Block</button>
-	  </div>
-	</div>      
-      </div>
-''');
+    var newhtml = document.createTextNode('<div class="box"><div class="tile"><img id="image2" src="/static/images/image2.jpeg" alt="Place image here." width="100%"><div class="imgDescription"><p id="imgDescription" class="imdesc">Describe this image.</p><button type="button" class="btn btn-info btn-xs">Add Image Description</button><button type="button" class="btn btn-danger btn-xs">Remove</button><button type="button" class="btn btn-success btn-xs">Edit Image Description</button><br><br><form class="file-form" action="/s/" method="POST" enctype="multipart/form_data"><input type="file" class="form-control" name="upload2"><button type="button" class="btn btn-success uphto">Upload File</button></form><br><button type="button" class="btn btn-danger remphto">Remove Block</button></div></div></div>');
     
     
     var but2 = newhtml.getElementsByClassName("remphto")[0];
     but2.addEventListener('click', rmphto);
-    this.getParentElement.appendChild(newhtml);
+    this.parentElement.appendChild(newhtml);
 };
 
 
@@ -137,7 +116,7 @@ var uplphto = function(e){
     form.onsubmit = stop 
     
 }; 
-*/
+
 console.log("hello");
 function myFunction() {
     alert ("Hello World!");
