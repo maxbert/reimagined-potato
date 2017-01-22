@@ -51,6 +51,31 @@ Max -- 2017-01-17 12:30 AM
 -descriptions of photos can now be changed
 -this is really hard
 
+Sarah -- 2017-01-17 1:00AM 
+- added stuff to About page
+
+Sarah -- 2017-01-18 2:00AM 
+- About page finished
+- Changed buttons for image blocks at the top
+
+Sarah -- 2017-01-19 2:00AM
+- add content to Contact page
+- Add dropdown button for adding stuff to a new subpage, but doesn't work
+- Dropdown should have options for adding
+   - Paragraph (serif font, large, like top description)
+   - Paragraph (sans-serif font, small, ike contact info)
+   - Contributor Bio (like sections in About page)
+   - Square Image with text on the right
+   - Square Image with text on the left
+   - Image Carousel   
+
 Brian -- 2017-01-19 22:45
 -fixed dropdown menu
 -working on previewing sites
+
+Sarah -- 2017-01-21 1:00AM
+- Added inline form for uploading a logo
+- Add content to "New Subpage"
+   - Square Image with text on the right/left
+   - Image Carousel
+- These should be removed, they're there so "Add Element" button can insert that HTML
