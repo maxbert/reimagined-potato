@@ -79,3 +79,4 @@ Sarah -- 2017-01-21 1:00AM
    - Square Image with text on the right/left
    - Image Carousel
 - These should be removed, they're there so "Add Element" button can insert that HTML
+- put everything that should disappear when publishing in a div called "strip"
