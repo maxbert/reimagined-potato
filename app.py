@@ -17,7 +17,10 @@ def home():
     if 'user' not in session:
         return redirect(url_for("login"))
     else:
-        return render_template("homepage.html")
+        f = open("templates/template1/template1.html", 'r')
+        templatehtml = f.read()
+        f.close()
+        return render_template("homepage.html", template1 = templatehtml)
 
 @app.route("/login/", methods = ["GET","POST"])
 def login():
