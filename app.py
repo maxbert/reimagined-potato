@@ -112,6 +112,13 @@ def hosted_site(username, site_name):
     temp_url = username + '/' + site_name + '.html'
     return render_template(temp_url)
 
+@app.route("/viewotherpages/")
+def viewotherpages():
+    if "user" not in session:
+        return redirect(url_for("login"))
+    mypages_str=savefile.getpages(session["user"],"publish",True)
+    return render_template("viewotherpages.html", mypages_html=mypages_str)
+
 if __name__ == "__main__":
     app.debug = True
     app.run()
