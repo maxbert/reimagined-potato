@@ -73,25 +73,20 @@ def getpages(username,editpublish,withLinks):
         if (entry[0] == username):
             pages = entry[2]
             break
-    print pages
     if pages == "":
         return "You currently have no sites."
 
     mypages_str=""
     pagesArr2 = []  #copy pages that match editpublish argument into pagesArr2
     pagesArr = pages.split(",")
-    print pagesArr
     for entry in pagesArr:
-        print entry
         dir = entry.split("/")
-        print dir
         if (len(dir)>2 and dir[1] == editpublish):
             pagesArr2.append(entry)
 
     if (withLinks):
         mypages_count=0
         for entry in pagesArr2:
-            print entry
             mypages_str+= "<a href=../%s%s> %s </a><br>"%(username,entry, entry.split("/")[2])
         mypages_count+=1
         
@@ -99,11 +94,42 @@ def getpages(username,editpublish,withLinks):
         mypages_str+= "You currently have no sites."
     return mypages_str
         
+def getOtherPagesHelper(username,editpublish,withLinks):
+    db = sqlite3.connect(db1)
+    c = db.cursor()
+    query = "SELECT * FROM users"
+    dbPages = c.execute(query)
+    for entry in dbPages:
+        if (entry[0] == username):
+            pages = entry[2]
+            break
+    if pages == "":
+        return "You currently have no sites."
 
-
-
-
-
-
-
-
+    mypages_str=""
+    pagesArr2 = []  #copy pages that match editpublish argument into pagesArr2
+    pagesArr = pages.split(",")
+    for entry in pagesArr:
+        dir = entry.split("/")
+        if (len(dir)>2 and dir[1] == editpublish):
+            pagesArr2.append(entry)
+    if (withLinks):
+        mypages_count=0
+        for entry in pagesArr2:
+            mypages_str+= '<a class="btn btn-success" href=../%s%s> %s </a><br><br>'%(username,entry, username + "/" + entry.split("/")[2])
+        mypages_count+=1        
+    if (mypages_count == 0):
+        mypages_str+= "You currently have no sites."
+    return mypages_str
+        
+def getOtherPages():
+    retstr = ""
+    db = sqlite3.connect(db1)
+    c = db.cursor()
+    query = "SELECT * FROM users"
+    dbPages = c.execute(query)
+    for entry in dbPages:
+        name = entry[0]
+        if getOtherPagesHelper(name, "publish", True) != "You currently have no sites.":
+            retstr += getOtherPagesHelper(name, "publish", True)
+    return retstr

@@ -20,7 +20,7 @@ def home():
         f = open("templates/template1/template1.html", 'r')
         templatehtml = f.read()
         f.close()
-        return render_template("homepage.html", template1 = templatehtml)
+        return render_template("homepage.html")
 
 @app.route("/login/", methods = ["GET","POST"])
 def login():
@@ -107,16 +107,18 @@ def edit_site(username, site_name):
     temp_url = "%s/edit/%s.html"%(username,site_name)
     return render_template(temp_url,sitetitle=site_name)
 
-@app.route("/<username>/<site_name>")
+@app.route("/<username>/publish/<site_name>")
 def hosted_site(username, site_name):
-    temp_url = username + '/' + site_name + '.html'
+    temp_url = "%s/publish/%s.html"%(username,site_name)
     return render_template(temp_url)
 
 @app.route("/viewotherpages/")
 def viewotherpages():
     if "user" not in session:
         return redirect(url_for("login"))
-    mypages_str=savefile.getpages(session["user"],"publish",True)
+    print savefile.getOtherPages()
+    mypages_str=savefile.getOtherPages()
+    print mypages_str
     return render_template("viewotherpages.html", mypages_html=mypages_str)
 
 if __name__ == "__main__":
