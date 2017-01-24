@@ -44,14 +44,20 @@ var add = function(e){
 };
 
 adddesc.addEventListener('click', add);
-
+var rmphto = function(e){
+    this.parentElement.parentElement.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement.parentElement.parentElement);//I'm so sorry
+};
 //adding photo bloks
 var addPhotoBlock = function(e){
 
     var itm = document.getElementsByClassName("box")[0];
     var cln = itm.cloneNode(true);
-    document.getElementById("boxholder").insertBefore(cln, document.getElementById("photobutton"));
-    
+    document.getElementById("boxholder").insertBefore(cln, document.getElementById("photobutton"));    
+    var removebuttons = document.getElementsByClassName("remphto");
+    for (i = 0; i < removebuttons.length; i++){
+	removebuttons[i].addEventListener('click', rmphto);
+    };
+
 };
 
 
@@ -59,9 +65,7 @@ var addphto = document.getElementById('addphto');
 addphto.addEventListener('click', addPhotoBlock);
 console.log('okay');
 //remove phtoblock
-var rmphto = function(e){
-    this.parentElement.parentElement.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement.parentElement.parentElement);//I'm so sorry
-};
+
 //remove event listeners
 var i;
 var removebuttons = document.getElementsByClassName("remphto");
@@ -111,7 +115,18 @@ var uplphto = function(e){
     var form_submit = this;
     form.onsubmit = stop 
     
-}; 
+};
+
+
+var strip = function(e){
+    var strips = document.getElementsByClassName("strip");
+    var i =strips.length;
+    while(i > 0 ){
+	var strip = document.getElementsByClassName("strip")[0];
+	strip.parentNode.removeChild(strip);
+	i--;
+    }
+}
 
 $("button#save").click(function() {
     var data = {};
@@ -135,6 +150,7 @@ $("button#save").click(function() {
        */
 });
 $("button#publish").click(function(e) {
+    strip();
     var data = {};
     var html_info = document.getElementsByTagName("html")[0].innerHTML;
     var title = document.title;
