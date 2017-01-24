@@ -93,6 +93,22 @@ nav-element:hover {
     font-size: 5vw;
 }
 
+#addperson {
+    width: 70%;
+    position: relative;
+    font-size: 5vw;
+}
+
+#addperson:after {
+    content: "";
+    display: block;
+    padding-bottom: 40%;
+}
+
+#plus {
+    padding-top: 20%;
+}
+
 .subpage {
     display: inline;
 }
