@@ -88,9 +88,11 @@ def save():
 @app.route("/publish/", methods = ['POST'])
 def publish():
     res = request.json
-    html_extract = str(res['templatehtml'])
+    html_edit = str(res['edit_html'])
+    html_publish = str(res['publish_html'])
     html_title = str(res['title'])
-    savefile.publish(session["user"], html_title, html_extract)
+    savefile.publish(session["user"], html_title, html_publish)
+    savefile.edit(session["user"], html_title, html_edit)
     return "success"
 
 @app.route("/<template>/")
