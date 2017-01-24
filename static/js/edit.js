@@ -46,7 +46,13 @@ var add = function(e){
 adddesc.addEventListener('click', add);
 
 //adding photo bloks
+var addPhotoBlock = function(e){
 
+    var itm = document.getElementsByClassName("box")[0];
+    var cln = itm.cloneNode(true);
+    document.getElementById("boxholder").insertBefore(cln, document.getElementById("photobutton"));
+    
+};
 
 
 var addphto = document.getElementById('addphto');
@@ -78,11 +84,6 @@ var removebuttons = document.getElementsByClassName("remphto");
 for (i = 0; i < removebuttons.length; i++){
     removebuttons[i].addEventListener('click', rmphto);
 };
-
-
- var addPhotoBlock = function(e){   
- };
-
 
 var addphto = document.getElementById('addphto');
 addphto.addEventListener('click', addPhotoBlock);
