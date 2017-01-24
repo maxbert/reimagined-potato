@@ -228,8 +228,8 @@
 	</div>      
       </div>
       
-      <div class="strip" id="photobutton">
-	<div class="box" >
+      <div class="strip">
+	<div class="box">
 	  <div class="tile" id="addtile">
 	    <button id="addphto" type="button" class="btn btn-info">+</button>
 	  </div>
@@ -253,7 +253,7 @@
 	  <button style="margin-top: -2.5rem;" type="button" class="btn btn-success">Edit Subpage Name</button>
 	  <button style="margin-top: -2.5rem;" type="button" class="btn btn-danger">Remove</button>
 	</div>	
-
+	
 	<div class="strip">
 	  <br><br>
 	  <div class="dropdown">
@@ -269,175 +269,17 @@
 	      <li><a class="dropdown-item" id="addContributorBlock">Contributor Bio</a></li>
 	    </ul>
 	  </div>
-	</div>
-	
-	<div class="sqImageR">
-	  <div class="spacer" style="margin-top:5rem;"></div>        
-	  <div class="row">
-	    <div class="col-md-5">	    
-	      <img src="/static/images/square1.jpg" alt="Square Image" width="100%">
-	      <div class="strip">
-		<br>
-		<form class="form-inline file-form" action="/s/" method="POST" enctype="multipart/form_data">
-		  <input type="file" class="form-control" name="upload1"> 	    
-		  <button type="button" class="btn btn-success uphto">Upload File</button>
-		</form>
-	      </div>
-	    </div>
-	    <div class="col-md-7">	    
-	      <h2>In lobortis felis non gravida lobortis.</h2>
-	      <div class="strip">
-		<button type="button" class="btn btn-info btn-xs">Add Heading</button>
-		<button type="button" class="btn btn-danger btn-xs">Remove</button>
-		<button type="button" class="btn btn-success btn-xs">Edit Heading</button>
-		<br><br>
-	      </div>		
-	      <p class="pDescription">Quisque fringilla metus ac diam luctus vestibulum. Nulla viverra facilisis leo, quis fringilla elit gravida imperdiet. In tincidunt sollicitudin turpis, et ornare mi fermentum ut.
-	      </p>
-	      <div class="strip">
-		<button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-		<button type="button" class="btn btn-danger btn-xs">Remove</button>
-		<button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-
-	<div class="sqImageL">
- 	  <div class="spacer" style="margin-top:5rem;"></div>        
-	  <div class="row">
-	    <div class="col-md-7">
-	      <h2>In lobortis felis non gravida lobortis.</h2>
-	      <div class="strip">
-		<button type="button" class="btn btn-info btn-xs">Add Heading</button>
-		<button type="button" class="btn btn-danger btn-xs">Remove</button>
-		<button type="button" class="btn btn-success btn-xs">Edit Heading</button>
-		<br><br>
-	      </div>
-	      <p class="pDescription">Quisque fringilla metus ac diam luctus vestibulum. Nulla viverra facilisis leo, quis fringilla elit gravida imperdiet. In tincidunt sollicitudin turpis, et ornare mi fermentum ut.
-	      </p>
-	      <div class="strip">
-		<button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-		<button type="button" class="btn btn-danger btn-xs">Remove</button>
-		<button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
-	      </div>
-	    </div>
-	    <div class="col-md-5">
-	      <img src="/static/images/square2.jpg" alt="Square Image" width="100%">
-	      <div class="strip">
-		<br>
-		<form class="form-inline file-form" action="/s/" method="POST" enctype="multipart/form_data">
-		  <input type="file" class="form-control" name="upload1"> 	    
-		  <button type="button" class="btn btn-success uphto">Upload File</button>
-		</form>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+	</div>	
       </div>
-
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-	<div class="spacer" style="margin-top:5rem;"></div>        
-	<ol class="carousel-indicators">
-	  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-	  <li data-target="#myCarousel" data-slide-to="1"></li>
-	  <li data-target="#myCarousel" data-slide-to="2"></li>
-	</ol>
-	<div class="carousel-inner" role="listbox">
-	  <div id="0" class="item active">
-	    <img class="first-slide" src="/static/images/carousel1.jpg" alt="First slide">
-	    <div class="container">
-	      <div class="carousel-caption">
-		<h1>Example headline.</h1>
-		<div class="strip">
-		  <button type="button" class="btn btn-info btn-xs">Add Heading</button>
-		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
-		  <button type="button" class="btn btn-success btn-xs">Edit Heading</button><br><br>
-		</div>
-		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-		<div class="strip">
-		  <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
-		  <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
-		  <br><br>
-		  <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
-		    <input type="file" class="form-control" name="upload7">
-		    <button type="button" class="btn btn-success btn-xs uphto">Upload File</button>
-		  </form><br>
-		  <button type="button" class="btn btn-danger btn-xs remphto">Remove Slide</button><br><br>
-		</div>
-	      </div>
-	    </div>
-	  </div>
-	  <div id="1" class="item">
-	    <img class="second-slide" src="/static/images/carousel2.jpg" alt="Second slide">
-	    <div class="container">
-	      <div class="carousel-caption">
-		<h1>Another example headline.</h1>
-		<div class="strip">
-		  <button type="button" class="btn btn-info btn-xs">Add Heading</button>
-		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
-		  <button type="button" class="btn btn-success btn-xs">Edit Heading</button> <br><br>
-		</div>
-		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-		<div class="strip">
-		  <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
-		  <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
-		  <br><br>
-		  <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
-		    <input type="file" class="form-control" name="upload7">
-		    <button type="button" class="btn btn-success btn-xs uphto">Upload File</button>
-		  </form><br>
-		  <button type="button" class="btn btn-danger btn-xs remphto">Remove Slide</button><br><br>
-		</div>
-	      </div>
-	    </div>
-	  </div>
-	  <div id="2" class="item">
-	    <img class="third-slide" src="/static/images/carousel3.jpg" alt="Third slide">
-	    <div class="container">
-	      <div class="carousel-caption">
-		<h1>One more for good measure.</h1>
-		<div class="strip">
-		  <button type="button" class="btn btn-info btn-xs">Add Heading</button>
-		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
-		  <button type="button" class="btn btn-success btn-xs">Edit Heading</button> <br><br>
-		</div>
-		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-		<div class="strip">
-		  <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
-		  <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
-		  <br><br>		  
-		  <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
-		    <input type="file" class="form-control" name="upload7">
-		    <button type="button" class="btn btn-success btn-xs uphto">Upload File</button>
-		  </form><br>
-		  <button type="button" class="btn btn-danger btn-xs remphto">Remove Slide</button><br><br>
-		</div>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-	  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-	  <span class="sr-only">Previous</span>
-	</a>
-	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-	  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-	  <span class="sr-only">Next</span>
-	</a>
-      </div>      
     </div>
-        
+    
     <div class="subpage" id="about">
       <div class="spacer" style="margin-top:5rem;"></div>
       <hr>
       <div class="sptitle">ABOUT </div>
       <div class="strip" style="display: inline;">
-	  <button style="margin-top: -2.5rem;" type="button" class="btn btn-success">Edit Subpage Name</button>
-	  <button style="margin-top: -2.5rem;" type="button" class="btn btn-danger">Remove</button>
+	<button style="margin-top: -2.5rem;" type="button" class="btn btn-success">Edit Subpage Name</button>
+	<button style="margin-top: -2.5rem;" type="button" class="btn btn-danger">Remove</button>
       </div>
       <div class="spacer" style="margin-top: 3rem;"></div>      
       <div class="box2">
@@ -613,7 +455,7 @@
     </div>
 
 
-    <div class="strip" style="display:;">
+    <div class="strip" id="collection" style="display:none;">
       <div class="box">
 	<div class="tile">
 	  <img id="image7" src="/static/images/image7.jpeg" alt="Place image here." width="100%">
@@ -634,50 +476,260 @@
 	  </div>
 	</div>      
       </div>
-      <div id="descholder">
-      <p id="description">
-	Place a brief description of what your company does here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
-    </div>
-    <div class="strip">
-      <button type="button" class="btn btn-info" id="adddesc">Add Company Description</button>
-      <button type="button" class="btn btn-danger" id="remdesc">Remove Company Description</button>
-      <button type="button" class="btn btn-success" id="editdesc">Edit Company Description</button>
-    </div>
-    
-    </div>
+      <div class="company_description">
+	<div id="descholder">
+	  <p id="description">
+	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non orci a velit fermentum lobortis. Nam id erat sed ante congue lacinia quis eget nibh.
+	  </p>
+	</div>
+	<div class="strip">
+	  <button type="button" class="btn btn-info" id="adddesc">Add Company Description</button>
+	  <button type="button" class="btn btn-danger" id="remdesc">Remove Company Description</button>
+	  <button type="button" class="btn btn-success" id="editdesc">Edit Company Description</button>
+	</div>
+      </div>
+      <div class="box2">
+	<center>
+	  <img class="img-circle" src="/static/images/person1.jpg" alt="Place image here." width="75%">
+	  <br><br>
+	  <div class="strip">
+	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+	      <input type="file" class="form-control" name="upload9">
+	      <button type="button" class="btn btn-success uphto">Upload Image</button>
+	      <button type="button" class="btn btn-danger">Remove Image</button>
+	    </form>	      
+	    <br>
+	  </div>
+	  <div class="pName">	    
+	    BRIAN LU
+	  </div>
+	  <div class="strip">
+	    <button type="button" class="btn btn-success">Edit Contributor Name</button>
+	    <br><br>
+	    <button type="button" class="btn btn-info btn-xs">Add Description</button>	    
+	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	    <button type="button" class="btn btn-success btn-xs">Edit</button>
+	    <br><br>
+	  </div>
+	  <div class="pDescription" id="pDescription1">
+	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non orci a velit fermentum lobortis. Nam id erat sed ante congue lacinia quis eget nibh. Aenean euismod massa nec risus mattis gravida. Ut placerat sed orci quis ultricies. 
+	  </div>
+	  <div class="strip">
+	    <br><button type="button" class="btn btn-danger">Remove Section</button>
+	  </div>
+	</center>
+      </div>
+      <div class="contact_paragraph">
+	<p class="contactinfo">
+	  Company Name
+	  <br><br>
+	  345 Chambers Street <br>
+	  New York, NY 10282
+	  <br><br>
+	  Email: company@name.com
+	  <br><br>
+	  Tel: (212) 312-4800
+	</p>
+	<div class="strip">
+	  <br>
+	  <button type="button" class="btn btn-info">Add Contact Info</button>
+	  <button type="button" class="btn btn-success">Edit Contact Info</button>
+	  <button type="button" class="btn btn-danger">Remove</button>
+	</div>
+      </div>
+      <div class="sqImageR">
+	<div class="spacer" style="margin-top:5rem;"></div>        
+	<div class="row">
+	  <div class="col-md-5">	    
+	    <img src="/static/images/square1.jpg" alt="Square Image" width="100%">
+	    <div class="strip">
+	      <br>
+	      <form class="form-inline file-form" action="/s/" method="POST" enctype="multipart/form_data">
+		<input type="file" class="form-control" name="upload1"> 	    
+		<button type="button" class="btn btn-success uphto">Upload File</button>
+	      </form>
+	    </div>
+	  </div>
+	  <div class="col-md-7">	    
+	    <h2>In lobortis felis non gravida lobortis.</h2>
+	    <div class="strip">
+	      <button type="button" class="btn btn-info btn-xs">Add Heading</button>
+	      <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	      <button type="button" class="btn btn-success btn-xs">Edit Heading</button>
+	      <br><br>
+	    </div>		
+	    <p class="pDescription">Quisque fringilla metus ac diam luctus vestibulum. Nulla viverra facilisis leo, quis fringilla elit gravida imperdiet. In tincidunt sollicitudin turpis, et ornare mi fermentum ut.
+	    </p>
+	    <div class="strip">
+	      <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
+	      <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	      <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+	    </div>
+	  </div>
+	</div>
+      </div>
 
-    <div class="spacer" style="margin-top: 5rem;"></div>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/static/js/edit.js"> </script>
-    
-    <script type="text/javascript">
-      function actionDropDown() {
-      document.getElementById("action-dropdown").classList.toggle("show");
-      }
-      window.onclick = function(event) {
-      if (!event.target.matches('.dropdown-toggle')) {
-      if(document.getElementById("action-dropdown").classList.contains('show')) {
-      document.getElementById("action-dropdown").classList.remove('show');
-      }
-      }
-      }      
-    </script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-      // Activate Carousel
-      $("#myCarousel").carousel();
+      <div class="sqImageL">
+ 	<div class="spacer" style="margin-top:5rem;"></div>        
+	<div class="row">
+	  <div class="col-md-7">
+	    <h2>In lobortis felis non gravida lobortis.</h2>
+	    <div class="strip">
+	      <button type="button" class="btn btn-info btn-xs">Add Heading</button>
+	      <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	      <button type="button" class="btn btn-success btn-xs">Edit Heading</button>
+	      <br><br>
+	    </div>
+	    <p class="pDescription">Quisque fringilla metus ac diam luctus vestibulum. Nulla viverra facilisis leo, quis fringilla elit gravida imperdiet. In tincidunt sollicitudin turpis, et ornare mi fermentum ut.
+	    </p>
+	    <div class="strip">
+	      <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
+	      <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	      <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+	    </div>
+	  </div>
+	  <div class="col-md-5">
+	    <img src="/static/images/square2.jpg" alt="Square Image" width="100%">
+	    <div class="strip">
+	      <br>
+	      <form class="form-inline file-form" action="/s/" method="POST" enctype="multipart/form_data">
+		<input type="file" class="form-control" name="upload1"> 	    
+		<button type="button" class="btn btn-success uphto">Upload File</button>
+	      </form>
+	    </div>
+	  </div>
+	</div>
+      </div>
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<div class="spacer" style="margin-top:5rem;"></div>        
+	<ol class="carousel-indicators">
+	  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	  <li data-target="#myCarousel" data-slide-to="1"></li>
+	  <li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner" role="listbox">
+	  <div id="0" class="item active">
+	    <img class="first-slide" src="/static/images/carousel1.jpg" alt="First slide">
+	    <div class="container">
+	      <div class="carousel-caption">
+		<h1>Example headline.</h1>
+		<div class="strip">
+		  <button type="button" class="btn btn-info btn-xs">Add Heading</button>
+		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
+		  <button type="button" class="btn btn-success btn-xs">Edit Heading</button><br><br>
+		</div>
+		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		<div class="strip">
+		  <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
+		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
+		  <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+		  <br><br>
+		  <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+		    <input type="file" class="form-control" name="upload7">
+		    <button type="button" class="btn btn-success btn-xs uphto">Upload File</button>
+		  </form><br>
+		  <button type="button" class="btn btn-danger btn-xs remphto">Remove Slide</button><br><br>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div id="1" class="item">
+	    <img class="second-slide" src="/static/images/carousel2.jpg" alt="Second slide">
+	    <div class="container">
+	      <div class="carousel-caption">
+		<h1>Another example headline.</h1>
+		<div class="strip">
+		  <button type="button" class="btn btn-info btn-xs">Add Heading</button>
+		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
+		  <button type="button" class="btn btn-success btn-xs">Edit Heading</button> <br><br>
+		</div>
+		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		<div class="strip">
+		  <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
+		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
+		  <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+		  <br><br>
+		  <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+		    <input type="file" class="form-control" name="upload7">
+		    <button type="button" class="btn btn-success btn-xs uphto">Upload File</button>
+		  </form><br>
+		  <button type="button" class="btn btn-danger btn-xs remphto">Remove Slide</button><br><br>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div id="2" class="item">
+	    <img class="third-slide" src="/static/images/carousel3.jpg" alt="Third slide">
+	    <div class="container">
+	      <div class="carousel-caption">
+		<h1>One more for good measure.</h1>
+		<div class="strip">
+		  <button type="button" class="btn btn-info btn-xs">Add Heading</button>
+		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
+		  <button type="button" class="btn btn-success btn-xs">Edit Heading</button> <br><br>
+		</div>
+		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		<div class="strip">
+		  <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
+		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
+		  <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+		  <br><br>		  
+		  <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+		    <input type="file" class="form-control" name="upload7">
+		    <button type="button" class="btn btn-success btn-xs uphto">Upload File</button>
+		  </form><br>
+		  <button type="button" class="btn btn-danger btn-xs remphto">Remove Slide</button><br><br>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	  <span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	  <span class="sr-only">Next</span>
+	</a>
+      </div>      
       
-      // Enable Carousel Controls
-      $(".left").click(function(){
-      $("#myCarousel").carousel("prev");
-      });
-      $(".right").click(function(){
-      $("#myCarousel").carousel("next");
-      });
-      });
-    </script>
-  </body>
+    </div>
+    
+</div>
+
+<div class="spacer" style="margin-top: 5rem;"></div>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/edit.js"> </script>
+
+<script type="text/javascript">
+  function actionDropDown() {
+  document.getElementById("action-dropdown").classList.toggle("show");
+  }
+  window.onclick = function(event) {
+  if (!event.target.matches('.dropdown-toggle')) {
+  if(document.getElementById("action-dropdown").classList.contains('show')) {
+  document.getElementById("action-dropdown").classList.remove('show');
+  }
+  }
+  }      
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+  // Activate Carousel
+  $("#myCarousel").carousel();
+  
+  // Enable Carousel Controls
+  $(".left").click(function(){
+  $("#myCarousel").carousel("prev");
+  });
+  $(".right").click(function(){
+  $("#myCarousel").carousel("next");
+  });
+  });
+</script>
+</body>
 
 </html>
