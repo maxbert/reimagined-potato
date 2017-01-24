@@ -31,7 +31,7 @@ nav-element:hover {
 .box {
     float: left;
     position: relative;
-    background-color: white;
+    background-color: transparent;
     width: 33%;
     padding-bottom: 45%;
 }
