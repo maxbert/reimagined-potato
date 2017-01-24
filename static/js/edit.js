@@ -117,7 +117,7 @@ for (i = 0; i < removebuttons.length; i++){
      holder.appendChild(box);
      console.log('done?');
      
-};
+ };
 
 
 var addphto = document.getElementById('addphto');
