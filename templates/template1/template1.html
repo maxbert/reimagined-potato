@@ -439,14 +439,7 @@
 	  <button style="margin-top: -2.5rem;" type="button" class="btn btn-success">Edit Subpage Name</button>
 	  <button style="margin-top: -2.5rem;" type="button" class="btn btn-danger">Remove</button>
       </div>
-      <div class="spacer" style="margin-top: 3rem;"></div>
-      <div class="strip">
-	<div class="col-md-4">
-	  <center>
-	    <button type="button" class="btn btn-info btn-lg" style="width:250px; height:250px; font-size: 5vw;">+</button>
-	  </center>
-	</div>
-      </div>      
+      <div class="spacer" style="margin-top: 3rem;"></div>      
       <div class="box2">
 	<center>
 	  <img id="pImg1" class="img-circle" src="/static/images/person1.jpg" alt="Place image here." width="75%">
@@ -575,6 +568,13 @@
 	</center>
       </div>
       
+      <div class="strip">
+	<div class="box2">
+	  <center>
+	    <button type="button" class="btn btn-info btn-sq-lg" style="width=100%">+</button>
+	  </center>
+	</div>
+      </div>      
       <div class="spacer" style="clear: both;"></div>
     </div>
 
@@ -610,6 +610,41 @@
       <hr style="border-top: 1px solid black;">
       <button id="save" type="button" class="btn btn-primary btn-lg">Save</button>
       <button id="publish" type="button" class="btn btn-success btn-lg">Publish</button>
+    </div>
+
+
+    <div class="strip" style="display:;">
+      <div class="box">
+	<div class="tile">
+	  <img id="image7" src="/static/images/image7.jpeg" alt="Place image here." width="100%">
+	  <div class="imgDescription">
+	    <p id="imgDescription" class="imdesc">Describe this image.</p>
+	    <div class="strip">
+	      <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
+	      <button type="button" class="btn btn-danger btn-xs">Remove</button>
+	      <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+	      <br><br>
+	      <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+		<input type="file" class="form-control" name="upload7">
+		<button type="button" class="btn btn-success uphto">Upload File</button>
+	      </form>
+	      <br>
+	      <button type="button" class="btn btn-danger remphto">Remove Block</button>
+	    </div>
+	  </div>
+	</div>      
+      </div>
+      <div id="descholder">
+      <p id="description">
+	Place a brief description of what your company does here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    </div>
+    <div class="strip">
+      <button type="button" class="btn btn-info" id="adddesc">Add Company Description</button>
+      <button type="button" class="btn btn-danger" id="remdesc">Remove Company Description</button>
+      <button type="button" class="btn btn-success" id="editdesc">Edit Company Description</button>
+    </div>
+    
     </div>
 
     <div class="spacer" style="margin-top: 5rem;"></div>
