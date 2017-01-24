@@ -50,7 +50,7 @@ var rmphto = function(e){
 //adding photo bloks
 var addPhotoBlock = function(e){
 
-    var itm = document.getElementsByClassName("box")[0];
+    var itm = document.getElementById("collection").getElementsByClassName("box")[0];
     var cln = itm.cloneNode(true);
     document.getElementById("boxholder").insertBefore(cln, document.getElementById("photobutton"));    
     var removebuttons = document.getElementsByClassName("remphto");
@@ -77,7 +77,6 @@ for (i = 0; i < removebuttons.length; i++){
 //remove event listenre
 
 var edphdesc = function(e){
-    console.log("test");
     var phdesc = prompt("Enter an image description", this.innerHTML);
     if(phdesc != null){
 	this.innerHTML = phdesc;
@@ -150,14 +149,16 @@ $("button#save").click(function() {
        */
 });
 $("button#publish").click(function(e) {
-    strip();
     var data = {};
-    var html_info = document.getElementsByTagName("html")[0].innerHTML;
-    var title = document.title;
-    data.templatehtml = html_info;
+    var title = document.title
+    var html_edit = document.getElementsByTagName("html")[0].innerHTML;
+    strip();
+    var html_publish = document.getElementsByTagName("html")[0].innerHTML;
+    data.edit_html = html_edit
+    data.publish_html = html_publish
     data.title = title;
     $.ajax({
- 	type: "POST",
+	type: "POST",
 	url: "/publish/",
 	contentType: "application/json",
 	data: JSON.stringify(data),
