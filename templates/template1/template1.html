@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/static/template1.css">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Vollkorn|Roboto|Dosis" rel="stylesheet">
-    
+    <script src="/static/js/jscolor.min.js"></script>
   </head>
 
   <body>
@@ -38,10 +38,14 @@
     </nav>
 
     <div class="strip">
-      <div class="spacer" style="margin-top: 200px"></div>
-    </div>
+      <div class="spacer" style="margin-top: 20rem"></div>
+      <div class="choosebackground" style="font-family: Montserrat; font-size:2vw; color: gray">
+	Background Color: <input class="jscolor" value="ffffff">
+      </div>
+      <div class="spacer" style="margin-top: 3rem"></div>
+    </div>    
 
-    <div style="margin-top: 15%;" id="descholder">
+    <div id="descholder">
       <p id="description">
 	Place a brief description of what your company does here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
@@ -639,7 +643,6 @@
       });
       });
     </script>
-
   </body>
 
 </html>
