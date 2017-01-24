@@ -10,8 +10,7 @@ var revdesc = function(e) {
     
 };
 
-var change = function(e) {
-    console.log('??');
+var change = function(e, description) {
     description.innerHTML = '<textarea rows="4" cols="50" id="descentry">' + description.innerHTML + '</textarea><br><button id = "subdesc" > done editing </button><br>';
     var sub = document.getElementById("subdesc");
     sub.addEventListener('click', revdesc);
@@ -120,7 +119,7 @@ var uplphto = function(e){
 var strip = function(e){
     var strips = document.getElementsByClassName("strip");
     var i =strips.length;
-    while(i > 0 ){
+    while(i > 1){
 	var strip = document.getElementsByClassName("strip")[0];
 	strip.parentNode.removeChild(strip);
 	i--;
