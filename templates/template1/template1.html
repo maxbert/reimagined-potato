@@ -42,7 +42,7 @@
       <div class="choosebackground" style="font-family: Montserrat; font-size:2vw; color: gray">
 	Background Color: <input class="jscolor" value="ffffff">
       </div>
-      <div class="spacer" style="margin-top: 3rem">
+      <div class="spacer" style="margin-top: 3rem"></div>
     </div>
 
     <div id="squarespace" class="spacer" style="margin-top: 15rem; display:none;"></div>
@@ -492,7 +492,7 @@
       </div>
       <div class="box2">
 	<center>
-	  <img class="img-circle" src="/static/images/person1.jpg" alt="Place image here." width="75%">
+	  <img class="img-circle" src="/static/images/person5.jpg" alt="Place image here." width="75%">
 	  <br><br>
 	  <div class="strip">
 	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
@@ -699,39 +699,40 @@
       
     </div>
     
-</div>
 
-<div class="spacer" style="margin-top: 5rem;"></div>
-<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/static/js/edit.js"> </script>
+    <div class="spacer" style="margin-top: 5rem;"></div>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/edit.js"> </script>
 
-<script type="text/javascript">
-  function actionDropDown() {
-  document.getElementById("action-dropdown").classList.toggle("show");
-  }
-  window.onclick = function(event) {
-  if (!event.target.matches('.dropdown-toggle')) {
-  if(document.getElementById("action-dropdown").classList.contains('show')) {
-  document.getElementById("action-dropdown").classList.remove('show');
-  }
-  }
-  }      
-</script>
-<script type="text/javascript">
-  $(document).ready(function(){
-  // Activate Carousel
-  $("#myCarousel").carousel();
-  
-  // Enable Carousel Controls
-  $(".left").click(function(){
-  $("#myCarousel").carousel("prev");
-  });
-  $(".right").click(function(){
-  $("#myCarousel").carousel("next");
-  });
-  });
-</script>
-</body>
+    <div class="strip">
+      <script type="text/javascript">
+	function actionDropDown() {
+	document.getElementById("action-dropdown").classList.toggle("show");
+	}
+	window.onclick = function(event) {
+	if (!event.target.matches('.dropdown-toggle')) {
+	if(document.getElementById("action-dropdown").classList.contains('show')) {
+	document.getElementById("action-dropdown").classList.remove('show');
+	}
+	}
+	}      
+      </script>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function(){
+      // Activate Carousel
+      $("#myCarousel").carousel();
+      
+      // Enable Carousel Controls
+      $(".left").click(function(){
+      $("#myCarousel").carousel("prev");
+      });
+      $(".right").click(function(){
+      $("#myCarousel").carousel("next");
+      });
+      });
+    </script>
+  </body>
 
 </html>

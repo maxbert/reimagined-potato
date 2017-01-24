@@ -10,8 +10,7 @@ var revdesc = function(e) {
     
 };
 
-var change = function(e) {
-    console.log('??');
+var change = function(e, description) {
     description.innerHTML = '<textarea rows="4" cols="50" id="descentry">' + description.innerHTML + '</textarea><br><button id = "subdesc" > done editing </button><br>';
     var sub = document.getElementById("subdesc");
     sub.addEventListener('click', revdesc);
@@ -50,7 +49,7 @@ var rmphto = function(e){
 //adding photo bloks
 var addPhotoBlock = function(e){
 
-    var itm = document.getElementsByClassName("box")[0];
+    var itm = document.getElementById("collection").getElementsByClassName("box")[0];
     var cln = itm.cloneNode(true);
     document.getElementById("boxholder").insertBefore(cln, document.getElementById("photobutton"));    
     var removebuttons = document.getElementsByClassName("remphto");
@@ -77,7 +76,6 @@ for (i = 0; i < removebuttons.length; i++){
 //remove event listenre
 
 var edphdesc = function(e){
-    console.log("test");
     var phdesc = prompt("Enter an image description", this.innerHTML);
     if(phdesc != null){
 	this.innerHTML = phdesc;
@@ -121,7 +119,7 @@ var uplphto = function(e){
 var strip = function(e){
     var strips = document.getElementsByClassName("strip");
     var i =strips.length;
-    while(i > 0 ){
+    while(i > 1){
 	var strip = document.getElementsByClassName("strip")[0];
 	strip.parentNode.removeChild(strip);
 	i--;
@@ -159,7 +157,7 @@ $("button#publish").click(function(e) {
     data.publish_html = html_publish
     data.title = title;
     $.ajax({
- 	type: "POST",
+	type: "POST",
 	url: "/publish/",
 	contentType: "application/json",
 	data: JSON.stringify(data),
