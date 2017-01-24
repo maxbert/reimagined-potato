@@ -150,11 +150,13 @@ $("button#save").click(function() {
        */
 });
 $("button#publish").click(function(e) {
-    strip();
     var data = {};
-    var html_info = document.getElementsByTagName("html")[0].innerHTML;
-    var title = document.title;
-    data.templatehtml = html_info;
+    var title = document.title
+    var html_edit = document.getElementsByTagName("html")[0].innerHTML;
+    strip();
+    var html_publish = document.getElementsByTagName("html")[0].innerHTML;
+    data.edit_html = html_edit
+    data.publish_html = html_publish
     data.title = title;
     $.ajax({
  	type: "POST",
