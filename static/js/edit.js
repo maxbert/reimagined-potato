@@ -35,6 +35,7 @@ var uplphto = function(e){
     form.onsubmit = sub(event);
 };
 
+
 var assignPhotoUploadButtons= function(e){
     var uploads = document.getElementsByClassName("uphto");
     i = 0;
@@ -107,6 +108,12 @@ var addPhotoBlock = function(e){
     for(i; i<uploads.length; i++){
 	uploads[i].addEventListener('click', uplphto);
     };
+    var imdescs = document.getElementsByClassName("imdescedit");
+    i = 0;
+    for(i; i<imdescs.length; i++){
+	imdescs[i].addEventListener('click', edphdesc);
+    };
+    
     
 };
 
@@ -127,9 +134,9 @@ for (i = 0; i < removebuttons.length; i++){
 //remove event listenre
 
 var edphdesc = function(e){
-    var phdesc = prompt("Enter an image description", this.innerHTML);
+    var phdesc = prompt("Enter an image description", this.parentElement.parentElement.getElementsByTagName("p")[0].innerHTML);
     if(phdesc != null){
-	this.innerHTML = phdesc;
+	this.parentElement.parentElement.getElementsByTagName("p")[0].innerHTML = phdesc;
     }
 };
 var i;
@@ -141,7 +148,7 @@ for (i = 0; i < removebuttons.length; i++){
 var addphto = document.getElementById('addphto');
 addphto.addEventListener('click', addPhotoBlock);
 console.log('okay');
-var imdescs = document.getElementsByClassName("imdesc");
+var imdescs = document.getElementsByClassName("imdescedit");
 i = 0;
 console.log(imdescs);
 for(i; i<imdescs.length; i++){
