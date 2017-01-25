@@ -92,7 +92,20 @@ var add = function(e){
 adddesc.addEventListener('click', add);
 var rmphto = function(e){
     this.parentElement.parentElement.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement.parentElement.parentElement);//I'm so sorry
+
 };
+
+
+
+
+var addperson = function(e){
+    var itm = document.getElementById("collection").getElementsByClassName("box2")[0];
+    var cln = itm.cloneNode(true);
+    console.log(document.getElementById("about").getElementsByClassName('box2')[0]);
+    document.getElementById("about").insertBefore(cln,document.getElementById("about").getElementsByClassName('box2')[1]);
+};
+
+document.getElementById("addperson").addEventListener('click', addperson);
 //adding photo bloks
 var addPhotoBlock = function(e){
 
