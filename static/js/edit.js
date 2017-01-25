@@ -196,7 +196,14 @@ var strip = function(e){
     }
 }
 
-
+var setbg = function(e){
+    var background = document.getElementsByTagName("body")[0];
+    var color = this.parentElement.getElementsByTagName("input")[0].value;
+    background.style = "background-color: #" + color;
+    console.log('color');
+};
+var back = document.getElementsByClassName("bgc")[0];
+back.addEventListener('click', setbg);
 
 $("button#save").click(function() {
     var data = {};
