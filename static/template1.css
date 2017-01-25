@@ -93,6 +93,15 @@ nav-element:hover {
     font-size: 5vw;
 }
 
+.dropdown-item {
+    background: transparent;
+    border: none !important;
+}
+
+.dropdownItem:hover {
+    background:#dbdbdb;
+}
+
 #addperson {
     width: 70%;
     position: relative;
