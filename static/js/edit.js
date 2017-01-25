@@ -1,3 +1,48 @@
+var uplphto = function(e){
+    console.log('help');
+    var img = this.parentElement.parentElement.parentElement.parentElement.getElementsByTagName("img")[0];
+    var form = this.parentElement;
+    var file_selector = this.parentElement.getElementsByClassName("form-control")[0];
+    var form_submit = this;
+    var sub = function(event){
+	console.log(event);
+	event.preventDefault();
+	if(file_selector.files.length == 0){
+	    alert("please choose an image with the file selector");
+	    return false;
+	};
+	var files = file_selector.files;
+	var formData = new FormData();
+	var file = files[0];
+	var today = new Date();
+	var now = today.getMinutes();
+	var now2 = today.getSeconds();
+	var now3 = today.getDay();
+	var ne = now + now2 + now3;
+	var filename = ne + file.name
+	if(!file.type.match('image.*')){
+	    alert("please upload a valid image file");
+	    return false;
+	};
+	form_submit.innerHTML = 'uploading...';
+	formData.append('photo', file, filename);
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', '/s/', true);
+	xhr.send(formData);
+	img.src = "../../static/images/" + filename;
+	form_submit.innerHTML = 'Upload File'
+    };
+    form.onsubmit = sub(event);
+};
+var assignPhotoUploadButtons= function(e){
+    var uploads = document.getElementsByClassName("uphto");
+    i = 0;
+    for(i; i<uploads.length; i++){
+	uploads[i].addEventListener('click', uplphto);
+    };
+};
+assignPhotoUploadButtons();
+
 var imgcount = 9;
 //description editing
 var desc = document.getElementById("editdesc");
@@ -56,7 +101,7 @@ var addPhotoBlock = function(e){
     for (i = 0; i < removebuttons.length; i++){
 	removebuttons[i].addEventListener('click', rmphto);
     };
-
+    assignPhotoUploadButtons();
 };
 
 
@@ -140,50 +185,6 @@ var uplgo = function(e){
 
 var uplogo = document.getElementsByClassName("uplgo")[0];
 uplogo.addEventListener('click', uplgo);
-var uplphto = function(e){
-    console.log('help');
-    var img = this.parentElement.parentElement.parentElement.parentElement.getElementsByTagName("img")[0];
-    var form = this.parentElement;
-    var file_selector = this.parentElement.getElementsByClassName("form-control")[0];
-    var form_submit = this;
-    var sub = function(event){
-	console.log(event);
-	event.preventDefault();
-	if(file_selector.files.length == 0){
-	    alert("please choose an image with the file selector");
-	    return false;
-	};
-	var files = file_selector.files;
-	var formData = new FormData();
-	var file = files[0];
-	var today = new Date();
-	var now = today.getMinutes();
-	var now2 = today.getSeconds();
-	var now3 = today.getDay();
-	var ne = now + now2 + now3;
-	var filename = ne + file.name
-	if(!file.type.match('image.*')){
-	    alert("please upload a valid image file");
-	    return false;
-	};
-	form_submit.innerHTML = 'uploading...';
-	formData.append('photo', file, filename);
-	var xhr = new XMLHttpRequest();
-	xhr.open('POST', '/s/', true);
-	xhr.send(formData);
-	img.src = "../../static/images/" + filename;
-	form_submit.innerHTML = 'Upload File'
-    };
-    form.onsubmit = sub(event);
-};
-var assignPhotoUploadButtons= function(e){
-    var uploads = document.getElementsByClassName("uphto");
-    i = 0;
-    for(i; i<uploads.length; i++){
-	uploads[i].addEventListener('click', uplphto);
-    };
-};
-assignPhotoUploadButtons();
 
 var strip = function(e){
     var strips = document.getElementsByClassName("strip");
