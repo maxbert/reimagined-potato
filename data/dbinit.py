@@ -8,8 +8,8 @@ c = db.cursor()    #facilitate db ops
 q = "CREATE TABLE users (user TEXT, pass TEXT, sites TEXT)"# "/site_name.html,/site2.html,/site3.html"
 c.execute(q)
 
-q = "INSERT INTO users VALUES(\'michael\', \'%s\',\'%s\')"%(hashlib.sha1("michael").hexdigest(),"/edit/yes.html,/edit/no.html,/publish/heckyes.html,/publish/heckno.html,")
-c.execute(q)
+#q = "INSERT INTO users VALUES(\'michael\', \'%s\',\'%s\')"%(hashlib.sha1("michael").hexdigest(),"")
+#c.execute(q)
 
 db.commit() #save changes
 db.close()  #close database
