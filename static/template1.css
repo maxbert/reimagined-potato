@@ -104,19 +104,9 @@ nav-element:hover {
 }
 
 #addperson {
-    width: 70%;
-    position: relative;
+    width: 200px;
+    height: 200px;
     font-size: 5vw;
-}
-
-#addperson:after {
-    content: "";
-    display: block;
-    padding-bottom: 40%;
-}
-
-#plus {
-    padding-top: 20%;
 }
 
 .subpage {
@@ -145,6 +135,19 @@ h2 {
     padding-bottom: 3%;
     padding-left: 3%;
     padding-right: 3%;
+}
+
+.pImgCircle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.pImgCircle img {
+    width: 100%;
+    height: auto;
 }
 
 .pName {
