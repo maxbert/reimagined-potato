@@ -34,6 +34,7 @@ var uplphto = function(e){
     };
     form.onsubmit = sub(event);
 };
+
 var assignPhotoUploadButtons= function(e){
     var uploads = document.getElementsByClassName("uphto");
     i = 0;
@@ -101,7 +102,12 @@ var addPhotoBlock = function(e){
     for (i = 0; i < removebuttons.length; i++){
 	removebuttons[i].addEventListener('click', rmphto);
     };
-    assignPhotoUploadButtons();
+     var uploads = document.getElementsByClassName("uphto");
+    i = 0;
+    for(i; i<uploads.length; i++){
+	uploads[i].addEventListener('click', uplphto);
+    };
+    
 };
 
 
