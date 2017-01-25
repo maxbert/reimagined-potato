@@ -20,7 +20,8 @@ def home():
         f = open("templates/template1/template1.html", 'r')
         templatehtml = f.read()
         f.close()
-        return render_template("homepage.html")
+        status = request.args.get("status")
+        return render_template("homepage.html",status=status)
 
 @app.route("/login/", methods = ["GET","POST"])
 def login():
@@ -71,6 +72,10 @@ def viewmypages():
 def templateselector():
     if "user" not in session:
         return redirect(url_for("login"))
+    if request.form["site_name"] == "":
+        return redirect(url_for("home",status="Please Enter a Site Name"))
+    if savefile.checkSites(session["user"],request.form["site_name"]):
+        return redirect(url_for("home",status="Site Name Already In Use"))
     f=open("templates/template1/%s.html"%(request.form["template"]),'r')
     templatehtml = f.read()
     savefile.save(session["user"],request.form["site_name"], templatehtml)
