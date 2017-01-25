@@ -95,14 +95,52 @@ var rmphto = function(e){
 
 };
 
+///ABOUT SECTION
 
+var removeperson = function(e){
+    this.parentElement.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement.parentElement);
+};
+i = 0;
+var removes = document.getElementsByClassName("remper");
+for (i= 0; i < removes.length; i++){
+    removes[i].addEventListener('click', removeperson);
+};
 
+var contname = function(e){
+    var phdesc = prompt("Enter a name", this.parentElement.parentElement.getElementsByClassName("pName")[0].innerHTML);
+    if(phdesc != null){
+	this.parentElement.parentElement.getElementsByClassName("pName")[0].innerHTML = phdesc;
+    };
+};
+
+var names = document.getElementsByClassName("contnameedit");
+i = 0;
+for(i; i< names.length; i++){
+    names[i].addEventListener('click', contname);
+};
 
 var addperson = function(e){
     var itm = document.getElementById("collection").getElementsByClassName("box2")[0];
     var cln = itm.cloneNode(true);
     console.log(document.getElementById("about").getElementsByClassName('box2')[0]);
     document.getElementById("about").insertBefore(cln,document.getElementById("about").getElementsByClassName('box2')[1]);
+    i = 0;
+    var removes = document.getElementsByClassName("remper");
+    for (i= 0; i < removes.length; i++){
+	removes[i].addEventListener('click', removeperson);
+    };
+    var uploads = document.getElementsByClassName("uphto");
+    i = 0;
+    for(i; i<uploads.length; i++){
+	uploads[i].addEventListener('click', uplphto);
+    };
+    var names = document.getElementsByClassName("contnameedit");
+    i = 0;
+    for(i; i< names.length; i++){
+	names[i].addEventListener('click', contname);
+    };
+
+
 };
 
 document.getElementById("addperson").addEventListener('click', addperson);
