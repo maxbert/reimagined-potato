@@ -10,14 +10,18 @@
 </div>
 </div>
 
-<h2>{{status}}</h2><br>
+<div class="container">
+<div class="alert alert-danger">{{status}}</div><br>
+</div>
 
-  <form action="/templateselector/" method = "POST"><br>
+<div class="container">
+  <form action="/templateselector/" method = "POST" id="homeform"><br>
     <b>Template 1:</b> <input type="radio" value="template1" name = "template" checked>
     <img src="/static/images/template1_preview.png" alt="Template 1" width=90px; height=120px;> </img><br><br>
     <h3><b>Enter Your Site Name</b></h3>
     <b>Site Name:</b> <input type = "text" name = "site_name"><br>
     <input type = "submit" value = "Submit"><br><br>
   </form>
+</div>
 
 {% endblock %}

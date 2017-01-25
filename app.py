@@ -20,7 +20,9 @@ def home():
         f = open("templates/template1/template1.html", 'r')
         templatehtml = f.read()
         f.close()
-        status = request.args.get("status")
+        status=""
+        if "status" in request.args:
+            status = request.args.get("status")
         return render_template("homepage.html",status=status)
 
 @app.route("/login/", methods = ["GET","POST"])
