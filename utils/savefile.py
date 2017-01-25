@@ -23,7 +23,6 @@ def db_addpath(user,filepath):
     db.commit()
     db.close()
 
-
 def save(user,site_name,html):
     actual_html = "<!DOCTYPE html>\n<html>\n" + html + "\n</html>"
     dirname = "templates/" + user
@@ -87,11 +86,12 @@ def getpages(username,editpublish,withLinks):
     if (withLinks):
         mypages_count=0
         for entry in pagesArr2:
-            mypages_str+= "<a href=../%s%s> %s </a><br>"%(username,entry, entry.split("/")[2])
-        mypages_count+=1
-        
+            mypages_str+= '<a class="btn btn-success" href=../%s%s> %s </a><br><br>'%(username,entry, entry.split("/")[2])
+            mypages_count+=1
     if (mypages_count == 0):
         mypages_str+= "You currently have no sites."
+    else: 
+        mypages_str=mypages_str[:-4]
     return mypages_str
         
 def getOtherPagesHelper(username,editpublish,withLinks):
@@ -106,6 +106,7 @@ def getOtherPagesHelper(username,editpublish,withLinks):
     if pages == "":
         return "You currently have no sites."
 
+    mypages_name=[]
     mypages_str=""
     pagesArr2 = []  #copy pages that match editpublish argument into pagesArr2
     pagesArr = pages.split(",")
@@ -117,9 +118,15 @@ def getOtherPagesHelper(username,editpublish,withLinks):
         mypages_count=0
         for entry in pagesArr2:
             mypages_str+= '<a class="btn btn-success" href=../%s%s> %s </a><br><br>'%(username,entry, username + "/" + entry.split("/")[2])
-        mypages_count+=1        
+            mypages_count+=1
+    else:
+        for entry in pagesArr2:
+            mypages_name.append(entry.split("/")[2])
+        return mypages_name        
     if (mypages_count == 0):
         mypages_str+= "You currently have no sites."
+    else: 
+        mypages_str=mypages_str[:-4]
     return mypages_str
         
 def getOtherPages():
@@ -131,5 +138,13 @@ def getOtherPages():
     for entry in dbPages:
         name = entry[0]
         if getOtherPagesHelper(name, "publish", True) != "You currently have no sites.":
-            retstr += getOtherPagesHelper(name, "publish", True)
-    return retstr
+            retstr += getOtherPagesHelper(name, "publish", True) + "<br>"
+    return retstr[:-4]
+
+def checkSites(username,site_name):
+    pagesArr = getOtherPagesHelper(username,"edit",False)
+    for entry in pagesArr:
+        if site_name==entry:
+            return True
+    return False
+

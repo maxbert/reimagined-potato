@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request, url_for, session, redirect
-import hashlib, sqlite3, json
+import hashlib, sqlite3, json, os
 from utils import auth
 from utils import savefile
+from werkzeug.utils import secure_filename
+
+UPLOAD_FOLDER = 'static/images'
 
 
 db = "data/database.db"
@@ -20,7 +23,10 @@ def home():
         f = open("templates/template1/template1.html", 'r')
         templatehtml = f.read()
         f.close()
-        return render_template("homepage.html")
+        status=""
+        if "status" in request.args:
+            status = request.args.get("status")
+        return render_template("homepage.html",status=status)
 
 @app.route("/login/", methods = ["GET","POST"])
 def login():
@@ -71,6 +77,10 @@ def viewmypages():
 def templateselector():
     if "user" not in session:
         return redirect(url_for("login"))
+    if request.form["site_name"] == "":
+        return redirect(url_for("home",status="Please Enter a Site Name"))
+    if savefile.checkSites(session["user"],request.form["site_name"]):
+        return redirect(url_for("home",status="Site Name Already In Use"))
     f=open("templates/template1/%s.html"%(request.form["template"]),'r')
     templatehtml = f.read()
     savefile.save(session["user"],request.form["site_name"], templatehtml)
@@ -122,6 +132,13 @@ def viewotherpages():
     mypages_str=savefile.getOtherPages()
     print mypages_str
     return render_template("viewotherpages.html", mypages_html=mypages_str)
+
+@app.route("/s/", methods=["POST"])
+def upload_file():
+    file = request.files['photo']
+    filename = secure_filename(file.filename)
+    file.save(os.path.join(UPLOAD_FOLDER, filename))
+    return json.dumps({"success":True})
 
 if __name__ == "__main__":
     app.debug = True

@@ -63,6 +63,16 @@
     	padding: 300px;
     }
 
+    input[type=submit]{
+        background-color: darkgray;
+        color:white;
+    }
+    input[type=text]{
+        margin:4px;
+    }
+    .alert:empty{
+        display:none;
+    }
     </style>
 
     
@@ -75,8 +85,9 @@
 
 
 <body>
-
-<h1>{{status}}</h1><br>
+<div class="container">
+<div class="alert alert-danger">{{status}}</div><br>
+</div>
 
   <form id="login" action = "/login/" method = "POST">
     <b>Username:</b> <input class="input" type = "text" name = "user" placeholder = "user"><br>
@@ -84,7 +95,6 @@
     <input type = "submit" value = "Login" name = "enter">
     <input type = "submit" value = "Register" name = "enter">
   </form><br>
-
 
 </body>
 
