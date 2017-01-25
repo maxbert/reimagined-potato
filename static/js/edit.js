@@ -132,7 +132,7 @@ var uplgo = function(e){
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', '/s/', true);
 	xhr.send(formData);
-	img.src = "/static/images/" + filename;
+	img.src = "../../static/images/" + filename;
 	form_submit.innerHTML = 'Upload File'
     };
     form.onsubmit = sub(event);
@@ -171,7 +171,7 @@ var uplphto = function(e){
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', '/s/', true);
 	xhr.send(formData);
-	img.src = "/static/images/" + filename;
+	img.src = "../../static/images/" + filename;
 	form_submit.innerHTML = 'Upload File'
     };
     form.onsubmit = sub(event);
