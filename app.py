@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request, url_for, session, redirect
-import hashlib, sqlite3, json
+import hashlib, sqlite3, json, os
 from utils import auth
 from utils import savefile
+from werkzeug.utils import secure_filename
+
+UPLOAD_FOLDER = 'static/images'
 
 
 db = "data/database.db"
@@ -129,6 +132,13 @@ def viewotherpages():
     mypages_str=savefile.getOtherPages()
     print mypages_str
     return render_template("viewotherpages.html", mypages_html=mypages_str)
+
+@app.route("/s/", methods=["POST"])
+def upload_file():
+    file = request.files['photo']
+    filename = secure_filename(file.filename)
+    file.save(os.path.join(UPLOAD_FOLDER, filename))
+    return json.dumps({"success":True})
 
 if __name__ == "__main__":
     app.debug = True
