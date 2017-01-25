@@ -92,7 +92,7 @@ def publish():
     html_publish = str(res['publish_html'])
     html_title = str(res['title'])
     savefile.publish(session["user"], html_title, html_publish)
-    savefile.edit(session["user"], html_title, html_edit)
+    savefile.save(session["user"], html_title, html_edit)
     return "success"
 
 @app.route("/<template>/")

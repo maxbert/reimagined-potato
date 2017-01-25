@@ -119,7 +119,7 @@ var uplphto = function(e){
 var strip = function(e){
     var strips = document.getElementsByClassName("strip");
     var i =strips.length;
-    while(i > 1){
+    while(document.getElementsByClassName("strip")[0] != null){
 	var strip = document.getElementsByClassName("strip")[0];
 	strip.parentNode.removeChild(strip);
 	i--;
@@ -163,6 +163,7 @@ $("button#publish").click(function(e) {
 	data: JSON.stringify(data),
 	success: function(data){
 	    alert("Your site was successfully published")
+	    window.location.href = '../../viewmypages/'
 	},
 	error: function(data){
 	    console.log("failure")
