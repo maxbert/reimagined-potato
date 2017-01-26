@@ -23,6 +23,35 @@ def db_addpath(user,filepath):
     db.commit()
     db.close()
 
+def db_removepath(user,filepath):
+    db = sqlite3.connect(db1)
+    c = db.cursor()
+    query = "SELECT * FROM users"
+    dbPages = c.execute(query)
+    for entry in dbPages:
+        if (entry[0] == user):
+            pages = entry[2]
+            break
+    pagesArr = pages.split(",")
+    for entry in pagesArr:
+        if (entry == filepath):
+            pagesArr.remove(entry)
+            break
+    updatedsites = ",".join(pagesArr)
+    updateQuery = "UPDATE users SET sites = \'%s\' WHERE user = \'%s\'"%(updatedsites,user)
+    c.execute(updateQuery)
+    db.commit()
+    db.close()
+
+def remove(user,site_name):
+    dirname = "templates/" + user
+    filepathname = "templates/" + "%s/edit/%s.html"%(user,site_name)
+    filepath = "/edit/%s"%(site_name)
+    if os.path.exists(dirname):
+        os.remove(filepathname)
+    db_removepath(user,filepath)
+    return "xd"
+
 def save(user,site_name,html):
     actual_html = "<!DOCTYPE html>\n<html>\n" + html + "\n</html>"
     dirname = "templates/" + user

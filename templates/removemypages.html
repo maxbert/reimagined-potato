@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+
+{% block title %}
+
+My Pages
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<h1 class="heading">My Pages</h1><br>
+
+<div class="transbox">
+<div class="boxlinks">
+  {{mypages_html|safe}}
+</div>
+</div>
+
+
+{% endblock %}
