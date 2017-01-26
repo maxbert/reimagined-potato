@@ -128,6 +128,7 @@ Max -- 2017-01-24
 
 Brian -- 2017-01-24
 - save and publish work
+- finish JS for removing sites
 
 Max -- 2017-01-25
 - uploading images works
@@ -135,6 +136,9 @@ Max -- 2017-01-25
 - change buttons for about page sections
 - rest of buttons working
 - edit green screen stuff in video
+
+Brian -- 2017-01-25
+- finish backend for removing sites
 
 Michael -- 2017-01-25
 - handle spaces in video
