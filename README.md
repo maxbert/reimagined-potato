@@ -14,3 +14,10 @@ Michael Woo
 
 ##Demo Video
 
+##Installation and Run
+Imports:
+<br>
+Use pip to install flask and requests
+<br>
+Running:
+Run app.py
