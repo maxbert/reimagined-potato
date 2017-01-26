@@ -119,6 +119,39 @@ for(i; i< names.length; i++){
     names[i].addEventListener('click', contname);
 };
 
+var aboutdesc = function(e){
+    console.log("chanign fields");
+    var field = document.createElement("textarea");
+    field.setAttribute("rows","10");
+    field.setAttribute("cols", "30");
+    var newdesc = document.createTextNode(this.parentElement.parentElement.getElementsByClassName("pDescription")[0].innerHTML);
+    field.appendChild(newdesc);
+    var subdesc2 = document.createElement("button");
+    var subtext = document.createTextNode("done editing");
+    subdesc2.appendChild(subtext);
+    console.log(this.parentElement.parentElement.getElementsByClassName("pDescription")[0]);
+    this.parentElement.parentElement.replaceChild(field, this.parentElement.parentElement.parentElement.getElementsByClassName("pDescription")[0]);
+    console.log(this.parentElement.parentElement.getElementsByClassName('strip')[2])
+    this.parentElement.parentElement.insertBefore(subdesc2,this.parentElement.parentElement.getElementsByClassName('strip')[2]);
+    var setdesc = function(e){
+	console.log(field.value);
+	var description2 = document.createTextNode(field.value);
+	var descrip = document.createElement("div");
+	descrip.setAttribute("class","pDescription");
+	descrip.appendChild(description2);
+	this.parentElement.replaceChild(descrip, field);
+	this.parentElement.removeChild(this);
+    }
+    subdesc2.addEventListener('click',setdesc);
+};
+
+var eddescs = document.getElementsByClassName("condescedit");
+i = 0;
+for(i; i< eddescs.length; i++){
+    console.log(eddescs[i]);
+    eddescs[i].addEventListener('click', aboutdesc);
+};
+
 var addperson = function(e){
     var itm = document.getElementById("collection").getElementsByClassName("box2")[0];
     var cln = itm.cloneNode(true);
@@ -139,8 +172,12 @@ var addperson = function(e){
     for(i; i< names.length; i++){
 	names[i].addEventListener('click', contname);
     };
-
-
+    var eddescs = document.getElementsByClassName("condescedit");
+    i = 0;
+    for(i; i< eddescs.length; i++){
+	console.log(eddescs[i]);
+	eddescs[i].addEventListener('click', aboutdesc);
+    };
 };
 
 document.getElementById("addperson").addEventListener('click', addperson);
