@@ -21,22 +21,21 @@
     <nav class="nav navbar-default navbar-fixed-top" role="banner">
       <div class="navbar-header">	
         <div class="pull-left">
-	  <a href="#"><img id="logo" src="/static/images/generic_logo.png" style="height:103px;width:103px"></a>
-	  <div class="strip">
-	    <form class="file-form form-inline" action="/s/" method="POST" enctype="multipart/form_data">
-	      <input type="file" class="form-control" name="upload1"> 	    
-	      <button type="button" class="btn btn-success uplgo">Upload Logo</button>
-	    </form>
-	    <br><br>
-	  </div>
+	  <a href="#"><img id="logo" src="/static/images/generic_logo.png" style="height:103px;width:103px"></a>	  
 	</div>
       </div>  
       <ul class="nav navbar-nav pull-right" id="navlist">
+	<li class="nav-element"><a href="#about">ABOUT</a></li>
+	<li class="nav-element"><a href="#contact">CONTACT</a></li>
       </ul>
     </nav>
-
+    <div class="spacer" style="margin-top: 15rem;"></div>
     <div class="strip">
-      <div class="spacer" style="margin-top: 30rem;"></div>
+      <form class="file-form form-inline" action="/s/" method="POST" enctype="multipart/form_data">
+	<input type="file" class="form-control" name="upload1"> 	    
+	<button type="button" class="btn btn-success uplgo">Upload Logo</button>
+      </form>
+      <br>
       <div class="choosebackground" style="font-family: Montserrat; font-size:2vw; color: gray">
 	Navbar Background Color: <input class="jscolor" value="f8f8f8"> <button type="button" class="btn btn-success nbgc"> Apply</button>
       </div>
