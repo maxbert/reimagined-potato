@@ -189,6 +189,7 @@ var changenamesub = function(e){
     var name = prompt("Enter a name");
     if(name != null){
 	this.parentElement.parentElement.getElementsByClassName("sptitle")[0].innerHTML = name;
+	this.parentElement.parentElement.setAttribute("id",name);
     };
 };
 
@@ -197,6 +198,7 @@ var addsubpage = function(e){
     var cln = itm.cloneNode(true);
     this.parentElement.parentElement.insertBefore(cln, this.parentElement);
     i = 0;
+    
     var removesubs = document.getElementsByClassName("rmsec");
     for(i; i<removesubs.length; i++){
 	removesubs[i].addEventListener("click",remsubpage);
