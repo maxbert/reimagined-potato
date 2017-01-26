@@ -65,6 +65,9 @@ Sarah -- 2017-01-18 2:00AM
 - About page finished
 - Changed buttons for image blocks at the top
 
+Max -- 2017-01-18
+- change editing descriptions for photo blocks to popup
+
 Sarah -- 2017-01-19 2:00AM
 - add content to Contact page
 - Add dropdown button for adding stuff to a new subpage, but doesn't work
@@ -83,6 +86,9 @@ Brian -- 2017-01-19 22:45
 -fixed dropdown menu
 -working on previewing sites
 
+Max -- 2017-01-19
+- fix adding photo blocks
+
 Michael -- 2017-01-22
 -wrote functions to get people's pages without getting links
 
@@ -94,6 +100,9 @@ Sarah -- 2017-01-21 1:00AM
 - These should be removed, they're there so "Add Element" button can insert that HTML
 - put everything that should disappear when publishing in a div called "strip"
 
+Max -- 2017-01-21
+- elements to be added (photo blocks, about page bios, etc) moved to invisible div at bottom
+
 Michael -- 2017-01-22
 -template selector
 -frontend for homepage
@@ -102,3 +111,28 @@ Michael -- 2017-01-24
 -collapsable navbar
 -handle error cases for entering sitename
 -worked on frontend for login and homepage
+
+Sarah -- 2017-01-24
+- color picker added
+- fix photo width for uploads in photo blocks, about page
+
+Max -- 2017-01-24
+- strip() works 
+
+Brian -- 2017-01-24
+- save and publish work
+
+Max -- 2017-01-25
+- uploading images works
+- choosing background color works
+- change buttons for about page sections
+- rest of buttons working
+- edit green screen stuff in video
+
+Michael -- 2017-01-25
+- video done
+
+Brian -- 2017-01-25
+- design changes and readme
+
+
