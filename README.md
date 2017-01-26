@@ -1,8 +1,13 @@
 # Triangle Time
 
-<img src="http://wallpaper.sc/en/ipad/wp-content/uploads/2014/10/ipad-2048x2048-thumbnail_00534-256x256.jpg"> </img>
+##Overview
+Triangle Time is a website that allows its users to pick a website template, and then customize it. Users can add a variety of HTML elements and customize the site to their liking. When they are done, the user can save their site to their account and publish it to a subdomain of our site. It functions much like Squarespace, but much cooler and better.
+##Members
 
+Brian Lu
+Sarah Yoon
+Max Bertfield
+Michael Woo
 
-## VS
+##Demo Video
 
-<img src="http://www.scandinavia-design.fr/wa_files/triangle_20clock_20vitra.jpg" style = "width: 1px;"> </img>
