@@ -228,13 +228,12 @@ for(i; i<addsubs.length; i++){
 };
 
 
-
     
 var addperson = function(e){
     var itm = document.getElementById("collection").getElementsByClassName("box2")[0];
     var cln = itm.cloneNode(true);
     console.log(document.getElementById("about").getElementsByClassName('box2')[0]);
-    document.getElementById("about").insertBefore(cln,document.getElementById("about").getElementsByClassName('box2')[1]);
+    this.parentElement.parentElement.parentElement.parentElement.insertBefore(cln, this.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("spacer")[1]);//,document.getElementById("about").getElementsByClassName('box2')[1]);
     i = 0;
     var removes = document.getElementsByClassName("remper");
     for (i= 0; i < removes.length; i++){
