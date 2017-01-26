@@ -31,9 +31,12 @@
     </nav>
     <div class="spacer" style="margin-top: 15rem;"></div>
     <div class="strip">
-      <form class="file-form form-inline" action="/s/" method="POST" enctype="multipart/form_data">
-	<input type="file" class="form-control" name="upload1"> 	    
-	<button type="button" class="btn btn-success uplgo">Upload Logo</button>
+      <center>
+	<div class="choosebackground" style="font-family: Montserrat; font-size:2vw; color: gray">
+	  <form class="file-form form-inline" action="/s/" method="POST" enctype="multipart/form_data">
+	    Upload Logo:<input type="file" class="form-control" name="upload1"> 	    
+	    <button type="button" class="btn btn-success uplgo">Upload Logo</button>
+	</div>
       </form>
       <br>
       <div class="choosebackground" style="font-family: Montserrat; font-size:2vw; color: gray">
@@ -43,6 +46,7 @@
       <div class="choosebackground" style="font-family: Montserrat; font-size:2vw; color: gray">
 	Background Color: <input class="jscolor" value="ffffff"> <button type="button" class="btn btn-success bgc"> Apply</button>
       </div>
+      </center>
       <div class="spacer" style="margin-top: 3rem"></div>
     </div>
 
@@ -54,8 +58,6 @@
       </p>
     </div>
     <div class="strip">
-      <button type="button" class="btn btn-info" id="adddesc">Add Company Description</button>
-      <button type="button" class="btn btn-danger" id="remdesc">Remove Company Description</button>
       <button type="button" class="btn btn-success" id="editdesc">Edit Company Description</button>
     </div>
     
@@ -434,23 +436,24 @@ Tel: (212) 312-4800
 	
 	<div>
 	  <br><br>
-	  <div class="dropdown">
-	    <button onclick = "actionDropDown()" id="dLabel" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	  <div class="strip">
+	    <div class="dropdown">
+	    <br>
+	    <button id="dLabel" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	      Add Element <span class="caret"></span>
 	    </button>
-	    <ul id = "action-dropdown" class="dropdown-menu" aria-labelledby="dLabel">
+	    <ul class="dropdown-menu" aria-labelledby="dLabel">
 	      <li class="dropdownItem"><button class="dropdown-item addParagraphSerif">Paragraph - Serif, Large</button></li> 
 	      <li class="dropdownItem"><button class="dropdown-item addParagraph">Paragraph - Sans-serif, Small</button></li> 
 	      <li class="dropdownItem"><button class="dropdown-item addImageLeft">Square Image Left</button></li>
 	      <li class="dropdownItem"><button class="dropdown-item addImageRight">Square Image Right</button></li>
 	      <li class="dropdownItem"><button class="dropdown-item addImageCarousel">Image Carousel</button></li>
-	      <li class="dropdownItem"><button class="dropdown-item addContributorBlock">Contributor Bio</button></li>
 	    </ul>
 	  </div>
 	</div>	
       </div>
+      </div>
       
-
       <div class="box">
 	<div class="tile">
 	  <img id="image7" src="/static/images/image7.jpeg" alt="Place image here." width="100%">
@@ -477,9 +480,7 @@ Tel: (212) 312-4800
 	  </p>
 	</div>
 	<div class="strip">
-	  <button type="button" class="btn btn-info" id="adddesc">Add Company Description</button>
-	  <button type="button" class="btn btn-danger" id="remdesc">Remove Company Description</button>
-	  <button type="button" class="btn btn-success" id="editdesc">Edit Company Description</button>
+	  <button type="button" class="btn btn-success" id="editdesc">Edit Text</button>
 	</div>
       </div>
       <div class="box2">
@@ -513,23 +514,27 @@ Tel: (212) 312-4800
 	  </div>
 	</center>
       </div>
+
       <div class="contact_paragraph">
-	<br>
-	<p class="contactinfo" style="white-space: pre;">
+	  <br>
+	  <p class="contactinfo" style="white-space: pre;">
 Company Name
-	
+	  
 345 Chambers Street
 New York, NY 10282
-	
+
 Email: company@name.com
-	
+
 Tel: (212) 312-4800
-	</p>
+	  </p>
+	<div class="strip">
+	  <br>
+	  <button type="button" class="btn btn-success edcon">Edit Text</button>
+	</div>
+
       </div>
-      <div class="strip">
-	<br>
-	<button type="button" class="btn btn-success edcon">Edit Contact Info</button>
-      </div>
+
+      
     <div class="sqImageR">
       <div class="spacer" style="margin-top:5rem;"></div>        
       <div class="row">
@@ -546,9 +551,7 @@ Tel: (212) 312-4800
 	  <div class="col-md-7">	    
 	    <h2>In lobortis felis non gravida lobortis.</h2>
 	    <div class="strip">
-	      <button type="button" class="btn btn-info btn-xs">Add Heading</button>
-	      <button type="button" class="btn btn-danger btn-xs">Remove</button>
-	      <button type="button" class="btn btn-success btn-xs">Edit Heading</button>
+	      <button type="button" class="btn btn-success btn-xs edhed">Edit Heading</button>
 	      <br><br>
 	    </div>		
 	    <p class="pDescription">Quisque fringilla metus ac diam luctus vestibulum. Nulla viverra facilisis leo, quis fringilla elit gravida imperdiet. In tincidunt sollicitudin turpis, et ornare mi fermentum ut.
@@ -567,9 +570,7 @@ Tel: (212) 312-4800
 	  <div class="col-md-7">
 	    <h2>In lobortis felis non gravida lobortis.</h2>
 	    <div class="strip">
-	      <button type="button" class="btn btn-info btn-xs">Add Heading</button>
-	      <button type="button" class="btn btn-danger btn-xs">Remove</button>
-	      <button type="button" class="btn btn-success btn-xs">Edit Heading</button>
+	      <button type="button" class="btn btn-success btn-xs edhed">Edit Heading</button>
 	      <br><br>
 	    </div>
 	    <p class="pDescription">Quisque fringilla metus ac diam luctus vestibulum. Nulla viverra facilisis leo, quis fringilla elit gravida imperdiet. In tincidunt sollicitudin turpis, et ornare mi fermentum ut.
@@ -606,21 +607,16 @@ Tel: (212) 312-4800
 	      <div class="carousel-caption">
 		<h1>Example headline.</h1>
 		<div class="strip">
-		  <button type="button" class="btn btn-info btn-xs">Add Heading</button>
-		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
-		  <button type="button" class="btn btn-success btn-xs">Edit Heading</button><br><br>
+		  <button type="button" class="btn btn-success btn-xs edcarhead">Edit Heading</button><br><br>
 		</div>
 		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 		<div class="strip">
-		  <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
 		  <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
 		  <br><br>
 		  <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 		    <input type="file" class="form-control" name="upload7">
 		    <button type="button" class="btn btn-success btn-xs uphto">Upload File</button>
 		  </form><br>
-		  <button type="button" class="btn btn-danger btn-xs remphto">Remove Slide</button><br><br>
 		</div>
 	      </div>
 	    </div>
@@ -631,21 +627,16 @@ Tel: (212) 312-4800
 	      <div class="carousel-caption">
 		<h1>Another example headline.</h1>
 		<div class="strip">
-		  <button type="button" class="btn btn-info btn-xs">Add Heading</button>
-		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
-		  <button type="button" class="btn btn-success btn-xs">Edit Heading</button> <br><br>
+		  <button type="button" class="btn btn-success btn-xs edcarhead">Edit Heading</button> <br><br>
 		</div>
 		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 		<div class="strip">
-		  <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
 		  <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
 		  <br><br>
 		  <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 		    <input type="file" class="form-control" name="upload7">
 		    <button type="button" class="btn btn-success btn-xs uphto">Upload File</button>
 		  </form><br>
-		  <button type="button" class="btn btn-danger btn-xs remphto">Remove Slide</button><br><br>
 		</div>
 	      </div>
 	    </div>
@@ -656,21 +647,16 @@ Tel: (212) 312-4800
 	      <div class="carousel-caption">
 		<h1>One more for good measure.</h1>
 		<div class="strip">
-		  <button type="button" class="btn btn-info btn-xs">Add Heading</button>
-		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
-		  <button type="button" class="btn btn-success btn-xs">Edit Heading</button> <br><br>
+		  <button type="button" class="btn btn-success btn-xs edcarhead">Edit Heading</button> <br><br>
 		</div>
 		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 		<div class="strip">
-		  <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
 		  <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
 		  <br><br>		  
 		  <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 		    <input type="file" class="form-control" name="upload7">
 		    <button type="button" class="btn btn-success btn-xs uphto">Upload File</button>
 		  </form><br>
-		  <button type="button" class="btn btn-danger btn-xs remphto">Remove Slide</button><br><br>
 		</div>
 	      </div>
 	    </div>
@@ -684,7 +670,39 @@ Tel: (212) 312-4800
 	  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 	  <span class="sr-only">Next</span>
 	</a>
-      </div>      
+      </div>
+
+      <div class="aboot">
+	<center>
+	  <div class="pImgCircle">
+	    <img id="pImg3" src="/static/images/person3.jpg" alt="Place image here.">
+	  </div>
+	  <br><br>
+	  <div class="strip">
+	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+	      <input type="file" class="form-control" name="upload9">
+	      <button type="button" class="btn btn-success uphto">Upload Image</button>  
+	       
+	    </form>
+	    <br>
+	  </div>
+	  <div class="pName" id="pName3">
+	    MAX BERTFIELD
+	  </div>
+	  <div class="strip">
+	    <button type="button" class="btn btn-success contnameedit">Edit Contributor Name</button>
+	    <br><br>
+	    <button type="button" class="btn btn-success btn-xs condescedit">Edit</button>
+	    <br><br>
+	  </div>
+	  <div class="pDescription" id="pDescription3">
+	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non orci a velit fermentum lobortis. Nam id erat sed ante congue lacinia quis eget nibh. Aenean euismod massa nec risus mattis gravida. Ut placerat sed orci quis ultricies. 
+	  </div>
+	  <div class="strip">
+	    <br><button type="button" class="btn btn-danger remper">Remove Section</button>
+	  </div>
+	</center>
+      </div>	
       
     </div>
     
@@ -695,18 +713,7 @@ Tel: (212) 312-4800
     <script type="text/javascript" src="/static/js/edit.js"> </script>
 
     <div class="strip">
-      <script type="text/javascript">
-	function actionDropDown() {
-	document.getElementById("action-dropdown").classList.toggle("show");
-	}
-	window.onclick = function(event) {
-	if (!event.target.matches('.dropdown-toggle')) {
-	if(document.getElementById("action-dropdown").classList.contains('show')) {
-	document.getElementById("action-dropdown").classList.remove('show');
-	}
-	}
-	}      
-      </script>
+      
     </div>
     <script type="text/javascript">
       $(document).ready(function(){

@@ -74,48 +74,32 @@ assignPhotoUploadButtons();
 var imgcount = 9;
 //description editing
 var desc = document.getElementById("editdesc");
-var description = document.getElementById("description");
 
-var revdesc = function(e) {
-    console.log('oops');
-    var newdesc = document.getElementById("descentry").value;
-    description.innerHTML = newdesc;
-    
+var editdesc = function(e){
+    var field = document.createElement("textarea");
+    field.setAttribute("rows","4");
+    field.setAttribute("cols", "50");
+    var newdesc = document.createTextNode(document.getElementById("descholder").getElementsByTagName("p")[0].innerHTML);
+    field.appendChild(newdesc);
+    var subdesc2 = document.createElement("button");
+    var subtext = document.createTextNode("done editing");
+    subdesc2.appendChild(subtext);
+    document.getElementById("descholder").replaceChild(field, document.getElementById("descholder").getElementsByTagName('p')[0]);
+    document.getElementById('descholder').appendChild(subdesc2);
+    var setdesc = function(e){
+	console.log(field.value);
+	var description2 = document.createTextNode(field.value);
+	var descrip = document.createElement("p");
+	descrip.setAttribute("id","description");
+	descrip.appendChild(description2);
+	this.parentElement.replaceChild(descrip, field);
+	this.parentElement.removeChild(this);
+    }
+    subdesc2.addEventListener('click',setdesc);
 };
 
-var change = function(e) {
-    description.innerHTML = '<textarea rows="4" cols="50" id="descentry">' + description.innerHTML + '</textarea><br><button id = "subdesc" > done editing </button><br>';
-    var sub = document.getElementById("subdesc");
-    sub.addEventListener('click', revdesc);
-    
-};
+desc.addEventListener('click', editdesc);
 
-desc.addEventListener('click', change);
-
-//Description removal
-var remdesc = document.getElementById("remdesc");
-
-var rem = function(e) {
-    description.parentElement.removeChild(description)
-};
-
-remdesc.addEventListener('click', rem);
-
-
-//adding description
-var adddesc = document.getElementById("adddesc");
-var descholder = document.getElementById("descholder");
-var descchild = document.createElement('p');
-descchild.setAttribute('id', 'description');
-descchild.innerHTML = 'Place a brief description of what your company does here. Lorem ipsu dolor sit amet, consectetur adipiscing elit.';
-var add = function(e){
-    console.log('hesh');
-    descholder.appendChild(descchild);
-    description = document.getElementById("description");
-
-};
-
-adddesc.addEventListener('click', add);
 var rmphto = function(e){
     this.parentElement.parentElement.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement.parentElement.parentElement);//I'm so sorry
 
@@ -220,13 +204,263 @@ var changenamesub = function(e){
 	refreshNavBar();
     };
 };
-
+var numsub = 0;
 var addsubpage = function(e){
     var itm = document.getElementById("collection").getElementsByClassName("subpage")[0];
     var cln = itm.cloneNode(true);
+    var newid = 'me' + numsub;
+    cln.getElementsByClassName('dropdown')[0].getElementsByClassName('dropdown-toggle')[0].setAttribute("id", newid);
+    cln.getElementsByClassName('dropdown')[0].getElementsByClassName('dropdown-menu')[0].setAttribute("aria-labelledby", newid);
     this.parentElement.parentElement.insertBefore(cln, this.parentElement);
+    numsub++;
+
     i = 0;
-    
+
+
+    //methods===================================================
+    var uphtolr = function(e){
+	console.log('help');
+	var img = this.parentElement.parentElement.parentElement.getElementsByTagName("img")[0];
+	var form = this.parentElement;
+	var file_selector = this.parentElement.getElementsByClassName("form-control")[0];
+	var form_submit = this;
+	var sub = function(event){
+	    console.log(event);
+	    event.preventDefault();
+	    if(file_selector.files.length == 0){
+		alert("please choose an image with the file selector");
+		return false;
+	    };
+	    var files = file_selector.files;
+	    var formData = new FormData();
+	    var file = files[0];
+	    var today = new Date();
+	    var now = today.getMinutes();
+	    var now2 = today.getSeconds();
+	    var now3 = today.getDay();
+	    var ne = now + now2 + now3;
+	    var filename = ne + file.name
+	    if(!file.type.match('image.*')){
+		alert("please upload a valid image file");
+		return false;
+	    };
+	    form_submit.innerHTML = 'uploading...';
+	    formData.append('photo', file, filename);
+	    var xhr = new XMLHttpRequest();
+	    xhr.open('POST', '/s/', true);
+	    xhr.send(formData);
+	    img.src = "../../static/images/" + filename;
+	    form_submit.innerHTML = 'Upload File'
+	};
+	form.onsubmit = sub(event);
+    };
+
+    var uphtocar = function(e){
+	console.log('help');
+	var img = this.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByTagName("img")[0];
+	var form = this.parentElement;
+	var file_selector = this.parentElement.getElementsByClassName("form-control")[0];
+	var form_submit = this;
+	var sub = function(event){
+	    console.log(event);
+	    event.preventDefault();
+	    if(file_selector.files.length == 0){
+		alert("please choose an image with the file selector");
+		return false;
+	    };
+	    var files = file_selector.files;
+	    var formData = new FormData();
+	    var file = files[0];
+	    var today = new Date();
+	    var now = today.getMinutes();
+	    var now2 = today.getSeconds();
+	    var now3 = today.getDay();
+	    var ne = now + now2 + now3;
+	    var filename = ne + file.name
+	    if(!file.type.match('image.*')){
+		alert("please upload a valid image file");
+		return false;
+	    };
+	    form_submit.innerHTML = 'uploading...';
+	    formData.append('photo', file, filename);
+	    var xhr = new XMLHttpRequest();
+	    xhr.open('POST', '/s/', true);
+	    xhr.send(formData);
+	    img.src = "../../static/images/" + filename;
+	    form_submit.innerHTML = 'Upload File'
+	};
+	form.onsubmit = sub(event);
+    };
+
+
+    var editserif = function(e){
+	var field = document.createElement("textarea");
+	field.setAttribute("rows","4");
+	field.setAttribute("cols", "50");
+	var newdesc = document.createTextNode(this.parentElement.parentElement.getElementsByTagName("div")[0].getElementsByTagName("p")[0].innerHTML);
+	field.appendChild(newdesc);
+	var subdesc2 = document.createElement("button");
+	var subtext = document.createTextNode("done editing");
+	subdesc2.appendChild(subtext);
+	this.parentElement.parentElement.getElementsByTagName('div')[0].replaceChild(field, this.parentElement.parentElement.getElementsByTagName("p")[0]);
+	this.parentElement.parentElement.getElementsByTagName("div")[0].appendChild(subdesc2);
+	var setdesc = function(e){
+	    console.log(field.value);
+	    var description2 = document.createTextNode(field.value);
+	    var descrip = document.createElement("p");
+	    descrip.setAttribute("id","description");
+	    descrip.appendChild(description2);
+	    this.parentElement.replaceChild(descrip, field);
+	    this.parentElement.removeChild(this);
+	}
+	subdesc2.addEventListener('click',setdesc);
+    };
+
+    var editpara = function(e){
+	var field = document.createElement("textarea");
+	field.setAttribute("rows","10");
+	field.setAttribute("cols", "30");
+	var newdesc = document.createTextNode(this.parentElement.parentElement.getElementsByClassName("contactinfo")[0].innerHTML);
+	field.appendChild(newdesc);
+	var subdesc2 = document.createElement("button");
+	var subtext = document.createTextNode("done editing");
+	subdesc2.appendChild(subtext);
+	console.log(this.parentElement.parentElement.getElementsByClassName("contactinfo")[0]);
+	this.parentElement.parentElement.replaceChild(field, this.parentElement.parentElement.getElementsByClassName("contactinfo")[0]);
+	this.parentElement.parentElement.appendChild(subdesc2);
+	var setdesc = function(e){
+	    console.log(field.value);
+	    var description2 = document.createTextNode(field.value);
+	    var descrip = document.createElement("p");
+	    descrip.setAttribute("class","contactinfo");
+	    descrip.setAttribute("style", "white-space:pre;");
+	    descrip.appendChild(description2);
+	    this.parentElement.replaceChild(descrip, field);
+	    this.parentElement.removeChild(this);
+	}
+	subdesc2.addEventListener('click',setdesc);
+    };
+
+    var edhedlr = function(e){
+	var phdesc = prompt("Enter a heading", this.parentElement.parentElement.getElementsByTagName("h2")[0].innerHTML);
+	if(phdesc != null){
+	    this.parentElement.parentElement.getElementsByTagName("h2")[0].innerHTML = phdesc;
+	};
+    };
+
+
+    var edhedcar = function(e){
+	var phdesc = prompt("Enter a heading", this.parentElement.parentElement.getElementsByTagName("h1")[0].innerHTML);
+	if(phdesc != null){
+	    this.parentElement.parentElement.getElementsByTagName("h1")[0].innerHTML = phdesc;
+	};
+    };
+
+    var editdesclr = function(e){
+	var field = document.createElement("textarea");
+	field.setAttribute("rows","15");
+	field.setAttribute("cols", "65");
+	var newdesc = document.createTextNode(this.parentElement.parentElement.getElementsByTagName("p")[0].innerHTML);
+	field.appendChild(newdesc);
+	var subdesc2 = document.createElement("button");
+	var subtext = document.createTextNode("done editing");
+	subdesc2.appendChild(subtext);
+	this.parentElement.parentElement.replaceChild(field, this.parentElement.parentElement.getElementsByTagName("p")[0]);
+	this.parentElement.parentElement.insertBefore(subdesc2, this.parentElement.parentElement.getElementsByClassName('strip')[1]);
+	var setdesc = function(e){
+	    console.log(field.value);
+	    var description2 = document.createTextNode(field.value);
+	    var descrip = document.createElement("p");
+	    descrip.setAttribute("id","pDescription");
+	    descrip.appendChild(description2);
+	    this.parentElement.replaceChild(descrip, field);
+	    this.parentElement.removeChild(this);
+	}
+	subdesc2.addEventListener('click',setdesc);
+    }; 
+    var eddesccar = function(e){
+	var field = document.createElement("textarea");
+	field.setAttribute("rows","15");
+	field.setAttribute("cols", "5");
+	field.setAttribute("style", "color:black");
+	var newdesc = document.createTextNode(this.parentElement.parentElement.getElementsByTagName("p")[0].innerHTML);
+	field.appendChild(newdesc);
+	var subdesc2 = document.createElement("button");
+	var subtext = document.createTextNode("done editing");
+	subdesc2.appendChild(subtext);
+	subdesc2.setAttribute("style", "color:black");
+	this.parentElement.parentElement.replaceChild(field, this.parentElement.parentElement.getElementsByTagName("p")[0]);
+	this.parentElement.parentElement.insertBefore(subdesc2, this.parentElement.parentElement.getElementsByClassName('strip')[1]);
+	var setdesc = function(e){
+	    console.log(field.value);
+	    var description2 = document.createTextNode(field.value);
+	    var descrip = document.createElement("p");
+	    descrip.appendChild(description2);
+	    this.parentElement.replaceChild(descrip, field);
+	    this.parentElement.removeChild(this);
+	}
+	subdesc2.addEventListener('click',setdesc);
+    }; 
+
+	
+    //============================ADDDING==================================//
+
+    var addserif = function(e){
+	var itm = document.getElementById("collection").getElementsByClassName("company_description")[0];
+	var cln = itm.cloneNode(true);
+	cln.getElementsByTagName('button')[0].addEventListener('click', editserif);
+	this.parentElement.parentElement.parentElement.parentElement.parentElement.insertBefore(cln, this.parentElement.parentElement.parentElement.parentElement);
+    };
+
+    var addpara = function(e){
+	var itm = document.getElementById("collection").getElementsByClassName("contact_paragraph")[0];
+	var cln = itm.cloneNode(true);
+	cln.getElementsByTagName('button')[0].addEventListener('click', editpara);
+	this.parentElement.parentElement.parentElement.parentElement.parentElement.insertBefore(cln, this.parentElement.parentElement.parentElement.parentElement);
+    };
+
+    var addimgr = function(e){
+	var itm = document.getElementById("collection").getElementsByClassName("sqImageR")[0];
+	var cln = itm.cloneNode(true);
+	cln.getElementsByClassName('uphto')[0].addEventListener('click', uphtolr);
+	cln.getElementsByClassName('edhed')[0].addEventListener('click', edhedlr);
+	cln.getElementsByClassName('imdescedit')[0].addEventListener('click', editdesclr);
+	this.parentElement.parentElement.parentElement.parentElement.parentElement.insertBefore(cln, this.parentElement.parentElement.parentElement.parentElement);
+    };
+
+    var addimgl = function(e){
+	var itm = document.getElementById("collection").getElementsByClassName("sqImageL")[0];
+	var cln = itm.cloneNode(true);
+	cln.getElementsByClassName('edhed')[0].addEventListener('click', edhedlr);
+	cln.getElementsByClassName('uphto')[0].addEventListener('click', uphtolr);
+	cln.getElementsByClassName('imdescedit')[0].addEventListener('click', editdesclr);
+	this.parentElement.parentElement.parentElement.parentElement.parentElement.insertBefore(cln, this.parentElement.parentElement.parentElement.parentElement);
+    };
+    var addimgc = function(e){
+	var itm = document.getElementById("collection").getElementsByClassName("carousel")[0];
+	var cln = itm.cloneNode(true);
+	var j = 0;
+	var heds = cln.getElementsByClassName('edcarhead');
+	for(j; j<heds.length; j++){
+	    heds[j].addEventListener('click', edhedcar);
+	}
+	j = 0;
+	var descs = cln.getElementsByClassName('imdescedit');
+	for(j; j<descs.length; j++){
+	    descs[j].addEventListener('click', eddesccar);
+	}
+	j = 0;
+	var phtos = cln.getElementsByClassName('uphto');
+	for(j; j<phtos.length; j++){
+	    phtos[j].addEventListener('click', uphtocar);
+	}
+
+ 
+	this.parentElement.parentElement.parentElement.parentElement.parentElement.insertBefore(cln, this.parentElement.parentElement.parentElement.parentElement);
+    };
+
+
+    //=------------------------EVENT LISTNERS-----------------------=//
     var removesubs = document.getElementsByClassName("rmsec");
     for(i; i<removesubs.length; i++){
 	removesubs[i].addEventListener("click",remsubpage);
@@ -236,6 +470,33 @@ var addsubpage = function(e){
     for(i; i<edsubs.length; i++){
 	edsubs[i].addEventListener("click",changenamesub);
     };
+     i = 0;
+    var edsubs = document.getElementsByClassName("addParagraphSerif");
+    for(i; i<edsubs.length; i++){
+	edsubs[i].addEventListener("click",addserif);
+    };
+     i = 0;
+    var edsubs = document.getElementsByClassName("addParagraph");
+    for(i; i<edsubs.length; i++){
+	edsubs[i].addEventListener("click",addpara);
+    };
+     i = 0;
+    var edsubs = document.getElementsByClassName("addImageRight");
+    for(i; i<edsubs.length; i++){
+	edsubs[i].addEventListener("click",addimgr);
+    };
+     i = 0;
+    var edsubs = document.getElementsByClassName("addImageLeft");
+    for(i; i<edsubs.length; i++){
+	edsubs[i].addEventListener("click",addimgl);
+    };
+    i =0;
+    var edsubs = document.getElementsByClassName("addImageCarousel");
+    for(i; i<edsubs.length; i++){
+	edsubs[i].addEventListener("click",addimgc);
+    };
+
+    
     refreshNavBar();
 
 };
