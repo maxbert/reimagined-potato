@@ -14,11 +14,16 @@ Michael Woo
 
 ##Demo Video
 
-##Installation and Run
+##Required Installations
 Imports:
 <br>
 Use pip to install flask and requests
-<br>
-Running:
-<br>
-Run app.py
+
+##Use
+1) Run app.py
+
+2) Go to localhost:5000 in a browser
+
+3) Register/log in to an account
+
+4) Its entirely up to you now! You can start by entering a site name and then editing and publishing your own template, or you can look at templates that other people have already published. 
