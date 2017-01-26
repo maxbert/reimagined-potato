@@ -14,16 +14,16 @@
     <script src="/static/js/jscolor.js"></script>
   </head>
 
-  <body>
+  <body style="background-color: rgb(143, 152, 255);">
     
     <nav class="nav navbar-default navbar-fixed-top" role="banner">
       <div class="navbar-header">	
         <div class="pull-left">
-	  <a href="#"><img id="logo" src="/static/images/generic_logo.png" style="max-height: 100%;"></a>
+	  <a href="#"><img id="logo" src="/static/images/generic_logo.png" style="height:103px;width:103px"></a>
 	  <div class="strip">
 	    <form class="file-form form-inline" action="/s/" method="POST" enctype="multipart/form_data">
 	      <input type="file" class="form-control" name="upload1"> 	    
-	      <button type="button" class="btn btn-success uphto">Upload Logo</button>
+	      <button type="button" class="btn btn-success uplgo">Upload Logo</button>
 	    </form>
 	    <br><br>
 	  </div>
@@ -38,7 +38,7 @@
     <div class="strip">
       <div class="spacer" style="margin-top: 20rem"></div>
       <div class="choosebackground" style="font-family: Montserrat; font-size:2vw; color: gray">
-	Background Color: <input class="jscolor" value="ffffff" autocomplete="off" style="background-image: none; background-color: rgb(82, 255, 82); color: rgb(0, 0, 0);">
+	Background Color: <input class="jscolor" value="ffffff" autocomplete="off" style="background-image: none; background-color: rgb(143, 152, 255); color: rgb(0, 0, 0);"> <button type="button" class="btn btn-success bgc"> Apply</button>
       </div>
       <div class="spacer" style="margin-top: 3rem"></div>
     </div>
@@ -46,8 +46,10 @@
     <div id="squarespace" class="spacer" style="margin-top: 15rem; display:none;"></div>
 
     <div id="descholder">
-      
-    <p id="description">memes</p></div>
+      <p id="description">
+	Place a brief description of what your company does here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    </div>
     <div class="strip">
       <button type="button" class="btn btn-info" id="adddesc">Add Company Description</button>
       <button type="button" class="btn btn-danger" id="remdesc">Remove Company Description</button>
@@ -64,30 +66,18 @@
 	  </div>
 	</div>
       </div>      
-      
-
-      
-
-      
-      
-      
-      
-
-      
-      
       <div class="box">
 	<div class="tile">
-	  <img id="image6" src="/static/images/image6.jpeg" alt="Place image here." width="100%">
+	  <img id="image1" src="/static/images/image1.jpeg" alt="Place image here." width="100%">
 	  <div class="imgDescription">
 	    <p id="imgDescription" class="imdesc">Describe this image.</p>
 	    <div class="strip">
-	      <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-	      <button type="button" class="btn btn-danger btn-xs">Remove</button>
-	      <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+	      
+	      <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
 	      <br><br>
 	      <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
-		<input type="file" class="form-control" name="upload6">
-		<button type="button" class="btn btn-success uphto">Upload File</button>
+		<input type="file" class="form-control" name="upload1"> 	    
+		<button type="submit" class="btn btn-success uphto">Upload File</button>
 	      </form>
 	      <br>
 	      <button type="button" class="btn btn-danger remphto">Remove Block</button>
@@ -96,9 +86,146 @@
 	</div>      
       </div>
 
+      <div class="box">
+	<div class="tile">
+	  <img id="image2" src="/static/images/image2.jpeg" alt="Place image here." width="100%">
+	  <div class="imgDescription">
+	    <p id="imgDescription" class="imdesc">Describe this image.</p>
+	    <div class="strip">
+	       
+	      <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
+	      <br><br>
+	      <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+		<input type="file" class="form-control" name="upload2">
+		<button type="submit" class="btn btn-success uphto">Upload File</button>
+	      </form>
+	      <br>
+	      <button type="button" class="btn btn-danger remphto">Remove Block</button>
+	    </div>
+	  </div>
+	</div>      
+      </div>
+
+      <div class="box">
+	<div class="tile">
+	  <img id="image3" src="/static/images/image3.jpeg" alt="Place image here." width="100%">
+	  <div class="imgDescription">
+	    <p id="imgDescription" class="imdesc">Describe this image.</p>
+	    <div class="strip">
+	       
+	      <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
+	      <br><br>
+	      <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+		<input type="file" class="form-control" name="upload3">
+		<button type="submit" class="btn btn-success uphto">Upload File</button>
+	      </form>
+	      <br>
+	      <button type="button" class="btn btn-danger remphto">Remove Block</button>
+	    </div>
+	  </div>
+	</div>      
+      </div>
       
+      <div class="box">
+	<div class="tile">
+	  <img id="image4" src="/static/images/image4.jpeg" alt="Place image here." width="100%">
+	  <div class="imgDescription">
+	    <p id="imgDescription" class="imdesc">Describe this image.</p>
+	    <div class="strip">
+	       
+	      <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
+	      <br><br>
+	      <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+		<input type="file" class="form-control" name="upload4">
+		<button type="submit" class="btn btn-success uphto">Upload File</button>
+	      </form>
+	      <br>
+	      <button type="button" class="btn btn-danger remphto">Remove Block</button>
+	    </div>
+	  </div>
+	</div>      
+      </div>
       
-           
+
+      <div class="box">
+	<div class="tile">
+	  <img id="image5" src="/static/images/image5.jpeg" alt="Place image here." width="100%">
+	  <div class="imgDescription">
+	    <p id="imgDescription" class="imdesc">Describe this image.</p>
+	    <div class="strip">
+	       
+	      <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
+	      <br><br>
+	      <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+		<input type="file" class="form-control" name="upload5">
+		<button type="submit" class="btn btn-success uphto">Upload File</button>
+	      </form>
+	      <br>
+	      <button type="button" class="btn btn-danger remphto">Remove Block</button>
+	    </div>
+	  </div>
+	</div>      
+      </div>
+      
+      <div class="box">
+	<div class="tile">
+	  <img id="image6" src="/static/images/image6.jpeg" alt="Place image here." width="100%">
+	  <div class="imgDescription">
+	    <p id="imgDescription" class="imdesc">Describe this image.</p>
+	    <div class="strip">
+	       
+	      <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
+	      <br><br>
+	      <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+		<input type="file" class="form-control" name="upload6">
+		<button type="submit" class="btn btn-success uphto">Upload File</button>
+	      </form>
+	      <br>
+	      <button type="button" class="btn btn-danger remphto">Remove Block</button>
+	    </div>
+	  </div>
+	</div>      
+      </div>
+
+      <div class="box">
+	<div class="tile">
+	  <img id="image7" src="/static/images/image7.jpeg" alt="Place image here." width="100%">
+	  <div class="imgDescription">
+	    <p id="imgDescription" class="imdesc">Describe this image.</p>
+	    <div class="strip">
+	       
+	      <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
+	      <br><br>
+	      <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+		<input type="file" class="form-control" name="upload7">
+		<button type="submit" class="btn btn-success uphto">Upload File</button>
+	      </form>
+	      <br>
+	      <button type="button" class="btn btn-danger remphto">Remove Block</button>
+	    </div>
+	  </div>
+	</div>      
+      </div>
+      
+      <div class="box">
+	<div class="tile">
+	  <img id="image8" src="/static/images/image8.jpeg" alt="Place image here." width="100%">	  
+	  <div class="imgDescription">
+	    <p id="imgDescription" class="imdesc">Describe this image.</p>
+	    <div class="strip">
+	       
+	      <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
+	      <br><br>
+	      <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
+		<input type="file" class="form-control" name="upload8">	  
+		<button type="submit" class="btn btn-success uphto">Upload File</button>
+	      </form>
+	      <br>
+	      <button type="button" class="btn btn-danger remphto">Remove Block</button>
+	    </div>
+	  </div>
+	</div>      
+      </div>     
     </div>
     <div class="spacer" style="clear: both;"></div>
     <div class="spacer" style="margin-top: 5rem;"></div>
@@ -149,19 +276,21 @@
       <div class="strip">
 	<div class="box2">
 	  <center>
-	    <button type="button" class="btn btn-info btn-lg" id="addperson"><div id="plus">+</div></button>
+	    <button type="button" class="btn btn-info btn-lg" id="addperson">+</button>
 	  </center>
 	</div>
       </div>
       <div class="box2">
 	<center>
-	  <img id="pImg1" class="img-circle" src="/static/images/person1.jpg" alt="Place image here." width="75%">
+	  <div class="pImgCircle">
+	    <img id="pImg1" src="/static/images/person1.jpg" alt="Place image here.">
+	  </div>
 	  <br><br>
 	  <div class="strip">
 	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 	      <input type="file" class="form-control" name="upload9">
-	      <button type="button" class="btn btn-success uphto">Upload Image</button>
-	      <button type="button" class="btn btn-danger">Remove Image</button>
+	      <button type="button" class="btn btn-success uphto">Upload File</button>
+	      <button type="button" class="btn btn-danger">Remove File</button>
 	    </form>	      
 	    <br>
 	  </div>
@@ -169,25 +298,25 @@
 	    BRIAN LU
 	  </div>
 	  <div class="strip">
-	    <button type="button" class="btn btn-success">Edit Contributor Name</button>
+	    <button type="button" class="btn btn-success contnameedit">Edit Contributor Name</button>
 	    <br><br>
-	    <button type="button" class="btn btn-info btn-xs">Add Description</button>	    
-	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
-	    <button type="button" class="btn btn-success btn-xs">Edit</button>
+	    <button type="button" class="btn btn-success btn-xs condescedit">Edit</button>
 	    <br><br>
 	  </div>
 	  <div class="pDescription" id="pDescription1">
 	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non orci a velit fermentum lobortis. Nam id erat sed ante congue lacinia quis eget nibh. Aenean euismod massa nec risus mattis gravida. Ut placerat sed orci quis ultricies. 
 	  </div>
 	  <div class="strip">
-	    <br><button type="button" class="btn btn-danger">Remove Section</button>
+	    <br><button type="button" class="btn btn-danger remper">Remove Section</button>
 	  </div>
 	</center>
       </div>
       
       <div class="box2">
 	<center>
-	  <img id="pImg2" class="img-circle" src="/static/images/person2.jpg" alt="Place image here." width="75%">
+	  <div class="pImgCircle">
+	    <img id="pImg2" src="/static/images/person2.jpg" alt="Place image here.">
+	  </div>
 	  <br><br>
 	  <div class="strip">
 	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
@@ -201,25 +330,25 @@
 	    SARAH YOON
 	  </div>
 	  <div class="strip">
-	    <button type="button" class="btn btn-success">Edit Contributor Name</button>
+	    <button type="button" class="btn btn-success contnameedit">Edit Contributor Name</button>
 	    <br><br>
-	    <button type="button" class="btn btn-info btn-xs">Add Description</button>	    
-	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
-	    <button type="button" class="btn btn-success btn-xs">Edit</button>
+	    <button type="button" class="btn btn-success btn-xs condescedit">Edit</button>
 	    <br><br>
 	  </div>
 	  <div class="pDescription" id="pDescription2">
 	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non orci a velit fermentum lobortis. Nam id erat sed ante congue lacinia quis eget nibh. Aenean euismod massa nec risus mattis gravida. Ut placerat sed orci quis ultricies. 
 	  </div>
 	  <div class="strip">
-	    <br><button type="button" class="btn btn-danger">Remove Section</button>
+	    <br><button type="button" class="btn btn-danger remper">Remove Section</button>
 	  </div>
 	</center>
       </div>              
 
       <div class="box2">
 	<center>
-	  <img id="pImg3" class="img-circle" src="/static/images/person3.jpg" alt="Place image here." width="75%">
+	  <div class="pImgCircle">
+	    <img id="pImg3" src="/static/images/person3.jpg" alt="Place image here.">
+	  </div>
 	  <br><br>
 	  <div class="strip">
 	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
@@ -233,30 +362,30 @@
 	    MAX BERTFIELD
 	  </div>
 	  <div class="strip">
-	    <button type="button" class="btn btn-success">Edit Contributor Name</button>
+	    <button type="button" class="btn btn-success contnameedit">Edit Contributor Name</button>
 	    <br><br>
-	    <button type="button" class="btn btn-info btn-xs">Add Description</button>	    
-	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
-	    <button type="button" class="btn btn-success btn-xs">Edit</button>
+	    <button type="button" class="btn btn-success btn-xs condescedit">Edit</button>
 	    <br><br>
 	  </div>
 	  <div class="pDescription" id="pDescription3">
 	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non orci a velit fermentum lobortis. Nam id erat sed ante congue lacinia quis eget nibh. Aenean euismod massa nec risus mattis gravida. Ut placerat sed orci quis ultricies. 
 	  </div>
 	  <div class="strip">
-	    <br><button type="button" class="btn btn-danger">Remove Section</button>
+	    <br><button type="button" class="btn btn-danger remper">Remove Section</button>
 	  </div>
 	</center>
       </div>	
       
       <div class="box2">
 	<center>
-	  <img id="pImg4" class="img-circle" src="/static/images/person4.jpg" alt="Place image here." width="75%">
+	  <div class="pImgCircle">
+	    <img id="pImg4" src="/static/images/person4.jpg" alt="Place image here.">
+	  </div>
 	  <br><br>
 	  <div class="strip">
 	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 	      <input type="file" class="form-control" name="upload9">
-	      <button type="button" class="btn btn-success uphto">Upload Image</button>  
+	      <button type="submit" class="btn btn-success uphto">Upload Image</button>  
 	      <button type="button" class="btn btn-danger">Remove Image</button>
 	    </form>	  
 	    <br>
@@ -265,22 +394,19 @@
 	    MICHAEL WOO
 	  </div>
 	  <div class="strip">
-	    <button type="button" class="btn btn-success">Edit Contributor Name</button>
+	    <button type="button" class="btn btn-success contnameedit">Edit Contributor Name</button>
 	    <br><br>
-	    <button type="button" class="btn btn-info btn-xs">Add Description</button>	    
-	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
-	    <button type="button" class="btn btn-success btn-xs">Edit</button>
+	    <button type="button" class="btn btn-success btn-xs condescedit">Edit</button>
 	    <br><br>
 	  </div>
 	  <div class="pDescription" id="pDescription4">
 	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non orci a velit fermentum lobortis. Nam id erat sed ante congue lacinia quis eget nibh. Aenean euismod massa nec risus mattis gravida. Ut placerat sed orci quis ultricies. 	      
 	  </div>
 	  <div class="strip">
-	    <br><button type="button" class="btn btn-danger">Remove Section</button>
+	    <br><button type="button" class="btn btn-danger remper">Remove Section</button>
 	  </div>
 	</center>
       </div>      
-            
       <div class="spacer" style="clear: both;"></div>
     </div>
 
@@ -326,13 +452,12 @@
 	  <div class="imgDescription">
 	    <p id="imgDescription" class="imdesc">Describe this image.</p>
 	    <div class="strip">
-	      <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-	      <button type="button" class="btn btn-danger btn-xs">Remove</button>
-	      <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+	       
+	      <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
 	      <br><br>
 	      <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 		<input type="file" class="form-control" name="upload7">
-		<button type="button" class="btn btn-success uphto">Upload File</button>
+		<button type="submit" class="btn btn-success uphto">Upload File</button>
 	      </form>
 	      <br>
 	      <button type="button" class="btn btn-danger remphto">Remove Block</button>
@@ -354,7 +479,9 @@
       </div>
       <div class="box2">
 	<center>
-	  <img class="img-circle" src="/static/images/person5.jpg" alt="Place image here." width="75%">
+	  <div class="pImgCircle">
+	    <img src="/static/images/person5.jpg" alt="Place image here.">
+	  </div>
 	  <br><br>
 	  <div class="strip">
 	    <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
@@ -368,18 +495,16 @@
 	    BRIAN LU
 	  </div>
 	  <div class="strip">
-	    <button type="button" class="btn btn-success">Edit Contributor Name</button>
+	    <button type="button" class="btn btn-success contnameedit">Edit Contributor Name</button>
 	    <br><br>
-	    <button type="button" class="btn btn-info btn-xs">Add Description</button>	    
-	    <button type="button" class="btn btn-danger btn-xs">Remove</button>
-	    <button type="button" class="btn btn-success btn-xs">Edit</button>
+	    <button type="button" class="btn btn-success btn-xs condescedit">Edit</button>
 	    <br><br>
 	  </div>
 	  <div class="pDescription" id="pDescription1">
 	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non orci a velit fermentum lobortis. Nam id erat sed ante congue lacinia quis eget nibh. Aenean euismod massa nec risus mattis gravida. Ut placerat sed orci quis ultricies. 
 	  </div>
 	  <div class="strip">
-	    <br><button type="button" class="btn btn-danger">Remove Section</button>
+	    <br><button type="button" class="btn btn-danger remper">Remove Section</button>
 	  </div>
 	</center>
       </div>
@@ -410,7 +535,7 @@
 	      <br>
 	      <form class="form-inline file-form" action="/s/" method="POST" enctype="multipart/form_data">
 		<input type="file" class="form-control" name="upload1"> 	    
-		<button type="button" class="btn btn-success uphto">Upload File</button>
+		<button type="submit" class="btn btn-success uphto">Upload File</button>
 	      </form>
 	    </div>
 	  </div>
@@ -425,9 +550,8 @@
 	    <p class="pDescription">Quisque fringilla metus ac diam luctus vestibulum. Nulla viverra facilisis leo, quis fringilla elit gravida imperdiet. In tincidunt sollicitudin turpis, et ornare mi fermentum ut.
 	    </p>
 	    <div class="strip">
-	      <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-	      <button type="button" class="btn btn-danger btn-xs">Remove</button>
-	      <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+	       
+	      <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
 	    </div>
 	  </div>
 	</div>
@@ -447,9 +571,8 @@
 	    <p class="pDescription">Quisque fringilla metus ac diam luctus vestibulum. Nulla viverra facilisis leo, quis fringilla elit gravida imperdiet. In tincidunt sollicitudin turpis, et ornare mi fermentum ut.
 	    </p>
 	    <div class="strip">
-	      <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
-	      <button type="button" class="btn btn-danger btn-xs">Remove</button>
-	      <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+	       
+	      <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
 	    </div>
 	  </div>
 	  <div class="col-md-5">
@@ -458,7 +581,7 @@
 	      <br>
 	      <form class="form-inline file-form" action="/s/" method="POST" enctype="multipart/form_data">
 		<input type="file" class="form-control" name="upload1"> 	    
-		<button type="button" class="btn btn-success uphto">Upload File</button>
+		<button type="submit" class="btn btn-success uphto">Upload File</button>
 	      </form>
 	    </div>
 	  </div>
@@ -470,7 +593,7 @@
 	<ol class="carousel-indicators">
 	  <li data-target="#myCarousel" data-slide-to="0" class=""></li>
 	  <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
-	  <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+	  <li data-target="#myCarousel" data-slide-to="2"></li>
 	</ol>
 	<div class="carousel-inner" role="listbox">
 	  <div id="0" class="item">
@@ -487,7 +610,7 @@
 		<div class="strip">
 		  <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
 		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
-		  <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+		  <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
 		  <br><br>
 		  <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 		    <input type="file" class="form-control" name="upload7">
@@ -512,7 +635,7 @@
 		<div class="strip">
 		  <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
 		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
-		  <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+		  <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
 		  <br><br>
 		  <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 		    <input type="file" class="form-control" name="upload7">
@@ -537,7 +660,7 @@
 		<div class="strip">
 		  <button type="button" class="btn btn-info btn-xs">Add Image Description</button>
 		  <button type="button" class="btn btn-danger btn-xs">Remove</button>
-		  <button type="button" class="btn btn-success btn-xs">Edit Image Description</button>
+		  <button type="button" class="btn btn-success btn-xs imdescedit">Edit Image Description</button>
 		  <br><br>		  
 		  <form class="file-form" action="/s/" method="POST" enctype="multipart/form_data">
 		    <input type="file" class="form-control" name="upload7">

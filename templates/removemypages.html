@@ -1,0 +1,44 @@
+{% extends "template.html" %}
+
+{% block title %}
+
+My Pages
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<h1 class="heading">My Pages</h1><br>
+
+<div class="transbox">
+<div class="boxlinks">
+  {{mypages_html|safe}}
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script type = "text/javascript">
+  $("button.btn-danger").click(function() {
+    var data = {};
+    var filename = $(this).attr('id');
+    data.filename = filename;
+    $.ajax({
+	  type: "POST",
+	  url: "/remove/",
+	  contentType: "application/json",
+	  data: JSON.stringify(data),
+	  success: function(data){
+	    $("#" + filename).remove();
+	  },
+	  error: function(data){
+	    console.log("failure")
+	  }
+    });/*
+         window.location.href= 'home/' + name;
+       */
+  });
+</script>
+{% endblock %}
