@@ -386,6 +386,16 @@ var setbg = function(e){
 };
 var back = document.getElementsByClassName("bgc")[0];
 back.addEventListener('click', setbg);
+var setnbg = function(e){
+    var background = document.getElementsByTagName("body")[0];
+    var nav = document.getElementsByTagName("nav")[0];
+    var color = this.parentElement.getElementsByTagName("input")[0].value;
+//    background.style = "background-color: #" + color;
+    nav.setAttribute("style","background-color: #" + color);
+    console.log('color');
+};
+var back = document.getElementsByClassName("nbgc")[0];
+back.addEventListener('click', setnbg);
 
 $("button#save").click(function() {
     var data = {};
