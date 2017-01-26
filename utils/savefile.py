@@ -50,8 +50,10 @@ def remove(user,site_name):
     filepath = "/edit/%s"%(site_name)
     filepath2 = "/publish/%s"%(site_name)
     if os.path.exists(dirname):
-        os.remove(filepathname)
-        os.remove(filepathname2)
+        if os.path.exists(filepathname):
+            os.remove(filepathname)
+        if os.path.exists(filepathname):
+            os.remove(filepathname2)
     db_removepath(user,filepath)
     db_removepath(user,filepath2)
     return "xd"
