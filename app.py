@@ -63,8 +63,16 @@ def logout():
 def removemypages():
     if "user" not in session:
         return redirect(url_for("login"))
-    mypages_str=savefile.getpages(session["user"],"edit",True)
+    mypages_str=savefile.getremovepages(session["user"],"edit",True)
     return render_template("removemypages.html", mypages_html=mypages_str)
+
+@app.route("/remove/", methods = ['POST'])
+def remove():
+    res = request.json
+    filename = str(res['filename'])
+    username = session["user"]
+    savefile.remove(username, filename)
+    return "success"
 
 @app.route("/editmypages/")
 def editmypages():
