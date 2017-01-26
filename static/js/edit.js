@@ -209,6 +209,7 @@ document.getElementsByClassName("edcon")[0].addEventListener("click", contactedi
 
 var remsubpage = function(e){
     this.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement);
+    refreshNavBar();
 };
 
 var changenamesub = function(e){
