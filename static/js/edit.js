@@ -152,6 +152,56 @@ for(i; i< eddescs.length; i++){
     eddescs[i].addEventListener('click', aboutdesc);
 };
 
+//CONTACT
+var contactedit = function(e){
+    var field = document.createElement("textarea");
+    field.setAttribute("rows","10");
+    field.setAttribute("cols", "30");
+    var newdesc = document.createTextNode(this.parentElement.parentElement.getElementsByClassName("contactinfo")[0].innerHTML);
+    field.appendChild(newdesc);
+    var subdesc2 = document.createElement("button");
+    var subtext = document.createTextNode("done editing");
+    subdesc2.appendChild(subtext);
+    console.log(this.parentElement.parentElement.getElementsByClassName("contactinfo")[0]);
+    this.parentElement.parentElement.replaceChild(field, this.parentElement.parentElement.parentElement.getElementsByClassName("contactinfo")[0]);
+    this.parentElement.parentElement.insertBefore(subdesc2,this.parentElement.parentElement.getElementsByClassName('strip')[1]);
+    var setdesc = function(e){
+	console.log(field.value);
+	var description2 = document.createTextNode(field.value);
+	var descrip = document.createElement("div");
+	descrip.setAttribute("class","contactinfo");
+	descrip.appendChild(description2);
+	this.parentElement.replaceChild(descrip, field);
+	this.parentElement.removeChild(this);
+    }
+    subdesc2.addEventListener('click',setdesc);
+};
+
+document.getElementsByClassName("edcon")[0].addEventListener("click", contactedit);
+//SUBPAGE HANDLERS
+
+var remsubpage = function(e){
+    this.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement);
+};
+
+var changenamesub = function(e){
+    var name = prompt("Enter a name");
+    if(name != null){
+	this.parentElement.parentElement.getElementsByClassName("sptitle")[0].innerHTML = name;
+    };
+};
+
+i = 0;
+var removesubs = document.getElementsByClassName("rmsec");
+for(i; i<removesubs.length; i++){
+    removesubs[i].addEventListener("click",remsubpage);
+};
+i = 0;
+var edsubs = document.getElementsByClassName("editsec");
+for(i; i<edsubs.length; i++){
+    edsubs[i].addEventListener("click",changenamesub);
+};
+    
 var addperson = function(e){
     var itm = document.getElementById("collection").getElementsByClassName("box2")[0];
     var cln = itm.cloneNode(true);
@@ -300,8 +350,10 @@ var strip = function(e){
 
 var setbg = function(e){
     var background = document.getElementsByTagName("body")[0];
+    var nav = document.getElementsByTagName("nav")[0];
     var color = this.parentElement.getElementsByTagName("input")[0].value;
     background.style = "background-color: #" + color;
+    //nav.setAttribute("style","background-color: #" + color);
     console.log('color');
 };
 var back = document.getElementsByClassName("bgc")[0];
