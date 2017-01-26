@@ -170,7 +170,7 @@ var contactedit = function(e){
 	var description2 = document.createTextNode(field.value);
 	var descrip = document.createElement("p");
 	descrip.setAttribute("class","contactinfo");
-	descrip.setAttribute("style", "whitespace:pre;");
+	descrip.setAttribute("style", "white-space:pre;");
 	descrip.appendChild(description2);
 	this.parentElement.replaceChild(descrip, field);
 	this.parentElement.removeChild(this);
