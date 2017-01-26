@@ -27,3 +27,9 @@ Use pip to install flask and requests
 3) Register/log in to an account
 
 4) Its entirely up to you now! You can start by entering a site name and then editing and publishing your own template, or you can look at templates that other people have already published. Once you're finished and back at the homescreen, you can use the navbar to view your sites in progress and your published sites.
+
+
+##Known Bugs
+1) Sitenames with spaces in them do not work
+2) Broken Pipe error is an issue
+3) Images with spaces in them also do not work
