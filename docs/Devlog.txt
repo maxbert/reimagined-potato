@@ -113,7 +113,8 @@ Michael -- 2017-01-24
 -worked on frontend for login and homepage
 
 Sarah -- 2017-01-24
-- color picker added 
+- color picker added
+- fix photo width for uploads in photo blocks, about page
 
 Max -- 2017-01-24
 - strip() works 
