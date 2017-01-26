@@ -31,5 +31,7 @@ Use pip to install flask and requests
 
 ##Known Bugs
 1) Sitenames with spaces in them do not work
+
 2) Broken Pipe error is an issue
+
 3) Images with spaces in them also do not work
