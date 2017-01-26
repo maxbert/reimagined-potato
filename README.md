@@ -5,8 +5,11 @@ Triangle Time is a website that allows its users to pick a website template, and
 ##Members
 
 Brian Lu
+<br>
 Sarah Yoon
+<br>
 Max Bertfield
+<br>
 Michael Woo
 
 ##Demo Video
