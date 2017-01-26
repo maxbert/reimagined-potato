@@ -191,6 +191,25 @@ var changenamesub = function(e){
     };
 };
 
+var addsubpage = function(e){
+    var itm = document.getElementById("collection").getElementsByClassName("subpage")[0];
+    var cln = itm.cloneNode(true);
+    this.parentElement.parentElement.insertBefore(cln, this.parentElement);
+    i = 0;
+    var removesubs = document.getElementsByClassName("rmsec");
+    for(i; i<removesubs.length; i++){
+	removesubs[i].addEventListener("click",remsubpage);
+    };
+    i = 0;
+    var edsubs = document.getElementsByClassName("editsec");
+    for(i; i<edsubs.length; i++){
+	edsubs[i].addEventListener("click",changenamesub);
+    };
+
+};
+
+
+
 i = 0;
 var removesubs = document.getElementsByClassName("rmsec");
 for(i; i<removesubs.length; i++){
@@ -201,6 +220,15 @@ var edsubs = document.getElementsByClassName("editsec");
 for(i; i<edsubs.length; i++){
     edsubs[i].addEventListener("click",changenamesub);
 };
+
+i = 0;
+var addsubs = document.getElementsByClassName("addsub");
+for(i; i<addsubs.length; i++){
+    addsubs[i].addEventListener("click",addsubpage);
+};
+
+
+
     
 var addperson = function(e){
     var itm = document.getElementById("collection").getElementsByClassName("box2")[0];

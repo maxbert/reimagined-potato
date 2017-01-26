@@ -232,40 +232,14 @@
     <div class="spacer" style="clear: both;"></div>
     <div class="spacer" style="margin-top: 5rem;"></div>
 
+    <div class="spacer" style="margin-top: 5rem;"></div>
+
+    
     <div class="strip">
-      <button type="button" class="btn btn-info btn-lg">Add Subpage</button>
+      <button type="button" class="btn btn-info btn-lg addsub">Add Subpage</button>
       <div class="spacer" style="margin-top:5rem;"></div>   
     </div>
-
-    <div class="strip">        
-      <div class="subpage" id="newSubpage">
-	<hr>    
-	<div class="spacer" style="margin-top:5rem;"></div>
-	<div class="sptitle">NEW SUBPAGE </div>
-	<div class="strip" style="display:inline;">
-	  <button style="margin-top: -2.5rem;" type="button" class="btn btn-success editsec">Edit Subpage Name</button>
-	  <button style="margin-top: -2.5rem;" type="button" class="btn btn-danger rmsec">Remove</button>
-	</div>	
-	
-	<div>
-	  <br><br>
-	  <div class="dropdown">
-	    <button onclick = "actionDropDown()" id="dLabel" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	      Add Element <span class="caret"></span>
-	    </button>
-	    <ul id = "action-dropdown" class="dropdown-menu" aria-labelledby="dLabel">
-	      <li class="dropdownItem"><button class="dropdown-item" id="addParagraphSerif">Paragraph - Serif, Large</button></li> 
-	      <li class="dropdownItem"><button class="dropdown-item" id="addParagraph">Paragraph - Sans-serif, Small</button></li> 
-	      <li class="dropdownItem"><button class="dropdown-item" id="addImageLeft">Square Image Left</button></li>
-	      <li class="dropdownItem"><button class="dropdown-item" id="addImageRight">Square Image Right</button></li>
-	      <li class="dropdownItem"><button class="dropdown-item" id="addImageCarousel">Image Carousel</button></li>
-	      <li class="dropdownItem"><button class="dropdown-item" id="addContributorBlock">Contributor Bio</button></li>
-	    </ul>
-	  </div>
-	</div>	
-      </div>
-    </div>
-    
+    <div class="spacer" style="margin-top: 5rem;"></div>
     <div class="subpage" id="about">
       <div class="spacer" style="margin-top:5rem;"></div>
       <hr>
@@ -444,7 +418,35 @@
     </div>
 
 
-    <div class="strip" id="collection" style="display:none;">
+    <div class="strip" id="collection" style="display:none;"> 
+      <div class="subpage" id="newSubpage1">
+	<hr>    
+	<div class="spacer" style="margin-top:5rem;"></div>
+	<div class="sptitle">NEW SUBPAGE </div>
+	<div class="strip" style="display:inline;">
+	  <button style="margin-top: -2.5rem;" type="button" class="btn btn-success editsec">Edit Subpage Name</button>
+	  <button style="margin-top: -2.5rem;" type="button" class="btn btn-danger rmsec">Remove</button>
+	</div>	
+	
+	<div>
+	  <br><br>
+	  <div class="dropdown">
+	    <button onclick = "actionDropDown()" id="dLabel" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	      Add Element <span class="caret"></span>
+	    </button>
+	    <ul id = "action-dropdown" class="dropdown-menu" aria-labelledby="dLabel">
+	      <li class="dropdownItem"><button class="dropdown-item addParagraphSerif">Paragraph - Serif, Large</button></li> 
+	      <li class="dropdownItem"><button class="dropdown-item addParagraph">Paragraph - Sans-serif, Small</button></li> 
+	      <li class="dropdownItem"><button class="dropdown-item addImageLeft">Square Image Left</button></li>
+	      <li class="dropdownItem"><button class="dropdown-item addImageRight">Square Image Right</button></li>
+	      <li class="dropdownItem"><button class="dropdown-item addImageCarousel">Image Carousel</button></li>
+	      <li class="dropdownItem"><button class="dropdown-item addContributorBlock">Contributor Bio</button></li>
+	    </ul>
+	  </div>
+	</div>	
+      </div>
+      
+
       <div class="box">
 	<div class="tile">
 	  <img id="image7" src="/static/images/image7.jpeg" alt="Place image here." width="100%">
