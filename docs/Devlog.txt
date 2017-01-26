@@ -137,6 +137,9 @@ Max -- 2017-01-25
 - edit green screen stuff in video
 
 Michael -- 2017-01-25
+- handle spaces in video
+- fix removing sites
+- login front end
 - video done
 
 Brian -- 2017-01-25
