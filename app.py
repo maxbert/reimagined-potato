@@ -98,7 +98,7 @@ def templateselector():
         return redirect(url_for("home",status="Site Name Already In Use"))
     f=open("templates/template1/%s.html"%(request.form["template"]),'r')
     templatehtml = f.read()
-    site_name = request.form["site_name"].replace(" ","_")
+    site_name = request.form["site_name"]##.replace(" ","_")
     savefile.save(session["user"],site_name, templatehtml)
     return redirect(url_for("edit_site",username=session["user"],site_name=site_name))
 

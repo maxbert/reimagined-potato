@@ -616,7 +616,7 @@ for(i; i<imdescs.length; i++){
 
 var uplgo = function(e){
     console.log('help');
-    var img = this.parentElement.parentElement.parentElement.getElementsByTagName("img")[0];
+    var img = document.getElementById('logo');
     var form = this.parentElement;
     var file_selector = this.parentElement.getElementsByClassName("form-control")[0];
     var form_submit = this;
