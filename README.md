@@ -37,3 +37,5 @@ Use pip to install flask and requests
 3) Images with spaces in them also do not work
 
 4) If there are two subpages being created, adding an element in the first one will add it twice. 
+
+5) Contact does not show up in the published page's navbar even though it does in editing
