@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e576593f-3cf1-4887-8bb7-6ac775d6722d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/database.db" afterPath="$PROJECT_DIR$/data/database.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Devlog.txt" afterPath="$PROJECT_DIR$/docs/Devlog.txt" />
     </list>
     <ignored path="reimagined-potato.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +30,8 @@
       <file leaf-file-name="Devlog.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/Devlog.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+            <state relative-caret-position="365">
+              <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -151,7 +150,6 @@
         <option value="$PROJECT_DIR$/templates/template1/template2.html" />
         <option value="$PROJECT_DIR$/templates/theTwo/template2.html" />
         <option value="$PROJECT_DIR$/static/template1.css" />
-        <option value="$PROJECT_DIR$/docs/Devlog.txt" />
         <option value="$PROJECT_DIR$/templates/template1/template1.html" />
         <option value="$PROJECT_DIR$/static/js/edit.js" />
         <option value="$PROJECT_DIR$/templates/homepage.html" />
@@ -160,6 +158,7 @@
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/utils/savefile.py" />
         <option value="$PROJECT_DIR$/templates/removemypages.html" />
+        <option value="$PROJECT_DIR$/docs/Devlog.txt" />
       </list>
     </option>
   </component>
@@ -891,8 +890,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/Devlog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+        <state relative-caret-position="365">
+          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -65,6 +65,9 @@ Sarah -- 2017-01-18 2:00AM
 - About page finished
 - Changed buttons for image blocks at the top
 
+Brian -- 2017-01-18
+- Started work on pre tags
+
 Max -- 2017-01-18
 - change editing descriptions for photo blocks to popup
 
@@ -89,7 +92,7 @@ Brian -- 2017-01-19 22:45
 Max -- 2017-01-19
 - fix adding photo blocks
 
-Michael -- 2017-01-22
+Michael -- 2017-01-20
 -wrote functions to get people's pages without getting links
 
 Sarah -- 2017-01-21 1:00AM
@@ -99,6 +102,10 @@ Sarah -- 2017-01-21 1:00AM
    - Image Carousel
 - These should be removed, they're there so "Add Element" button can insert that HTML
 - put everything that should disappear when publishing in a div called "strip"
+
+Brian -- 2017-01-21
+- Finished previewing sites
+- Fixed JS for image carousel
 
 Max -- 2017-01-21
 - elements to be added (photo blocks, about page bios, etc) moved to invisible div at bottom
@@ -134,5 +141,3 @@ Michael -- 2017-01-25
 
 Brian -- 2017-01-25
 - design changes and readme
-
-
