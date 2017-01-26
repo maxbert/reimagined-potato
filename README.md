@@ -35,3 +35,5 @@ Use pip to install flask and requests
 2) Broken Pipe error is an issue
 
 3) Images with spaces in them also do not work
+
+4) If there are two subpages being created, adding an element in the first one will add it twice. 
