@@ -1,3 +1,29 @@
+var refreshNavBar = function(e){
+    var divs = document.getElementsByClassName("subpage");
+    var navbar = document.getElementById("navlist");
+    while(navbar.hasChildNodes()){
+	navbar.removeChild(navbar.lastChild);
+    };
+    var newlist = [];
+    var i = 0;
+    for(i; i<divs.length -1; i++){
+	var el = document.createElement('li');
+	el.setAttribute('class', 'nav-element');
+	var lin = document.createElement('a');
+	lin.setAttribute('href', '#' + divs[i].id);
+	var link = document.createTextNode(divs[i].id);
+	lin.appendChild(link);
+	el.appendChild(lin);
+	navbar.appendChild(el);
+    };
+	
+};
+
+refreshNavBar();
+
+
+
+
 var uplphto = function(e){
     console.log('help');
     var img = this.parentElement.parentElement.parentElement.parentElement.getElementsByTagName("img")[0];
@@ -190,6 +216,7 @@ var changenamesub = function(e){
     if(name != null){
 	this.parentElement.parentElement.getElementsByClassName("sptitle")[0].innerHTML = name;
 	this.parentElement.parentElement.setAttribute("id",name);
+	refreshNavBar();
     };
 };
 
@@ -208,10 +235,9 @@ var addsubpage = function(e){
     for(i; i<edsubs.length; i++){
 	edsubs[i].addEventListener("click",changenamesub);
     };
+    refreshNavBar();
 
 };
-
-
 
 i = 0;
 var removesubs = document.getElementsByClassName("rmsec");
